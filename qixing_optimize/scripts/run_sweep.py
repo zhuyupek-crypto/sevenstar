@@ -101,7 +101,14 @@ def compute_metrics(res, label, elapsed):
     if daily_returns.std() > 0:
         sharpe = float(daily_returns.mean() / daily_returns.std() * (252 ** 0.5))
 
-    calmar = float(total_return / max_dd) if max_dd > 0 else 0.0
+    # Calmar = 年化收益率 / 最大回撤（标准定义，不是总收益/最大回撤）
+    # 对多年度区间差异显著：总收益/回撤会高估 Calmar
+    n_days = len(values)
+    if n_days > 0 and total_return > -1:
+        annualized_return = (1 + total_return) ** (252.0 / n_days) - 1
+    else:
+        annualized_return = 0.0
+    calmar = float(annualized_return / max_dd) if max_dd > 0 else 0.0
 
     trades = res.get('trades', [])
     buy_count = sum(1 for t in trades if t['amount'] > 0)
@@ -111,9 +118,11 @@ def compute_metrics(res, label, elapsed):
         'label': label,
         'final_value': round(float(values[-1]), 2),
         'total_return_pct': round(total_return * 100, 2),
+        'annualized_return_pct': round(annualized_return * 100, 2),
         'max_drawdown_pct': round(max_dd * 100, 2),
         'sharpe': round(sharpe, 3),
         'calmar': round(calmar, 3),
+        'n_trade_days': int(n_days),
         'trade_count': len(trades),
         'buy_count': buy_count,
         'sell_count': sell_count,
@@ -159,17 +168,17 @@ def run_single(overrides, label, start, end, out_dir, pool='default', score_mode
 
 def print_summary(results):
     """打印汇总表格"""
-    print(f"\n{'=' * 90}")
-    print(f"{'参数':<25} {'最终权益':>12} {'收益%':>8} {'回撤%':>8} {'夏普':>7} {'Calmar':>7} {'交易':>6} {'耗时s':>7}")
-    print(f"{'-' * 90}")
+    print(f"\n{'=' * 105}")
+    print(f"{'参数':<25} {'最终权益':>12} {'总收益%':>9} {'年化%':>8} {'回撤%':>8} {'夏普':>7} {'Calmar':>7} {'天数':>6} {'耗时s':>7}")
+    print(f"{'-' * 105}")
     for r in results:
         if 'error' in r:
             print(f"{r['label']:<25} {'ERROR':>12} {r.get('error', '')}")
             continue
-        print(f"{r['label']:<25} {r['final_value']:>12.2f} {r['total_return_pct']:>8.2f} "
-              f"{r['max_drawdown_pct']:>8.2f} {r['sharpe']:>7.3f} {r['calmar']:>7.3f} "
-              f"{r['trade_count']:>6} {r['elapsed_s']:>7.1f}")
-    print(f"{'=' * 90}")
+        print(f"{r['label']:<25} {r['final_value']:>12.2f} {r['total_return_pct']:>9.2f} "
+              f"{r['annualized_return_pct']:>8.2f} {r['max_drawdown_pct']:>8.2f} {r['sharpe']:>7.3f} {r['calmar']:>7.3f} "
+              f"{r['n_trade_days']:>6} {r['elapsed_s']:>7.1f}")
+    print(f"{'=' * 105}")
 
 
 def mode_functional(args):

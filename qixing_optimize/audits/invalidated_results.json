@@ -1,0 +1,278 @@
+{
+  "audit_title": "旧实验 NAV 缺失污染审计 (fail_open_0_premium)",
+  "audit_date": "2026-07-03",
+  "project": "七星高照ETF轮动",
+  "contamination_root_cause": "旧回测代码在 NAV 数据缺失时采用 fail-open 策略（返回 0 溢价放行），导致无 NAV 数据的 ETF 被当作零溢价通过筛选并参与交易，污染回测结果。",
+  "nav_coverage": {
+    "parquet_coverage": "2023-10-09 ~ 2024-12-31",
+    "missing_periods": ["2022 全年", "2023 Q1-Q3 (2023-01-01 ~ 2023-10-08)"],
+    "no_nav_etf_count": 28,
+    "no_nav_etf_codes": ["159980", "159981", "159509", "513290", "513500", "159529", "513400", "513520", "513030", "513080", "513310", "513730", "159792", "513130", "513050", "513690", "510300", "510500", "510210", "588080", "512100", "563360", "563300", "512890", "159967", "512040", "511380", "511010"]
+  },
+  "is_oos_definition": {
+    "IS": "2022-01-04 ~ 2023-12-29 (484天, 2024-01-01 之前)",
+    "OOS": "2024-01-02 ~ 2024-12-31 (242天, 2024-01-01 及之后)"
+  },
+  "old_nav_missing_policy": "fail_open_0_premium",
+  "status_rules": {
+    "invalid": "无 NAV 买入笔数 > 0（结果被污染，必须废弃）",
+    "needs_rerun": "无 NAV 买入笔数 = 0 但区间在 2022-2023（NAV 覆盖不足，需重跑）",
+    "valid": "无 NAV 买入笔数 = 0 且区间在 2024（结果可用）",
+    "no_data": "该区间无交易数据"
+  },
+  "experiments": [
+    {
+      "name": "原池 baseline",
+      "run_dir": "functional",
+      "file": "qixing_optimize/runs/functional/baseline.json",
+      "label": "baseline",
+      "pool": "原池 (POOL)",
+      "overrides": {
+        "lookback_days": 25,
+        "holdings_num": 1,
+        "short_lookback_days": 10,
+        "profit_protection_threshold": 0.05
+      },
+      "metrics": {
+        "final_value": 959727.17,
+        "total_return_pct": -4.03,
+        "max_drawdown_pct": 4.08,
+        "sharpe": -3.761,
+        "calmar": -0.988,
+        "trade_count": 11,
+        "buy_count": 6,
+        "sell_count": 5
+      },
+      "backtest_range": {
+        "min_date": "2024-01-02",
+        "max_date": "2024-01-22",
+        "total_trades": 11,
+        "note": "仅覆盖 2024 年 1 月前 3 周，疑似中断的短回测（elapsed=253s）"
+      },
+      "IS": {
+        "has_data": false,
+        "note": "无 IS 数据（文件仅含 2024 OOS 区间）",
+        "buy_count": 0,
+        "nav_missing_buy_count": 0,
+        "nav_missing_ratio": 0.0,
+        "nav_missing_etfs": [],
+        "nav_missing_etf_counts": {},
+        "status": "no_data"
+      },
+      "OOS": {
+        "has_data": true,
+        "buy_count": 6,
+        "nav_missing_buy_count": 0,
+        "nav_missing_ratio": 0.0,
+        "nav_missing_etfs": [],
+        "nav_missing_etf_counts": {},
+        "status": "valid"
+      }
+    },
+    {
+      "name": "原池 multi_period",
+      "run_dir": "score_multi_period",
+      "file": "qixing_optimize/runs/score_multi_period/score_mode_multi_period.json",
+      "label": "score_mode=multi_period",
+      "pool": "原池 (POOL)",
+      "overrides": {
+        "lookback_days": 25,
+        "holdings_num": 1,
+        "short_lookback_days": 10,
+        "profit_protection_threshold": 0.05,
+        "profit_protection_lookback": 1
+      },
+      "metrics": {
+        "final_value": 1493117.09,
+        "total_return_pct": 49.31,
+        "max_drawdown_pct": 12.16,
+        "sharpe": 1.495,
+        "calmar": 4.055,
+        "trade_count": 105,
+        "buy_count": 53,
+        "sell_count": 52
+      },
+      "backtest_range": {
+        "min_date": "2024-01-02",
+        "max_date": "2024-12-30",
+        "total_trades": 105,
+        "note": "完整覆盖 2024 OOS 全年"
+      },
+      "IS": {
+        "has_data": false,
+        "note": "无 IS 数据（文件仅含 2024 OOS 区间）",
+        "buy_count": 0,
+        "nav_missing_buy_count": 0,
+        "nav_missing_ratio": 0.0,
+        "nav_missing_etfs": [],
+        "nav_missing_etf_counts": {},
+        "status": "no_data"
+      },
+      "OOS": {
+        "has_data": true,
+        "buy_count": 53,
+        "nav_missing_buy_count": 0,
+        "nav_missing_ratio": 0.0,
+        "nav_missing_etfs": [],
+        "nav_missing_etf_counts": {},
+        "status": "valid"
+      }
+    },
+    {
+      "name": "大池 baseline",
+      "run_dir": "pool_bak",
+      "file": "qixing_optimize/runs/pool_bak/pool_bak.json",
+      "label": "pool=bak",
+      "pool": "大池 (POOL_BAK, 37只)",
+      "overrides": {
+        "lookback_days": 25,
+        "holdings_num": 1,
+        "short_lookback_days": 10,
+        "profit_protection_threshold": 0.05,
+        "profit_protection_lookback": 1
+      },
+      "metrics": {
+        "final_value": 1747202.48,
+        "total_return_pct": 74.72,
+        "max_drawdown_pct": 20.14,
+        "sharpe": 1.246,
+        "calmar": 3.71,
+        "trade_count": 299,
+        "buy_count": 150,
+        "sell_count": 149
+      },
+      "backtest_range": {
+        "min_date": "2022-01-04",
+        "max_date": "2023-12-15",
+        "total_trades": 299,
+        "note": "仅覆盖 IS 区间（2022-2023），未跑到 2024 OOS"
+      },
+      "IS": {
+        "has_data": true,
+        "buy_count": 150,
+        "nav_missing_buy_count": 84,
+        "nav_missing_ratio": 0.56,
+        "nav_missing_etfs": ["159509", "159792", "159967", "159980", "159981", "512040", "512100", "512890", "513030", "513050", "513080", "513130", "513290", "513310", "513500", "513520", "513690", "563300", "588080"],
+        "nav_missing_etf_counts": {
+          "159509": 1,
+          "159792": 6,
+          "159967": 11,
+          "159980": 3,
+          "159981": 9,
+          "512040": 2,
+          "512100": 2,
+          "512890": 7,
+          "513030": 6,
+          "513050": 3,
+          "513080": 4,
+          "513130": 5,
+          "513290": 3,
+          "513310": 7,
+          "513500": 3,
+          "513520": 1,
+          "513690": 4,
+          "563300": 1,
+          "588080": 6
+        },
+        "status": "invalid"
+      },
+      "OOS": {
+        "has_data": false,
+        "note": "无 OOS 数据（实验仅跑到 2023-12-15，未进入 2024）",
+        "buy_count": 0,
+        "nav_missing_buy_count": 0,
+        "nav_missing_ratio": 0.0,
+        "nav_missing_etfs": [],
+        "nav_missing_etf_counts": {},
+        "status": "needs_rerun"
+      }
+    },
+    {
+      "name": "大池 multi_period (C+E)",
+      "run_dir": "score_multi_period_pool_bak",
+      "file": "qixing_optimize/runs/score_multi_period_pool_bak/score_mode_multi_period,pool_bak.json",
+      "label": "score_mode=multi_period,pool=bak",
+      "pool": "大池 (POOL_BAK, 37只)",
+      "overrides": {
+        "lookback_days": 25,
+        "holdings_num": 1,
+        "short_lookback_days": 10,
+        "profit_protection_threshold": 0.05,
+        "profit_protection_lookback": 1
+      },
+      "metrics": {
+        "final_value": 1968926.25,
+        "total_return_pct": 96.89,
+        "max_drawdown_pct": 17.34,
+        "sharpe": 1.468,
+        "calmar": 5.587,
+        "trade_count": 293,
+        "buy_count": 147,
+        "sell_count": 146
+      },
+      "backtest_range": {
+        "min_date": "2022-01-04",
+        "max_date": "2023-12-18",
+        "total_trades": 293,
+        "note": "仅覆盖 IS 区间（2022-2023），未跑到 2024 OOS"
+      },
+      "IS": {
+        "has_data": true,
+        "buy_count": 147,
+        "nav_missing_buy_count": 80,
+        "nav_missing_ratio": 0.5442,
+        "nav_missing_etfs": ["159509", "159792", "159967", "159980", "159981", "512040", "512100", "512890", "513030", "513050", "513080", "513130", "513290", "513310", "513500", "513520", "513690", "588080"],
+        "nav_missing_etf_counts": {
+          "159509": 1,
+          "159792": 6,
+          "159967": 9,
+          "159980": 4,
+          "159981": 8,
+          "512040": 2,
+          "512100": 4,
+          "512890": 7,
+          "513030": 5,
+          "513050": 5,
+          "513080": 6,
+          "513130": 6,
+          "513290": 1,
+          "513310": 4,
+          "513500": 2,
+          "513520": 1,
+          "513690": 4,
+          "588080": 5
+        },
+        "status": "invalid"
+      },
+      "OOS": {
+        "has_data": false,
+        "note": "无 OOS 数据（实验仅跑到 2023-12-18，未进入 2024）",
+        "buy_count": 0,
+        "nav_missing_buy_count": 0,
+        "nav_missing_ratio": 0.0,
+        "nav_missing_etfs": [],
+        "nav_missing_etf_counts": {},
+        "status": "needs_rerun"
+      }
+    }
+  ],
+  "conclusion": {
+    "invalid": [
+      "大池 baseline IS (84/150 = 56.0% 无NAV买入)",
+      "大池 multi_period (C+E) IS (80/147 = 54.42% 无NAV买入)"
+    ],
+    "needs_rerun": [
+      "大池 baseline OOS (无OOS数据，需补跑2024 OOS)",
+      "大池 multi_period (C+E) OOS (无OOS数据，需补跑2024 OOS)"
+    ],
+    "valid": [
+      "原池 baseline OOS (2024, 0 无NAV买入; 注:仅覆盖1月前3周)",
+      "原池 multi_period OOS (2024全年, 0 无NAV买入)"
+    ],
+    "no_data": [
+      "原池 baseline IS (无IS数据)",
+      "原池 multi_period IS (无IS数据)"
+    ],
+    "summary": "大池两组实验的 IS 结果均被污染（无NAV买入占比 54%-56%），必须废弃；其 OOS 区间缺失，需以修复后的 fail-close 策略补跑。原池两组实验仅含 2024 OOS，未触及 28 只无NAV ETF，结果可用；但原池无 IS 数据。"
+  }
+}

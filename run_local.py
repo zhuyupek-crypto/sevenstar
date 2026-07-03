@@ -52,7 +52,15 @@ from engine import Engine
 class QixingParityRunner:
     """运行器：加载策略、注入兼容层与性能优化、运行回测、输出诊断"""
 
-    def __init__(self, start_date, end_date, param_overrides=None, score_mode='baseline'):
+    def __init__(self, start_date, end_date, param_overrides=None, score_mode='baseline',
+                 nav_mode='parity'):
+        """
+        Args:
+            nav_mode: NAV 缺失处理策略
+                - 'parity':         NAV 缺失立即终止回测（默认，用于对齐聚宽）
+                - 'realistic':      NAV 缺失返回 None，策略原生逻辑跳过该 ETF（用于研究/实盘）
+                - 'legacy_invalid': 保留旧版 0 溢价兜底（仅用于复现旧污染结果，禁止用于新报告）
+        """
         self.start_date = start_date
         self.end_date = end_date
         self.engine = None
@@ -62,6 +70,14 @@ class QixingParityRunner:
         self.param_overrides = param_overrides or {}
         # 得分模式：baseline（原版）/ multi_period（25d+60d加权）/ vol_adjusted（波动率惩罚）
         self.score_mode = score_mode
+        # NAV 缺失处理模式
+        if nav_mode not in ('parity', 'realistic', 'legacy_invalid'):
+            raise ValueError(f"nav_mode 必须为 parity/realistic/legacy_invalid， got {nav_mode}")
+        self.nav_mode = nav_mode
+        # NAV 缺失统计（记录每只 ETF 的净值缺失事件）
+        self._nav_missing_log = []
+        # legacy_invalid 模式标记：结果文件必须包含此标记
+        self._invalid_due_to_nav_fail_open = (nav_mode == 'legacy_invalid')
 
     def run(self):
         engine = Engine(
@@ -379,14 +395,39 @@ class QixingParityRunner:
                 engine.namespace['finance'] = nav_adapter.finance
                 engine.namespace['query'] = nav_adapter.query
 
-                # ---- 溢价率兜底：NAV 缺失的 ETF 不因溢价率过滤被排除 ----
+                # ---- 溢价率缺失处理：根据 nav_mode 区分三种语义 ----
+                # parity:         NAV 缺失立即终止回测（数据不完整时无法宣称对齐聚宽）
+                # realistic:      NAV 缺失返回 None，策略原生逻辑跳过该 ETF（研究/实盘模式）
+                # legacy_invalid: 保留旧版 0 溢价兜底（仅用于复现旧污染结果，禁止用于新报告）
                 _engine_get_premium = engine.namespace.get('get_premium_rate')
-                def _qixing_get_premium_rate(code, date):
-                    result = _engine_get_premium(code, date)
-                    if result[0] is None:
-                        engine.info(f"⚠️ [NAV_MISSING] {code} 净值缺失，溢价率兜底为0")
-                        return (0.0, result[1] or 0, result[2] or 0)
-                    return result
+                _nav_missing_log = self._nav_missing_log
+                _nav_mode = self.nav_mode
+
+                if _nav_mode == 'legacy_invalid':
+                    def _qixing_get_premium_rate(code, date):
+                        result = _engine_get_premium(code, date)
+                        if result[0] is None:
+                            engine.info(f"⚠️ [LEGACY_INVALID] {code} 净值缺失，溢价率兜底为0（结果不可信）")
+                            _nav_missing_log.append({'code': code, 'date': str(date), 'mode': 'legacy_invalid'})
+                            return (0.0, result[1] or 0, result[2] or 0)
+                        return result
+                elif _nav_mode == 'parity':
+                    def _qixing_get_premium_rate(code, date):
+                        result = _engine_get_premium(code, date)
+                        if result[0] is None:
+                            _nav_missing_log.append({'code': code, 'date': str(date), 'mode': 'parity'})
+                            raise RuntimeError(
+                                f"[PARITY] NAV 缺失：{code} 在 {date} 无净值数据。"
+                                f"parity 模式要求 NAV 完整，请补全数据或切换到 realistic 模式。"
+                            )
+                        return result
+                else:  # realistic
+                    def _qixing_get_premium_rate(code, date):
+                        result = _engine_get_premium(code, date)
+                        if result[0] is None:
+                            _nav_missing_log.append({'code': code, 'date': str(date), 'mode': 'realistic'})
+                            return (None, result[1], result[2])  # 返回 None，策略原生逻辑跳过
+                        return result
                 engine.namespace['get_premium_rate'] = _qixing_get_premium_rate
             else:
                 print(f"⚠️ 净值数据不存在: {_nav_file}")
@@ -423,15 +464,29 @@ class QixingParityRunner:
                 _patch_score_mode(engine, self.score_mode)
                 print(f"[SCORE] 已启用得分模式: {self.score_mode}", flush=True)
 
+            # ==== P0 任务二：NAV 回测前预检 ====
+            # 在策略 initialize() 之后、daily loop 之前执行
+            # 检查本次 ETF 池 × 回测区间的 NAV 覆盖完整性
+            precheck_report = self._run_nav_precheck(engine)
+            self._precheck_report = precheck_report
+            if precheck_report['should_abort']:
+                raise RuntimeError(
+                    f"[NAV_PRECHECK] 回测区间内 NAV 覆盖不完整，parity 模式不允许运行。\n"
+                    f"缺失 ETF: {precheck_report['missing_codes']}\n"
+                    f"请补全 NAV 数据或切换到 realistic 模式（fail-closed）。"
+                )
+
         engine.post_exec_hook = post_exec_hook
 
         self.engine = engine
+
         _t0 = time.monotonic()
         engine.run()
         _elapsed = time.monotonic() - _t0
 
         results = self._collect_results(engine)
         results['elapsed_seconds'] = round(_elapsed, 2)
+        results['nav_precheck'] = getattr(self, '_precheck_report', None)
         return results
 
     def _record_diagnostic(self, engine, security, callback_name, extra=None):
@@ -522,12 +577,230 @@ class QixingParityRunner:
                 'positions': pos_str,
             })
 
+        # P0-5: NAV 覆盖率统计
+        nav_report = self._build_nav_report()
+
         return {
             'trades': trades,
             'daily': daily,
             'diag': self.diag_records,
             'final_value': round(engine.context.portfolio.total_value, 2),
+            'nav_report': nav_report,
+            'nav_mode': self.nav_mode,
+            'invalid_due_to_nav_fail_open': self._invalid_due_to_nav_fail_open,
         }
+
+    def _build_nav_report(self):
+        """构建 NAV 覆盖率报告：每只 ETF 的缺失次数、缺失日期范围、受影响交易"""
+        if not self._nav_missing_log:
+            print(f"\n[NAV] ✅ 无净值缺失事件，溢价过滤全程正常工作")
+            return {'total_missing': 0, 'by_code': {}, 'affected_pool': []}
+
+        from collections import Counter, defaultdict
+        by_code_count = Counter(e['code'] for e in self._nav_missing_log)
+        by_code_dates = defaultdict(list)
+        for e in self._nav_missing_log:
+            by_code_dates[e['code']].append(e['date'])
+
+        print(f"\n{'=' * 70}")
+        print(f"[NAV] 净值缺失统计（fail-closed 模式：缺失→跳过该 ETF）")
+        print(f"{'=' * 70}")
+        print(f"总缺失次数: {len(self._nav_missing_log)}")
+        print(f"{'代码':<16} {'缺失次数':>8} {'首次缺失':>12} {'末次缺失':>12}")
+        print(f"{'-' * 70}")
+        for code in sorted(by_code_count.keys()):
+            dates = sorted(by_code_dates[code])
+            print(f"{code:<16} {by_code_count[code]:>8} {dates[0]:>12} {dates[-1]:>12}")
+        print(f"{'=' * 70}")
+
+        # 判断池中受影响的 ETF（即整个回测区间都缺失 NAV 的）
+        affected_pool = sorted(by_code_count.keys())
+        if affected_pool:
+            print(f"[NAV] ⚠️ 以下 ETF 因净值缺失被溢价过滤跳过（可能影响选股）:")
+            print(f"      {affected_pool}")
+            print(f"[NAV] 如这些 ETF 在候选池中，回测结果可能不可靠，需补全 NAV 数据")
+
+        return {
+            'total_missing': len(self._nav_missing_log),
+            'by_code': {code: {'count': by_code_count[code],
+                               'first_date': min(by_code_dates[code]),
+                               'last_date': max(by_code_dates[code])}
+                        for code in by_code_count},
+            'affected_pool': affected_pool,
+        }
+
+    def _run_nav_precheck(self, engine):
+        """P0 任务二：NAV 回测前预检
+
+        在回测开始前，对本次 ETF 池 × 回测区间做完整 NAV 覆盖检查。
+        生成预检报告并写入 qixing_optimize/audits/ 目录。
+        """
+        import pandas as pd
+        from pathlib import Path
+
+        # 获取本次回测的 ETF 池（风险池 + 防御 ETF）
+        _g = engine.namespace.get('g')
+        if _g is None or not hasattr(_g, 'etf_pool'):
+            return {'should_abort': False, 'reason': 'g.etf_pool 不可用，跳过预检'}
+
+        risk_pool = list(_g.etf_pool)
+        defensive_etf = getattr(_g, 'defensive_etf', None)
+        all_pool = list(risk_pool)
+        if defensive_etf and defensive_etf not in all_pool:
+            all_pool.append(defensive_etf)
+
+        # 加载 NAV 数据
+        nav_file = (Path(os.environ.get('HDATA_ROOT', r'D:\Work Space\HData'))
+                     / 'data' / 'processed' / 'fund_nav' / 'qixing_fund_nav.parquet')
+        if not nav_file.exists():
+            return {'should_abort': False, 'reason': f'NAV 文件不存在: {nav_file}'}
+
+        nav_df = pd.read_parquet(nav_file)
+        nav_col = 'nav_date' if 'nav_date' in nav_df.columns else 'date'
+        nav_df[nav_col] = pd.to_datetime(nav_df[nav_col])
+
+        # 回测区间内的交易日（策略在 14:01 买入时需要前一交易日的 NAV）
+        # 简化：用回测区间内的所有日历日做检查
+        start_dt = pd.Timestamp(self.start_date)
+        end_dt = pd.Timestamp(self.end_date)
+
+        per_code = {}
+        missing_codes = []
+        for code in all_pool:
+            sub = nav_df[nav_df['code'] == code]
+            is_defensive = (code == defensive_etf)
+            is_risk = code in risk_pool
+
+            if len(sub) == 0:
+                # 该 ETF 完全没有 NAV 数据
+                per_code[code] = {
+                    'in_risk_pool': is_risk,
+                    'is_defensive': is_defensive,
+                    'required_days': 'all',
+                    'valid_days': 0,
+                    'coverage_pct': 0.0,
+                    'first_valid_date': None,
+                    'last_valid_date': None,
+                    'missing_days': -1,  # -1 表示完全无数据
+                    'first_20_missing': [],
+                }
+                if is_risk:  # 风险池中缺失才记录
+                    missing_codes.append(code)
+                continue
+
+            # 计算回测区间内的覆盖
+            in_range = sub[(sub[nav_col] >= start_dt) & (sub[nav_col] <= end_dt)]
+            # 全部可用 NAV 日期范围
+            first_valid = sub[nav_col].min()
+            last_valid = sub[nav_col].max()
+
+            # 估算所需天数（回测区间内的交易日）
+            # 粗略估计：区间日历日 * 5/7 * 0.97（扣除节假日）
+            calendar_days = (end_dt - start_dt).days + 1
+            est_trading_days = int(calendar_days * 5 / 7 * 0.97)
+            valid_in_range = len(in_range)
+            coverage = valid_in_range / est_trading_days * 100 if est_trading_days > 0 else 0
+
+            # 缺失日期（回测区间内需要的但 NAV 没有的）
+            missing_count = max(0, est_trading_days - valid_in_range)
+
+            per_code[code] = {
+                'in_risk_pool': is_risk,
+                'is_defensive': is_defensive,
+                'required_days': est_trading_days,
+                'valid_days': valid_in_range,
+                'coverage_pct': round(coverage, 1),
+                'first_valid_date': str(first_valid.date()) if pd.notna(first_valid) else None,
+                'last_valid_date': str(last_valid.date()) if pd.notna(last_valid) else None,
+                'missing_days': missing_count,
+                'first_20_missing': [],  # 详细缺失日期需要交易日历，这里简化
+            }
+            # 覆盖率 < 90% 的风险池 ETF 标记为缺失
+            if is_risk and coverage < 90:
+                missing_codes.append(code)
+
+        should_abort = (self.nav_mode == 'parity' and len(missing_codes) > 0)
+
+        report = {
+            'should_abort': should_abort,
+            'nav_mode': self.nav_mode,
+            'backtest_range': f"{self.start_date} ~ {self.end_date}",
+            'risk_pool_size': len(risk_pool),
+            'defensive_etf': defensive_etf,
+            'total_pool_size': len(all_pool),
+            'missing_codes': missing_codes,
+            'missing_count': len(missing_codes),
+            'per_code': per_code,
+        }
+
+        # 打印预检摘要
+        print(f"\n[NAV_PRECHECK] 模式={self.nav_mode}  区间={self.start_date}~{self.end_date}")
+        print(f"[NAV_PRECHECK] 风险池 {len(risk_pool)} 只 + 防御 {defensive_etf} = 总 {len(all_pool)} 只")
+        print(f"[NAV_PRECHECK] NAV 覆盖不足的风险池 ETF: {len(missing_codes)} 只 -> {missing_codes}")
+        if should_abort:
+            print(f"[NAV_PRECHECK] ❌ parity 模式下 NAV 不完整，回测将被终止")
+        else:
+            print(f"[NAV_PRECHECK] ✅ 允许继续运行")
+
+        # 写入审计文件
+        self._write_nav_audit_files(report)
+
+        return report
+
+    def _write_nav_audit_files(self, report):
+        """将 NAV 预检报告写入 qixing_optimize/audits/ 目录"""
+        import json
+        from pathlib import Path
+
+        audit_dir = Path(__file__).parent / 'qixing_optimize' / 'audits'
+        audit_dir.mkdir(parents=True, exist_ok=True)
+
+        # JSON 文件
+        json_path = audit_dir / 'nav_coverage.json'
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(report, f, indent=2, ensure_ascii=False, default=str)
+
+        # Markdown 报告
+        md_path = audit_dir / 'NAV_COVERAGE_REPORT.md'
+        lines = [
+            "# NAV 覆盖率预检报告",
+            "",
+            f"> 生成时间：{time.strftime('%Y-%m-%d %H:%M:%S')}",
+            f"> 回测区间：{report['backtest_range']}",
+            f"> NAV 模式：{report['nav_mode']}",
+            f"> 风险池大小：{report['risk_pool_size']}",
+            f"> 防御 ETF：{report['defensive_etf']}",
+            f"> 总池大小：{report['total_pool_size']}",
+            "",
+            "## 覆盖率明细",
+            "",
+            "| ETF 代码 | 风险池 | 防御 | 所需天数 | 有效天数 | 覆盖率% | 首个有效日 | 最后有效日 | 缺失天数 |",
+            "|----------|--------|------|---------|---------|---------|-----------|-----------|---------|",
+        ]
+        for code in sorted(report['per_code'].keys()):
+            c = report['per_code'][code]
+            risk = "✓" if c['in_risk_pool'] else ""
+            defn = "✓" if c['is_defensive'] else ""
+            lines.append(
+                f"| {code} | {risk} | {defn} | {c['required_days']} | {c['valid_days']} | "
+                f"{c['coverage_pct']} | {c['first_valid_date']} | {c['last_valid_date']} | {c['missing_days']} |"
+            )
+        lines.extend([
+            "",
+            f"## 预检结论",
+            "",
+            f"- NAV 覆盖不足的风险池 ETF 数量：{report['missing_count']}",
+            f"- 缺失 ETF 列表：{report['missing_codes']}",
+            f"- 允许继续运行：{'否' if report['should_abort'] else '是'}",
+            f"- 运行模式：{report['nav_mode']}",
+        ])
+        if report['should_abort']:
+            lines.append(f"\n> ⚠️ parity 模式下 NAV 不完整，回测被终止。请补全 NAV 数据或切换到 realistic 模式。")
+
+        with open(md_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(lines))
+        print(f"[NAV_PRECHECK] 审计报告已写入: {md_path}")
+        print(f"[NAV_PRECHECK] 审计 JSON 已写入: {json_path}")
 
 
 def _patch_score_mode(engine, score_mode):
