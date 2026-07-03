@@ -2,6 +2,7 @@
   "should_abort": false,
   "nav_mode": "parity",
   "backtest_range": "2024-01-02 ~ 2024-01-05",
+  "n_trade_days": 4,
   "risk_pool_size": 7,
   "defensive_etf": "511880.XSHG",
   "total_pool_size": 8,
@@ -11,9 +12,9 @@
     "518880.XSHG": {
       "in_risk_pool": true,
       "is_defensive": false,
-      "required_days": 2,
+      "required_days": 4,
       "valid_days": 4,
-      "coverage_pct": 200.0,
+      "coverage_pct": 100.0,
       "first_valid_date": "2023-10-09",
       "last_valid_date": "2024-12-31",
       "missing_days": 0,
@@ -22,9 +23,9 @@
     "159985.XSHE": {
       "in_risk_pool": true,
       "is_defensive": false,
-      "required_days": 2,
+      "required_days": 4,
       "valid_days": 4,
-      "coverage_pct": 200.0,
+      "coverage_pct": 100.0,
       "first_valid_date": "2023-10-09",
       "last_valid_date": "2024-12-31",
       "missing_days": 0,
@@ -33,9 +34,9 @@
     "501018.XSHG": {
       "in_risk_pool": true,
       "is_defensive": false,
-      "required_days": 2,
+      "required_days": 4,
       "valid_days": 4,
-      "coverage_pct": 200.0,
+      "coverage_pct": 100.0,
       "first_valid_date": "2023-10-09",
       "last_valid_date": "2024-12-31",
       "missing_days": 0,
@@ -44,9 +45,9 @@
     "161226.XSHE": {
       "in_risk_pool": true,
       "is_defensive": false,
-      "required_days": 2,
+      "required_days": 4,
       "valid_days": 4,
-      "coverage_pct": 200.0,
+      "coverage_pct": 100.0,
       "first_valid_date": "2023-10-09",
       "last_valid_date": "2024-12-31",
       "missing_days": 0,
@@ -55,9 +56,9 @@
     "513100.XSHG": {
       "in_risk_pool": true,
       "is_defensive": false,
-      "required_days": 2,
+      "required_days": 4,
       "valid_days": 4,
-      "coverage_pct": 200.0,
+      "coverage_pct": 100.0,
       "first_valid_date": "2023-10-09",
       "last_valid_date": "2024-12-31",
       "missing_days": 0,
@@ -66,9 +67,9 @@
     "159915.XSHE": {
       "in_risk_pool": true,
       "is_defensive": false,
-      "required_days": 2,
+      "required_days": 4,
       "valid_days": 4,
-      "coverage_pct": 200.0,
+      "coverage_pct": 100.0,
       "first_valid_date": "2023-10-09",
       "last_valid_date": "2024-12-31",
       "missing_days": 0,
@@ -77,9 +78,9 @@
     "511220.XSHG": {
       "in_risk_pool": true,
       "is_defensive": false,
-      "required_days": 2,
+      "required_days": 4,
       "valid_days": 4,
-      "coverage_pct": 200.0,
+      "coverage_pct": 100.0,
       "first_valid_date": "2023-10-09",
       "last_valid_date": "2024-12-31",
       "missing_days": 0,
@@ -88,13 +89,14 @@
     "511880.XSHG": {
       "in_risk_pool": false,
       "is_defensive": true,
-      "required_days": 2,
+      "required_days": 4,
       "valid_days": 4,
-      "coverage_pct": 200.0,
+      "coverage_pct": 100.0,
       "first_valid_date": "2023-10-09",
       "last_valid_date": "2024-12-31",
       "missing_days": 0,
       "first_20_missing": []
     }
-  }
+  },
+  "nav_file_exists": true
 }

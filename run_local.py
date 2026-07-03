@@ -630,10 +630,14 @@ class QixingParityRunner:
         }
 
     def _run_nav_precheck(self, engine):
-        """P0 任务二：NAV 回测前预检
+        """P0 任务二：NAV 回测前预检（真实交易日历版）
 
-        在回测开始前，对本次 ETF 池 × 回测区间做完整 NAV 覆盖检查。
-        生成预检报告并写入 qixing_optimize/audits/ 目录。
+        在回测开始前，对本次 ETF 池 × 回测区间的每个交易日逐日检查 NAV 覆盖。
+        策略在 14:01 买入时需要"前一交易日"的 NAV，因此检查每个交易日 T 的
+        前一交易日 T-1 是否有 NAV 数据。
+
+        parity 模式下任何缺失立即终止；realistic/legacy_invalid 模式仅记录不终止。
+        NAV 文件不存在时：parity 必须终止；其余模式记录但允许继续。
         """
         import pandas as pd
         from pathlib import Path
@@ -649,20 +653,72 @@ class QixingParityRunner:
         if defensive_etf and defensive_etf not in all_pool:
             all_pool.append(defensive_etf)
 
+        # 获取回测区间内的真实交易日列表（使用引擎 data_api，不估算）
+        try:
+            trade_days = list(engine.data_api.get_trade_days(
+                start_date=self.start_date, end_date=self.end_date))
+            # 转为 pd.Timestamp 集合，便于后续按日匹配
+            trade_days_ts = [pd.Timestamp(d) for d in trade_days]
+            n_trade_days = len(trade_days_ts)
+        except Exception as e:
+            # 取不到交易日历：parity 必须终止（数据完整性无法保证）
+            report = {
+                'should_abort': (self.nav_mode == 'parity'),
+                'nav_mode': self.nav_mode,
+                'backtest_range': f"{self.start_date} ~ {self.end_date}",
+                'risk_pool_size': len(risk_pool),
+                'defensive_etf': defensive_etf,
+                'total_pool_size': len(all_pool),
+                'missing_codes': [],
+                'missing_count': 0,
+                'per_code': {},
+                'reason': f'无法获取交易日历: {e}',
+            }
+            if report['should_abort']:
+                self._write_nav_audit_files(report)
+                raise RuntimeError(
+                    f"[NAV_PRECHECK] parity 模式下无法获取交易日历，无法保证 NAV 完整性。"
+                    f"错误: {e}"
+                )
+            return report
+
         # 加载 NAV 数据
         nav_file = (Path(os.environ.get('HDATA_ROOT', r'D:\Work Space\HData'))
                      / 'data' / 'processed' / 'fund_nav' / 'qixing_fund_nav.parquet')
         if not nav_file.exists():
-            return {'should_abort': False, 'reason': f'NAV 文件不存在: {nav_file}'}
+            # 文件不存在：parity 必须终止（漏洞修复）
+            report = {
+                'should_abort': (self.nav_mode == 'parity'),
+                'nav_mode': self.nav_mode,
+                'backtest_range': f"{self.start_date} ~ {self.end_date}",
+                'risk_pool_size': len(risk_pool),
+                'defensive_etf': defensive_etf,
+                'total_pool_size': len(all_pool),
+                'missing_codes': list(risk_pool),  # 全部风险池都视为缺失
+                'missing_count': len(risk_pool),
+                'per_code': {},
+                'reason': f'NAV 文件不存在: {nav_file}',
+                'nav_file_exists': False,
+            }
+            if self.nav_mode == 'parity':
+                self._write_nav_audit_files(report)
+                raise RuntimeError(
+                    f"[NAV_PRECHECK] parity 模式下 NAV 文件不存在: {nav_file}\n"
+                    f"parity 要求 NAV 数据完整，请补全数据文件或切换到 realistic 模式。"
+                )
+            # realistic/legacy_invalid：记录但允许继续
+            print(f"[NAV_PRECHECK] ⚠️ NAV 文件不存在，{self.nav_mode} 模式继续运行（所有 ETF 将被策略原生逻辑排除）")
+            self._write_nav_audit_files(report)
+            return report
 
         nav_df = pd.read_parquet(nav_file)
         nav_col = 'nav_date' if 'nav_date' in nav_df.columns else 'date'
         nav_df[nav_col] = pd.to_datetime(nav_df[nav_col])
 
-        # 回测区间内的交易日（策略在 14:01 买入时需要前一交易日的 NAV）
-        # 简化：用回测区间内的所有日历日做检查
-        start_dt = pd.Timestamp(self.start_date)
-        end_dt = pd.Timestamp(self.end_date)
+        # 策略实际需要：每个交易日 T 的前一交易日 T-1 的 NAV
+        # 这里检查每个 ETF 在 [start, end] 区间内每个交易日的"前一日 NAV"是否可用
+        # 简化为：检查每个 ETF 在区间交易日集合中是否有 NAV（保守口径）
+        trade_days_set = set(trade_days_ts)
 
         per_code = {}
         missing_codes = []
@@ -673,50 +729,49 @@ class QixingParityRunner:
 
             if len(sub) == 0:
                 # 该 ETF 完全没有 NAV 数据
+                missing_dates = sorted(trade_days_ts)  # 全部交易日都缺失
                 per_code[code] = {
                     'in_risk_pool': is_risk,
                     'is_defensive': is_defensive,
-                    'required_days': 'all',
+                    'required_days': n_trade_days,
                     'valid_days': 0,
                     'coverage_pct': 0.0,
                     'first_valid_date': None,
                     'last_valid_date': None,
-                    'missing_days': -1,  # -1 表示完全无数据
-                    'first_20_missing': [],
+                    'missing_days': n_trade_days,
+                    'first_20_missing': [str(d.date()) for d in missing_dates[:20]],
                 }
                 if is_risk:  # 风险池中缺失才记录
                     missing_codes.append(code)
                 continue
 
-            # 计算回测区间内的覆盖
-            in_range = sub[(sub[nav_col] >= start_dt) & (sub[nav_col] <= end_dt)]
+            # 该 ETF 在区间交易日内的覆盖
+            nav_dates_set = set(sub[nav_col].tolist())
+            # 区间内有效 NAV 日期（与交易日交集）
+            valid_in_range = trade_days_set & nav_dates_set
+            # 缺失日期（需要的交易日 - 有 NAV 的）
+            missing_in_range = trade_days_set - nav_dates_set
+            missing_dates_sorted = sorted(missing_in_range)
+
             # 全部可用 NAV 日期范围
             first_valid = sub[nav_col].min()
             last_valid = sub[nav_col].max()
 
-            # 估算所需天数（回测区间内的交易日）
-            # 粗略估计：区间日历日 * 5/7 * 0.97（扣除节假日）
-            calendar_days = (end_dt - start_dt).days + 1
-            est_trading_days = int(calendar_days * 5 / 7 * 0.97)
-            valid_in_range = len(in_range)
-            coverage = valid_in_range / est_trading_days * 100 if est_trading_days > 0 else 0
-
-            # 缺失日期（回测区间内需要的但 NAV 没有的）
-            missing_count = max(0, est_trading_days - valid_in_range)
+            coverage = len(valid_in_range) / n_trade_days * 100 if n_trade_days > 0 else 0
 
             per_code[code] = {
                 'in_risk_pool': is_risk,
                 'is_defensive': is_defensive,
-                'required_days': est_trading_days,
-                'valid_days': valid_in_range,
+                'required_days': n_trade_days,
+                'valid_days': len(valid_in_range),
                 'coverage_pct': round(coverage, 1),
                 'first_valid_date': str(first_valid.date()) if pd.notna(first_valid) else None,
                 'last_valid_date': str(last_valid.date()) if pd.notna(last_valid) else None,
-                'missing_days': missing_count,
-                'first_20_missing': [],  # 详细缺失日期需要交易日历，这里简化
+                'missing_days': len(missing_in_range),
+                'first_20_missing': [str(d.date()) for d in missing_dates_sorted[:20]],
             }
-            # 覆盖率 < 90% 的风险池 ETF 标记为缺失
-            if is_risk and coverage < 90:
+            # 覆盖率 < 100% 的风险池 ETF 标记为缺失（严格口径：任何一天缺失都算）
+            if is_risk and coverage < 100.0:
                 missing_codes.append(code)
 
         should_abort = (self.nav_mode == 'parity' and len(missing_codes) > 0)
@@ -725,18 +780,28 @@ class QixingParityRunner:
             'should_abort': should_abort,
             'nav_mode': self.nav_mode,
             'backtest_range': f"{self.start_date} ~ {self.end_date}",
+            'n_trade_days': n_trade_days,
             'risk_pool_size': len(risk_pool),
             'defensive_etf': defensive_etf,
             'total_pool_size': len(all_pool),
             'missing_codes': missing_codes,
             'missing_count': len(missing_codes),
             'per_code': per_code,
+            'nav_file_exists': True,
         }
 
         # 打印预检摘要
-        print(f"\n[NAV_PRECHECK] 模式={self.nav_mode}  区间={self.start_date}~{self.end_date}")
+        print(f"\n[NAV_PRECHECK] 模式={self.nav_mode}  区间={self.start_date}~{self.end_date}  交易日数={n_trade_days}")
         print(f"[NAV_PRECHECK] 风险池 {len(risk_pool)} 只 + 防御 {defensive_etf} = 总 {len(all_pool)} 只")
-        print(f"[NAV_PRECHECK] NAV 覆盖不足的风险池 ETF: {len(missing_codes)} 只 -> {missing_codes}")
+        print(f"[NAV_PRECHECK] NAV 覆盖不足（<100%）的风险池 ETF: {len(missing_codes)} 只")
+        if missing_codes:
+            # 显示前 10 只及其缺失天数
+            for c in missing_codes[:10]:
+                info = per_code[c]
+                print(f"[NAV_PRECHECK]   {c}: 缺失 {info['missing_days']}/{info['required_days']} 天, "
+                      f"覆盖率 {info['coverage_pct']}%, 首缺 {info['first_20_missing'][0] if info['first_20_missing'] else 'N/A'}")
+            if len(missing_codes) > 10:
+                print(f"[NAV_PRECHECK]   ... 还有 {len(missing_codes) - 10} 只")
         if should_abort:
             print(f"[NAV_PRECHECK] ❌ parity 模式下 NAV 不完整，回测将被终止")
         else:
@@ -762,39 +827,46 @@ class QixingParityRunner:
 
         # Markdown 报告
         md_path = audit_dir / 'NAV_COVERAGE_REPORT.md'
+        n_trade_days = report.get('n_trade_days', 'N/A')
+        nav_file_exists = report.get('nav_file_exists', True)
         lines = [
             "# NAV 覆盖率预检报告",
             "",
             f"> 生成时间：{time.strftime('%Y-%m-%d %H:%M:%S')}",
             f"> 回测区间：{report['backtest_range']}",
+            f"> 真实交易日数：{n_trade_days}",
             f"> NAV 模式：{report['nav_mode']}",
             f"> 风险池大小：{report['risk_pool_size']}",
             f"> 防御 ETF：{report['defensive_etf']}",
             f"> 总池大小：{report['total_pool_size']}",
+            f"> NAV 文件存在：{nav_file_exists}",
             "",
-            "## 覆盖率明细",
+            "## 覆盖率明细（按真实交易日逐日核对）",
             "",
-            "| ETF 代码 | 风险池 | 防御 | 所需天数 | 有效天数 | 覆盖率% | 首个有效日 | 最后有效日 | 缺失天数 |",
-            "|----------|--------|------|---------|---------|---------|-----------|-----------|---------|",
+            "| ETF 代码 | 风险池 | 防御 | 所需天数 | 有效天数 | 覆盖率% | 首个有效日 | 最后有效日 | 缺失天数 | 前 20 个缺失日期 |",
+            "|----------|--------|------|---------|---------|---------|-----------|-----------|---------|------------------|",
         ]
         for code in sorted(report['per_code'].keys()):
             c = report['per_code'][code]
             risk = "✓" if c['in_risk_pool'] else ""
             defn = "✓" if c['is_defensive'] else ""
+            first_20 = ", ".join(c.get('first_20_missing', [])) if c.get('first_20_missing') else "-"
             lines.append(
                 f"| {code} | {risk} | {defn} | {c['required_days']} | {c['valid_days']} | "
-                f"{c['coverage_pct']} | {c['first_valid_date']} | {c['last_valid_date']} | {c['missing_days']} |"
+                f"{c['coverage_pct']} | {c['first_valid_date']} | {c['last_valid_date']} | {c['missing_days']} | {first_20} |"
             )
         lines.extend([
             "",
             f"## 预检结论",
             "",
-            f"- NAV 覆盖不足的风险池 ETF 数量：{report['missing_count']}",
+            f"- NAV 覆盖不足（<100%）的风险池 ETF 数量：{report['missing_count']}",
             f"- 缺失 ETF 列表：{report['missing_codes']}",
             f"- 允许继续运行：{'否' if report['should_abort'] else '是'}",
             f"- 运行模式：{report['nav_mode']}",
         ])
-        if report['should_abort']:
+        if not nav_file_exists:
+            lines.append(f"\n> ⚠️ NAV 文件不存在。parity 模式已终止；{report['nav_mode']} 模式继续运行但所有 ETF 将被策略原生逻辑排除。")
+        elif report['should_abort']:
             lines.append(f"\n> ⚠️ parity 模式下 NAV 不完整，回测被终止。请补全 NAV 数据或切换到 realistic 模式。")
 
         with open(md_path, 'w', encoding='utf-8') as f:
