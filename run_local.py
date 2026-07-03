@@ -715,10 +715,43 @@ class QixingParityRunner:
         nav_col = 'nav_date' if 'nav_date' in nav_df.columns else 'date'
         nav_df[nav_col] = pd.to_datetime(nav_df[nav_col])
 
-        # 策略实际需要：每个交易日 T 的前一交易日 T-1 的 NAV
-        # 这里检查每个 ETF 在 [start, end] 区间内每个交易日的"前一日 NAV"是否可用
-        # 简化为：检查每个 ETF 在区间交易日集合中是否有 NAV（保守口径）
-        trade_days_set = set(trade_days_ts)
+        # ==== 策略实际需要：每个交易日 T 的"前一交易日 T-1"的 NAV ====
+        # 母版 get_premium_rate(code, date) 接收的是 prev_date（前一交易日），
+        # 通过 get_trade_days(end_date=T, count=2)[0] 获取 T-1。
+        # 因此预检必须检查每个 T 对应的 T-1 是否有 NAV，而非 T 当天。
+        #
+        # 需要的 NAV 日期集合 = {T0 的前一交易日} ∪ {T0, T1, ..., Tn-1}
+        # （Tn 不需要，因为没有 Tn+1 交易日用它作为前一交易日）
+        prev_of_first = None
+        if n_trade_days > 0:
+            first_day = trade_days_ts[0]
+            try:
+                # 直接从 HData 1d_stock 读取交易日历（避免 data_api._all_trade_days
+                # 缓存只含回测区间年份的问题：_ensure_trade_days_loaded 一旦加载
+                # 就不重新补充其他年份）
+                hdata_root = os.environ.get('HDATA_ROOT', r'D:\Work Space\HData')
+                processed_root = os.path.join(hdata_root, 'data', 'processed')
+                before_dates = []
+                for yr in [first_day.year, first_day.year - 1]:
+                    cal_path = os.path.join(processed_root, f'1d_stock/{yr}.parquet')
+                    if os.path.exists(cal_path):
+                        yr_dates = pd.to_datetime(
+                            pd.read_parquet(cal_path, columns=['date'])['date']
+                            .unique().astype(str)
+                        )
+                        before_dates.extend([d for d in yr_dates if d < first_day])
+                if before_dates:
+                    prev_of_first = max(before_dates)
+            except Exception as e:
+                print(f"[NAV_PRECHECK] ⚠️ 获取前一交易日失败: {e}")
+                # 取不到则 prev_of_first 保持 None
+
+        required_nav_dates = set()
+        if prev_of_first is not None:
+            required_nav_dates.add(prev_of_first)
+        # 除最后一天外，每个交易日都是后一天的前一交易日
+        required_nav_dates.update(trade_days_ts[:-1])
+        n_required = len(required_nav_dates)
 
         per_code = {}
         missing_codes = []
@@ -729,40 +762,40 @@ class QixingParityRunner:
 
             if len(sub) == 0:
                 # 该 ETF 完全没有 NAV 数据
-                missing_dates = sorted(trade_days_ts)  # 全部交易日都缺失
+                missing_dates = sorted(required_nav_dates)
                 per_code[code] = {
                     'in_risk_pool': is_risk,
                     'is_defensive': is_defensive,
-                    'required_days': n_trade_days,
+                    'required_days': n_required,
                     'valid_days': 0,
                     'coverage_pct': 0.0,
                     'first_valid_date': None,
                     'last_valid_date': None,
-                    'missing_days': n_trade_days,
+                    'missing_days': n_required,
                     'first_20_missing': [str(d.date()) for d in missing_dates[:20]],
                 }
                 if is_risk:  # 风险池中缺失才记录
                     missing_codes.append(code)
                 continue
 
-            # 该 ETF 在区间交易日内的覆盖
+            # 检查该 ETF 在"前一交易日"集合上是否有 NAV
             nav_dates_set = set(sub[nav_col].tolist())
-            # 区间内有效 NAV 日期（与交易日交集）
-            valid_in_range = trade_days_set & nav_dates_set
-            # 缺失日期（需要的交易日 - 有 NAV 的）
-            missing_in_range = trade_days_set - nav_dates_set
+            # 有效 = 需要的前一交易日 ∩ 有 NAV 的日期
+            valid_in_range = required_nav_dates & nav_dates_set
+            # 缺失 = 需要的前一交易日 - 有 NAV 的日期
+            missing_in_range = required_nav_dates - nav_dates_set
             missing_dates_sorted = sorted(missing_in_range)
 
             # 全部可用 NAV 日期范围
             first_valid = sub[nav_col].min()
             last_valid = sub[nav_col].max()
 
-            coverage = len(valid_in_range) / n_trade_days * 100 if n_trade_days > 0 else 0
+            coverage = len(valid_in_range) / n_required * 100 if n_required > 0 else 0
 
             per_code[code] = {
                 'in_risk_pool': is_risk,
                 'is_defensive': is_defensive,
-                'required_days': n_trade_days,
+                'required_days': n_required,
                 'valid_days': len(valid_in_range),
                 'coverage_pct': round(coverage, 1),
                 'first_valid_date': str(first_valid.date()) if pd.notna(first_valid) else None,
@@ -781,6 +814,8 @@ class QixingParityRunner:
             'nav_mode': self.nav_mode,
             'backtest_range': f"{self.start_date} ~ {self.end_date}",
             'n_trade_days': n_trade_days,
+            'n_required_nav_dates': n_required,
+            'prev_of_first': str(prev_of_first.date()) if prev_of_first else None,
             'risk_pool_size': len(risk_pool),
             'defensive_etf': defensive_etf,
             'total_pool_size': len(all_pool),
@@ -792,6 +827,8 @@ class QixingParityRunner:
 
         # 打印预检摘要
         print(f"\n[NAV_PRECHECK] 模式={self.nav_mode}  区间={self.start_date}~{self.end_date}  交易日数={n_trade_days}")
+        print(f"[NAV_PRECHECK] 策略需要前一交易日 NAV: 首日 {trade_days_ts[0].date()} 的前一交易日 = {prev_of_first.date() if prev_of_first else 'N/A'}")
+        print(f"[NAV_PRECHECK] 需要的 NAV 日期数: {n_required}（含回测首日前一交易日）")
         print(f"[NAV_PRECHECK] 风险池 {len(risk_pool)} 只 + 防御 {defensive_etf} = 总 {len(all_pool)} 只")
         print(f"[NAV_PRECHECK] NAV 覆盖不足（<100%）的风险池 ETF: {len(missing_codes)} 只")
         if missing_codes:
@@ -828,6 +865,8 @@ class QixingParityRunner:
         # Markdown 报告
         md_path = audit_dir / 'NAV_COVERAGE_REPORT.md'
         n_trade_days = report.get('n_trade_days', 'N/A')
+        n_required = report.get('n_required_nav_dates', 'N/A')
+        prev_of_first = report.get('prev_of_first', 'N/A')
         nav_file_exists = report.get('nav_file_exists', True)
         lines = [
             "# NAV 覆盖率预检报告",
@@ -835,13 +874,18 @@ class QixingParityRunner:
             f"> 生成时间：{time.strftime('%Y-%m-%d %H:%M:%S')}",
             f"> 回测区间：{report['backtest_range']}",
             f"> 真实交易日数：{n_trade_days}",
+            f"> 需要的 NAV 日期数：{n_required}（每个交易日 T 需要前一交易日 T-1 的 NAV）",
+            f"> 回测首日的前一交易日：{prev_of_first}",
             f"> NAV 模式：{report['nav_mode']}",
             f"> 风险池大小：{report['risk_pool_size']}",
             f"> 防御 ETF：{report['defensive_etf']}",
             f"> 总池大小：{report['total_pool_size']}",
             f"> NAV 文件存在：{nav_file_exists}",
             "",
-            "## 覆盖率明细（按真实交易日逐日核对）",
+            "## 覆盖率明细（按前一交易日 T-1 逐日核对）",
+            "",
+            "> 策略 get_premium_rate(code, prev_date) 使用前一交易日的 NAV 计算溢价率，",
+            "> 因此预检检查的是每个交易日 T 对应的 T-1 是否有 NAV，而非 T 当天。",
             "",
             "| ETF 代码 | 风险池 | 防御 | 所需天数 | 有效天数 | 覆盖率% | 首个有效日 | 最后有效日 | 缺失天数 | 前 20 个缺失日期 |",
             "|----------|--------|------|---------|---------|---------|-----------|-----------|---------|------------------|",

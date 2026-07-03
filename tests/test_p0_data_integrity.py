@@ -1,15 +1,16 @@
 """P0 数据完整性修复 — 自动化测试
 
-覆盖用户要求的 7 项测试：
+覆盖用户要求的 8 项测试：
 1. parity 模式遇到 NAV 缺失必须报错
 2. realistic 模式遇到 NAV 缺失必须排除候选
 3. legacy_invalid 模式能复现 0 溢价，但结果带 invalid 标记
 4. NAV 预检能发现池内未进入 Top3 的缺失 ETF
 5. Calmar 一年样例
 6. Calmar 两年样例
-7. 2024 原 7 只池 parity 短区间结果不得因本次修复发生变化
+7. 2024 原 7 只池 parity 短区间结果不得因本次修复发生变化（基准值 981257.41）
+8. 当天 NAV 存在、前一交易日 NAV 缺失时，parity 必须停止
 
-注意：测试 1-4、7 需要完整引擎环境，运行时间较长（每条约 30-60 秒）。
+注意：测试 1-4、7-8 需要完整引擎环境，运行时间较长（每条约 30-60 秒）。
 测试 5-6 为纯计算测试，瞬间完成。
 
 运行方式：
@@ -170,9 +171,33 @@ def test_7_original_pool_parity_unchanged():
     # 运行时也应无缺失
     nav_report = res.get('nav_report', {})
     assert nav_report.get('total_missing', 0) == 0, "原 7 只池运行时不应有 NAV 缺失"
-    # 最终权益应与修复前一致（允许微小浮点差异）
-    # 注意：2024-01-02~01-05 的最终权益在修复前后的基准值
-    assert res['final_value'] > 950000, f"最终权益异常: {res['final_value']}"
+    # 最终权益应与修复前基准值一致（允许微小浮点差异 0.01 元）
+    # 基准值 981257.41 来自修复前多次运行的稳定结果
+    assert abs(res['final_value'] - 981257.41) < 0.02, \
+        f"最终权益应与修复前基准 981257.41 一致，实际 {res['final_value']}"
+
+
+# ========== 测试 8：前一交易日 NAV 边界测试 ==========
+
+def test_8_prev_day_nav_missing_aborts():
+    """测试8：当天 NAV 存在、前一交易日 NAV 缺失时，parity 必须停止
+
+    策略 get_premium_rate(code, prev_date) 使用前一交易日的 NAV。
+    NAV 文件从 2023-10-09 开始，若回测从 2023-10-09 开始：
+    - 交易日 T0 = 2023-10-09，需要前一交易日 T-1（如 2023-10-08 或 09-28）
+    - T-1 不在 NAV 文件中（文件从 10-09 开始）
+    - 因此原 7 只池（有 NAV 数据）在 T0 的前一交易日也缺 NAV
+    - parity 模式必须终止
+
+    这验证预检检查的是 T-1 而非 T 当天。
+    """
+    from run_local import QixingParityRunner
+    # 回测从 NAV 文件起始日开始，前一交易日必然在文件外
+    with pytest.raises(RuntimeError, match="NAV_PRECHECK|PARITY"):
+        QixingParityRunner(
+            '2023-10-09', '2023-10-10',
+            nav_mode='parity'  # 默认原 7 只池
+        ).run()
 
 
 if __name__ == '__main__':
@@ -191,6 +216,7 @@ if __name__ == '__main__':
             test_5_calmar_one_year,
             test_6_calmar_two_years,
             test_7_original_pool_parity_unchanged,
+            test_8_prev_day_nav_missing_aborts,
         ]
         for i, tf in enumerate(test_funcs, 1):
             print(f"\n{'=' * 60}")
@@ -198,4 +224,4 @@ if __name__ == '__main__':
             print(f"{'=' * 60}")
             tf()
             print(f"✅ 测试 {i} 通过")
-        print(f"\n🎉 所有 7 项测试通过")
+        print(f"\n🎉 所有 {len(test_funcs)} 项测试通过")
