@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+
+# 临时测试文件
+_test_*.py
+_tmp_*.py
+
+# 对齐阶段的诊断结果（大文件，非配置）
+results/
+
+# 聚宽母版回测数据（非项目配置）
+聚宽回测结果/
+
+# 优化扫描的完整运行数据（仅保留报告 .md）
+qixing_optimize/runs/*/
+qixing_optimize/runs/*.json
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
