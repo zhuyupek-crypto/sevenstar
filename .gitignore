@@ -23,6 +23,10 @@ qixing_optimize/runs/*.json
 !qixing_optimize/runs/clean_rerun/
 !qixing_optimize/runs/clean_rerun/**
 
+# P2 Walk-Forward 验证结果（例外保留）
+!qixing_optimize/runs/walk_forward/
+!qixing_optimize/runs/walk_forward/**
+
 # 系统文件
 .DS_Store
 Thumbs.db
