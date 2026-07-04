@@ -19,6 +19,10 @@ results/
 qixing_optimize/runs/*/
 qixing_optimize/runs/*.json
 
+# P1 干净消融实验结果（例外保留）
+!qixing_optimize/runs/clean_rerun/
+!qixing_optimize/runs/clean_rerun/**
+
 # 系统文件
 .DS_Store
 Thumbs.db

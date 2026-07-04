@@ -130,10 +130,10 @@ def compute_metrics(res, label, elapsed):
     }
 
 
-def run_single(overrides, label, start, end, out_dir, pool='default', score_mode='baseline'):
+def run_single(overrides, label, start, end, out_dir, pool='default', score_mode='baseline', nav_mode='parity'):
     """运行单次回测并保存结果"""
     print(f"\n{'=' * 60}")
-    print(f"[SWEEP] {label}  区间: {start} ~ {end}  池: {pool}  得分: {score_mode}")
+    print(f"[SWEEP] {label}  区间: {start} ~ {end}  池: {pool}  得分: {score_mode}  nav: {nav_mode}")
     print(f"[SWEEP] overrides: {overrides}")
     print(f"{'=' * 60}")
 
@@ -142,7 +142,8 @@ def run_single(overrides, label, start, end, out_dir, pool='default', score_mode
     if pool == 'bak':
         extra_overrides['etf_pool'] = list(POOL_BAK)
 
-    runner = QixingParityRunner(start, end, param_overrides=extra_overrides, score_mode=score_mode)
+    runner = QixingParityRunner(start, end, param_overrides=extra_overrides,
+                                score_mode=score_mode, nav_mode=nav_mode)
     t0 = time.monotonic()
     try:
         res = runner.run()
@@ -273,7 +274,8 @@ def mode_pool(args):
     out_dir.mkdir(parents=True, exist_ok=True)
 
     label = f'pool={args.pool}'
-    m = run_single(dict(BASELINE), label, args.start, args.end, out_dir, pool=args.pool)
+    m = run_single(dict(BASELINE), label, args.start, args.end, out_dir,
+                   pool=args.pool, nav_mode=args.nav_mode)
     return [m] if m else []
 
 
@@ -284,7 +286,7 @@ def mode_score(args):
 
     label = f'score_mode={args.score_mode},pool={args.pool}'
     m = run_single(dict(BASELINE), label, args.start, args.end, out_dir,
-                   pool=args.pool, score_mode=args.score_mode)
+                   pool=args.pool, score_mode=args.score_mode, nav_mode=args.nav_mode)
     return [m] if m else []
 
 
@@ -300,6 +302,8 @@ def main():
     parser.add_argument('--score-mode', choices=['baseline', 'multi_period', 'vol_adjusted'],
                         default='baseline', help='得分模式')
     parser.add_argument('--out', default=None, help='输出目录（默认: qixing_optimize/runs）')
+    parser.add_argument('--nav-mode', choices=['parity', 'realistic', 'legacy_invalid'],
+                        default='parity', help='NAV 缺失处理模式（默认: parity）')
     args = parser.parse_args()
 
     out_root = Path(args.out) if args.out else (ROOT / 'qixing_optimize' / 'runs')
