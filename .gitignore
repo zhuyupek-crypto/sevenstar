@@ -31,6 +31,10 @@ qixing_optimize/runs/*.json
 !qixing_optimize/runs/attribution/
 !qixing_optimize/runs/attribution/**
 
+# P3 因子论证结果（例外保留）
+!qixing_optimize/runs/factor_validation/
+!qixing_optimize/runs/factor_validation/**
+
 # 系统文件
 .DS_Store
 Thumbs.db
