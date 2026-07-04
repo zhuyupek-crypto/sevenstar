@@ -4636,5 +4636,9 @@
     "buy_count": 53,
     "sell_count": 52,
     "elapsed_s": 1262.7
-  }
+  },
+  "start": "2024-01-02",
+  "end": "2024-12-31",
+  "window": "2024",
+  "group": "B"
 }
