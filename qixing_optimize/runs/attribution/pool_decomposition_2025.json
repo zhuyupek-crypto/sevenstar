@@ -1,0 +1,50 @@
+{
+  "A": {
+    "default_pool_pnl": 1369605.76,
+    "bak_only_pnl": 0,
+    "default_pool_cost": 59140919.71,
+    "bak_only_cost": 0,
+    "default_pool_n_trades": 47,
+    "bak_only_n_trades": 0,
+    "default_pool_return_pct": 2.32,
+    "bak_only_return_pct": 0,
+    "n_default_etfs": 8,
+    "n_bak_only_etfs": 0
+  },
+  "B": {
+    "default_pool_pnl": 1370187.01,
+    "bak_only_pnl": 0,
+    "default_pool_cost": 58570232.01,
+    "bak_only_cost": 0,
+    "default_pool_n_trades": 46,
+    "bak_only_n_trades": 0,
+    "default_pool_return_pct": 2.34,
+    "bak_only_return_pct": 0,
+    "n_default_etfs": 8,
+    "n_bak_only_etfs": 0
+  },
+  "C": {
+    "default_pool_pnl": 759114.42,
+    "bak_only_pnl": 563573.83,
+    "default_pool_cost": 27686734.36,
+    "bak_only_cost": 78454114.89,
+    "default_pool_n_trades": 21,
+    "bak_only_n_trades": 55,
+    "default_pool_return_pct": 2.74,
+    "bak_only_return_pct": 0.72,
+    "n_default_etfs": 7,
+    "n_bak_only_etfs": 17
+  },
+  "D": {
+    "default_pool_pnl": 843884.47,
+    "bak_only_pnl": 682318.22,
+    "default_pool_cost": 26550315.1,
+    "bak_only_cost": 79154778.05,
+    "default_pool_n_trades": 20,
+    "bak_only_n_trades": 54,
+    "default_pool_return_pct": 3.18,
+    "bak_only_return_pct": 0.86,
+    "n_default_etfs": 7,
+    "n_bak_only_etfs": 17
+  }
+}

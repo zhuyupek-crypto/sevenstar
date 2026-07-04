@@ -1,0 +1,101 @@
+[
+  {
+    "month": "2023-01",
+    "label": "D_2023",
+    "realized_pnl": 3610.75,
+    "unrealized_pnl": 0,
+    "total_pnl": 3610.75,
+    "n_closed": 4,
+    "n_open": 0
+  },
+  {
+    "month": "2023-02",
+    "label": "D_2023",
+    "realized_pnl": -42623.75,
+    "unrealized_pnl": 0,
+    "total_pnl": -42623.75,
+    "n_closed": 6,
+    "n_open": 0
+  },
+  {
+    "month": "2023-03",
+    "label": "D_2023",
+    "realized_pnl": -6623.58,
+    "unrealized_pnl": 0,
+    "total_pnl": -6623.58,
+    "n_closed": 3,
+    "n_open": 0
+  },
+  {
+    "month": "2023-04",
+    "label": "D_2023",
+    "realized_pnl": 20222.45,
+    "unrealized_pnl": 0,
+    "total_pnl": 20222.45,
+    "n_closed": 4,
+    "n_open": 0
+  },
+  {
+    "month": "2023-05",
+    "label": "D_2023",
+    "realized_pnl": 7548.71,
+    "unrealized_pnl": 0,
+    "total_pnl": 7548.71,
+    "n_closed": 4,
+    "n_open": 0
+  },
+  {
+    "month": "2023-06",
+    "label": "D_2023",
+    "realized_pnl": 133507.56,
+    "unrealized_pnl": 0,
+    "total_pnl": 133507.56,
+    "n_closed": 1,
+    "n_open": 0
+  },
+  {
+    "month": "2023-08",
+    "label": "D_2023",
+    "realized_pnl": 176727.89,
+    "unrealized_pnl": 0,
+    "total_pnl": 176727.89,
+    "n_closed": 4,
+    "n_open": 0
+  },
+  {
+    "month": "2023-09",
+    "label": "D_2023",
+    "realized_pnl": -40244.35,
+    "unrealized_pnl": 0,
+    "total_pnl": -40244.35,
+    "n_closed": 9,
+    "n_open": 0
+  },
+  {
+    "month": "2023-10",
+    "label": "D_2023",
+    "realized_pnl": -137138.31,
+    "unrealized_pnl": 0,
+    "total_pnl": -137138.31,
+    "n_closed": 7,
+    "n_open": 0
+  },
+  {
+    "month": "2023-11",
+    "label": "D_2023",
+    "realized_pnl": -13932.77,
+    "unrealized_pnl": 0,
+    "total_pnl": -13932.77,
+    "n_closed": 4,
+    "n_open": 0
+  },
+  {
+    "month": "2023-12",
+    "label": "D_2023",
+    "realized_pnl": 24667.9,
+    "unrealized_pnl": 35397.86,
+    "total_pnl": 60065.76,
+    "n_closed": 2,
+    "n_open": 1
+  }
+]

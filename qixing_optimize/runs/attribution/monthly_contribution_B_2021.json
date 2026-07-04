@@ -1,0 +1,110 @@
+[
+  {
+    "month": "2021-01",
+    "label": "B_2021",
+    "realized_pnl": -61687.09,
+    "unrealized_pnl": 0,
+    "total_pnl": -61687.09,
+    "n_closed": 5,
+    "n_open": 0
+  },
+  {
+    "month": "2021-02",
+    "label": "B_2021",
+    "realized_pnl": -11451.6,
+    "unrealized_pnl": 0,
+    "total_pnl": -11451.6,
+    "n_closed": 2,
+    "n_open": 0
+  },
+  {
+    "month": "2021-03",
+    "label": "B_2021",
+    "realized_pnl": 34903.96,
+    "unrealized_pnl": 0,
+    "total_pnl": 34903.96,
+    "n_closed": 3,
+    "n_open": 0
+  },
+  {
+    "month": "2021-04",
+    "label": "B_2021",
+    "realized_pnl": -11282.13,
+    "unrealized_pnl": 0,
+    "total_pnl": -11282.13,
+    "n_closed": 3,
+    "n_open": 0
+  },
+  {
+    "month": "2021-05",
+    "label": "B_2021",
+    "realized_pnl": 1039.94,
+    "unrealized_pnl": 0,
+    "total_pnl": 1039.94,
+    "n_closed": 2,
+    "n_open": 0
+  },
+  {
+    "month": "2021-06",
+    "label": "B_2021",
+    "realized_pnl": 29468.95,
+    "unrealized_pnl": 0,
+    "total_pnl": 29468.95,
+    "n_closed": 3,
+    "n_open": 0
+  },
+  {
+    "month": "2021-07",
+    "label": "B_2021",
+    "realized_pnl": -17937.01,
+    "unrealized_pnl": 0,
+    "total_pnl": -17937.01,
+    "n_closed": 3,
+    "n_open": 0
+  },
+  {
+    "month": "2021-08",
+    "label": "B_2021",
+    "realized_pnl": -19643.03,
+    "unrealized_pnl": 0,
+    "total_pnl": -19643.03,
+    "n_closed": 6,
+    "n_open": 0
+  },
+  {
+    "month": "2021-09",
+    "label": "B_2021",
+    "realized_pnl": 89066.09,
+    "unrealized_pnl": 0,
+    "total_pnl": 89066.09,
+    "n_closed": 3,
+    "n_open": 0
+  },
+  {
+    "month": "2021-10",
+    "label": "B_2021",
+    "realized_pnl": 72211.31,
+    "unrealized_pnl": 0,
+    "total_pnl": 72211.31,
+    "n_closed": 1,
+    "n_open": 0
+  },
+  {
+    "month": "2021-11",
+    "label": "B_2021",
+    "realized_pnl": 29860.11,
+    "unrealized_pnl": 0,
+    "total_pnl": 29860.11,
+    "n_closed": 2,
+    "n_open": 0
+  },
+  {
+    "month": "2021-12",
+    "label": "B_2021",
+    "realized_pnl": -8284.03,
+    "unrealized_pnl": 6268.65,
+    "total_pnl": -2015.38,
+    "n_closed": 7,
+    "n_open": 1
+  }
+]

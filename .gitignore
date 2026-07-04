@@ -27,6 +27,10 @@ qixing_optimize/runs/*.json
 !qixing_optimize/runs/walk_forward/
 !qixing_optimize/runs/walk_forward/**
 
+# P3 归因结果（例外保留）
+!qixing_optimize/runs/attribution/
+!qixing_optimize/runs/attribution/**
+
 # 系统文件
 .DS_Store
 Thumbs.db

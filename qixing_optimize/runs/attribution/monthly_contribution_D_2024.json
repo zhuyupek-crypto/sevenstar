@@ -1,0 +1,101 @@
+[
+  {
+    "month": "2024-01",
+    "label": "D_2024",
+    "realized_pnl": 213628.6,
+    "unrealized_pnl": 0,
+    "total_pnl": 213628.6,
+    "n_closed": 7,
+    "n_open": 0
+  },
+  {
+    "month": "2024-03",
+    "label": "D_2024",
+    "realized_pnl": 110251.79,
+    "unrealized_pnl": 0,
+    "total_pnl": 110251.79,
+    "n_closed": 7,
+    "n_open": 0
+  },
+  {
+    "month": "2024-04",
+    "label": "D_2024",
+    "realized_pnl": 23308.44,
+    "unrealized_pnl": 0,
+    "total_pnl": 23308.44,
+    "n_closed": 3,
+    "n_open": 0
+  },
+  {
+    "month": "2024-05",
+    "label": "D_2024",
+    "realized_pnl": 2744.24,
+    "unrealized_pnl": 0,
+    "total_pnl": 2744.24,
+    "n_closed": 5,
+    "n_open": 0
+  },
+  {
+    "month": "2024-06",
+    "label": "D_2024",
+    "realized_pnl": 183326.89,
+    "unrealized_pnl": 0,
+    "total_pnl": 183326.89,
+    "n_closed": 3,
+    "n_open": 0
+  },
+  {
+    "month": "2024-07",
+    "label": "D_2024",
+    "realized_pnl": -27215.23,
+    "unrealized_pnl": 0,
+    "total_pnl": -27215.23,
+    "n_closed": 10,
+    "n_open": 0
+  },
+  {
+    "month": "2024-08",
+    "label": "D_2024",
+    "realized_pnl": -41094.53,
+    "unrealized_pnl": 0,
+    "total_pnl": -41094.53,
+    "n_closed": 6,
+    "n_open": 0
+  },
+  {
+    "month": "2024-09",
+    "label": "D_2024",
+    "realized_pnl": 372620.28,
+    "unrealized_pnl": 0,
+    "total_pnl": 372620.28,
+    "n_closed": 10,
+    "n_open": 0
+  },
+  {
+    "month": "2024-10",
+    "label": "D_2024",
+    "realized_pnl": -107911.35,
+    "unrealized_pnl": 0,
+    "total_pnl": -107911.35,
+    "n_closed": 10,
+    "n_open": 0
+  },
+  {
+    "month": "2024-11",
+    "label": "D_2024",
+    "realized_pnl": 245100.43,
+    "unrealized_pnl": 0,
+    "total_pnl": 245100.43,
+    "n_closed": 9,
+    "n_open": 0
+  },
+  {
+    "month": "2024-12",
+    "label": "D_2024",
+    "realized_pnl": 272251.7,
+    "unrealized_pnl": -2935.0,
+    "total_pnl": 269316.7,
+    "n_closed": 13,
+    "n_open": 1
+  }
+]
