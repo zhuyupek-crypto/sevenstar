@@ -1,0 +1,268 @@
+{
+  "n_total_days": 1560,
+  "n_features": 40,
+  "n_targets": 17,
+  "feature_coverage": {
+    "c8d_dd_20d": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "c8d_dd_60d": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "c8d_dd_120d": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "o7_dd_20d": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "o7_dd_60d": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "o7_dd_120d": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "dd_diff_60d": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "dd_diff_120d": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "c8d_vol_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "o7_vol_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "vol_ratio_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "c8d_vol_expansion": {
+      "n_valid": 1500,
+      "coverage_pct": 96.15
+    },
+    "o7_vol_expansion": {
+      "n_valid": 1500,
+      "coverage_pct": 96.15
+    },
+    "vol_expansion_diff": {
+      "n_valid": 1500,
+      "coverage_pct": 96.15
+    },
+    "c8d_internal_dispersion_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "o7_internal_dispersion_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "dispersion_diff": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "union_dispersion_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "top1_minus_median_union_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "top1_minus_median_c8d_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "top1_minus_median_o7_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "c8d_internal_corr_60d": {
+      "n_valid": 1500,
+      "coverage_pct": 96.15
+    },
+    "o7_internal_corr_60d": {
+      "n_valid": 1500,
+      "coverage_pct": 96.15
+    },
+    "corr_diff_60d": {
+      "n_valid": 1500,
+      "coverage_pct": 96.15
+    },
+    "cross_pool_corr_60d": {
+      "n_valid": 1500,
+      "coverage_pct": 96.15
+    },
+    "c8d_efficiency_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "o7_efficiency_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "efficiency_diff": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "c8d_up_day_ratio_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "o7_up_day_ratio_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "up_day_ratio_diff": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "c8d_max_day_contrib_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "o7_max_day_contrib_20d": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "max_day_contrib_diff": {
+      "n_valid": 1540,
+      "coverage_pct": 98.72
+    },
+    "c8d_amt_mean_20d": {
+      "n_valid": 1541,
+      "coverage_pct": 98.78
+    },
+    "o7_amt_mean_20d": {
+      "n_valid": 1541,
+      "coverage_pct": 98.78
+    },
+    "amt_ratio_20d": {
+      "n_valid": 1541,
+      "coverage_pct": 98.78
+    },
+    "c8d_amt_change": {
+      "n_valid": 1501,
+      "coverage_pct": 96.22
+    },
+    "o7_amt_change": {
+      "n_valid": 1501,
+      "coverage_pct": 96.22
+    },
+    "amt_change_diff": {
+      "n_valid": 1501,
+      "coverage_pct": 96.22
+    }
+  },
+  "target_coverage": {
+    "o7_value": {
+      "n_valid": 1560,
+      "coverage_pct": 100.0
+    },
+    "c8d_value": {
+      "n_valid": 1560,
+      "coverage_pct": 100.0
+    },
+    "o7_ret": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "c8d_ret": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "future_o7_5d": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "future_c8d_5d": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "target_excess_5d": {
+      "n_valid": 1559,
+      "coverage_pct": 99.94
+    },
+    "target_win_5d": {
+      "n_valid": 1560,
+      "coverage_pct": 100.0
+    },
+    "future_o7_20d": {
+      "n_valid": 1549,
+      "coverage_pct": 99.29
+    },
+    "future_c8d_20d": {
+      "n_valid": 1549,
+      "coverage_pct": 99.29
+    },
+    "target_excess_20d": {
+      "n_valid": 1549,
+      "coverage_pct": 99.29
+    },
+    "target_win_20d": {
+      "n_valid": 1560,
+      "coverage_pct": 100.0
+    },
+    "future_o7_60d": {
+      "n_valid": 1509,
+      "coverage_pct": 96.73
+    },
+    "future_c8d_60d": {
+      "n_valid": 1509,
+      "coverage_pct": 96.73
+    },
+    "target_excess_60d": {
+      "n_valid": 1509,
+      "coverage_pct": 96.73
+    },
+    "target_win_60d": {
+      "n_valid": 1560,
+      "coverage_pct": 100.0
+    }
+  },
+  "window_distribution": {
+    "2020": 243,
+    "2021": 243,
+    "2022": 242,
+    "2023": 242,
+    "2024": 242,
+    "2025": 243,
+    "2026H1": 105
+  },
+  "future_return_method": "roll.shift(-(N-1)) -> T to T+N-1 累计收益 (P3-02 修正版)",
+  "pool_o7": [
+    "518880.XSHG",
+    "159985.XSHE",
+    "501018.XSHG",
+    "161226.XSHE",
+    "513100.XSHG",
+    "159915.XSHE",
+    "511220.XSHG"
+  ],
+  "pool_c8d": [
+    "518880.XSHG",
+    "159915.XSHE",
+    "510300.XSHG",
+    "510500.XSHG",
+    "510050.XSHG",
+    "513100.XSHG",
+    "511220.XSHG",
+    "159985.XSHE"
+  ],
+  "n_days_list": [
+    5,
+    20,
+    60
+  ],
+  "primary_n": 20
+}

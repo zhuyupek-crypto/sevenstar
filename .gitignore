@@ -43,6 +43,10 @@ qixing_optimize/runs/*.json
 !qixing_optimize/runs/p4_01_core_pool_validation/
 !qixing_optimize/runs/p4_01_core_pool_validation/**
 
+# P4-02 非动量预测力验证结果（例外保留）
+!qixing_optimize/runs/p4_02_non_momentum_predictive_validation/
+!qixing_optimize/runs/p4_02_non_momentum_predictive_validation/**
+
 # 系统文件
 .DS_Store
 Thumbs.db
