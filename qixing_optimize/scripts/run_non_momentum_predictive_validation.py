@@ -218,7 +218,12 @@ def build_target_panel(o7_nav, c8d_nav):
 # 4. 构建特征面板（feature_panel）
 # ============================================================
 def build_feature_panel(data):
-    """构建 6 类非动量特征变量（T 可计算，target 用未来收益，无前视偏差）"""
+    """构建 6 类非动量特征变量（T-1 可计算，target 用 T~T+N-1 未来收益）
+
+    所有特征用 T 日及以前数据计算，最后统一 shift(1)，使得 feature_panel.loc[T]
+    只使用截至 T-1 的 close/amount/return/corr/dd/vol/efficiency 信息，
+    严格匹配 target_panel.loc[T] 的 T~T+N-1 未来收益，避免同日信息污染。
+    """
     close = data['close']
     amount = data['amount']
 
@@ -347,6 +352,11 @@ def build_feature_panel(data):
     features['c8d_amt_change'] = features['c8d_amt_mean_20d'] / c8d_amt_60d.replace(0, np.nan) - 1
     features['o7_amt_change'] = features['o7_amt_mean_20d'] / o7_amt_60d.replace(0, np.nan) - 1
     features['amt_change_diff'] = features['c8d_amt_change'] - features['o7_amt_change']
+
+    # === T-1 严格口径：所有特征统一 shift(1) ===
+    # feature_panel.loc[T] 只使用截至 T-1 的数据，与 target_panel.loc[T] 的 T~T+N-1 未来收益匹配
+    # 避免同日信息污染（feature[T] 不再包含 T 日 close/amount/return）
+    features = features.shift(1)
 
     return features
 
