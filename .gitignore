@@ -51,6 +51,10 @@ qixing_optimize/runs/*.json
 !qixing_optimize/runs/p4_03_reverse_causality_cost_validation/
 !qixing_optimize/runs/p4_03_reverse_causality_cost_validation/**
 
+# P4-04 低频切换框架验证结果（例外保留）
+!qixing_optimize/runs/p4_04_low_frequency_switch_validation/
+!qixing_optimize/runs/p4_04_low_frequency_switch_validation/**
+
 # 系统文件
 .DS_Store
 Thumbs.db

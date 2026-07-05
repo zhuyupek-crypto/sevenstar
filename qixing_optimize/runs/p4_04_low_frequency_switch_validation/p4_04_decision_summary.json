@@ -1,0 +1,210 @@
+{
+  "pass_results_mid_cost": [
+    {
+      "strategy": "A1_relative_monthly_mid_cost",
+      "framework": "A1_relative_monthly",
+      "cost_scenario": "mid",
+      "pass_criteria": {
+        "1_total_return_gt_o7": "False",
+        "2_5of7_windows_win_o7": false,
+        "3_max_dd_le_o7": "True",
+        "4_dd_le_20_ge_o7": true,
+        "5_annual_switch_le_12": "True",
+        "6_no_2024_drag": true,
+        "7_no_2026_drag": true,
+        "8_high_cost_not_obviously_lose": null,
+        "9_total_cost_economically_meaningful": "True",
+        "10_logic_explainable_not_single_year": "True"
+      },
+      "all_pass": false,
+      "total_return": 0.45208160970162226,
+      "excess_vs_o7": -0.15562383633435406,
+      "annual_switches": 8.076923076923077,
+      "n_windows_beat_o7": 0
+    },
+    {
+      "strategy": "A2_corr_monthly_mid_cost",
+      "framework": "A2_corr_monthly",
+      "cost_scenario": "mid",
+      "pass_criteria": {
+        "1_total_return_gt_o7": "False",
+        "2_5of7_windows_win_o7": false,
+        "3_max_dd_le_o7": "True",
+        "4_dd_le_20_ge_o7": true,
+        "5_annual_switch_le_12": "True",
+        "6_no_2024_drag": true,
+        "7_no_2026_drag": true,
+        "8_high_cost_not_obviously_lose": null,
+        "9_total_cost_economically_meaningful": "True",
+        "10_logic_explainable_not_single_year": "True"
+      },
+      "all_pass": false,
+      "total_return": 0.5698094839759669,
+      "excess_vs_o7": -0.03789596206000945,
+      "annual_switches": 2.5846153846153843,
+      "n_windows_beat_o7": 0
+    },
+    {
+      "strategy": "B1_dual_monthly_mid_cost",
+      "framework": "B1_dual_monthly",
+      "cost_scenario": "mid",
+      "pass_criteria": {
+        "1_total_return_gt_o7": "False",
+        "2_5of7_windows_win_o7": false,
+        "3_max_dd_le_o7": "True",
+        "4_dd_le_20_ge_o7": true,
+        "5_annual_switch_le_12": "True",
+        "6_no_2024_drag": true,
+        "7_no_2026_drag": true,
+        "8_high_cost_not_obviously_lose": null,
+        "9_total_cost_economically_meaningful": "True",
+        "10_logic_explainable_not_single_year": "True"
+      },
+      "all_pass": false,
+      "total_return": 0.6014384661301919,
+      "excess_vs_o7": -0.006266979905784398,
+      "annual_switches": 1.2923076923076922,
+      "n_windows_beat_o7": 0
+    },
+    {
+      "strategy": "C1_dual_quarterly_mid_cost",
+      "framework": "C1_dual_quarterly",
+      "cost_scenario": "mid",
+      "pass_criteria": {
+        "1_total_return_gt_o7": false,
+        "2_5of7_windows_win_o7": false,
+        "3_max_dd_le_o7": "True",
+        "4_dd_le_20_ge_o7": true,
+        "5_annual_switch_le_12": "True",
+        "6_no_2024_drag": true,
+        "7_no_2026_drag": true,
+        "8_high_cost_not_obviously_lose": null,
+        "9_total_cost_economically_meaningful": "True",
+        "10_logic_explainable_not_single_year": "False"
+      },
+      "all_pass": false,
+      "total_return": 0.607705446035987,
+      "excess_vs_o7": 1.0658141036401503e-14,
+      "annual_switches": 0.0,
+      "n_windows_beat_o7": 0
+    }
+  ],
+  "high_cost_check": [
+    {
+      "strategy": "A1_relative_monthly_high_cost",
+      "framework": "A1_relative_monthly",
+      "high_total_return": 0.33343078271746807,
+      "o7_total_return": 0.6077054460359763,
+      "return_ratio_vs_o7": 0.5486717041823728,
+      "return_passes_95pct": "False",
+      "high_max_dd": -0.5967929679097411,
+      "o7_max_dd": -0.5967929679097411,
+      "dd_passes_threshold": true
+    },
+    {
+      "strategy": "A2_corr_monthly_high_cost",
+      "framework": "A2_corr_monthly",
+      "high_total_return": 0.52756737031036,
+      "o7_total_return": 0.6077054460359763,
+      "return_ratio_vs_o7": 0.8681300681961108,
+      "return_passes_95pct": "False",
+      "high_max_dd": -0.596792967909741,
+      "o7_max_dd": -0.5967929679097411,
+      "dd_passes_threshold": true
+    },
+    {
+      "strategy": "B1_dual_monthly_high_cost",
+      "framework": "B1_dual_monthly",
+      "high_total_return": 0.5797449225729474,
+      "o7_total_return": 0.6077054460359763,
+      "return_ratio_vs_o7": 0.9539900067616415,
+      "return_passes_95pct": "True",
+      "high_max_dd": -0.5967929679097411,
+      "o7_max_dd": -0.5967929679097411,
+      "dd_passes_threshold": true
+    },
+    {
+      "strategy": "C1_dual_quarterly_high_cost",
+      "framework": "C1_dual_quarterly",
+      "high_total_return": 0.607705446035987,
+      "o7_total_return": 0.6077054460359763,
+      "return_ratio_vs_o7": 1.0000000000000175,
+      "return_passes_95pct": "True",
+      "high_max_dd": -0.5967929679097411,
+      "o7_max_dd": -0.5967929679097411,
+      "dd_passes_threshold": true
+    }
+  ],
+  "stop_conditions": [
+    {
+      "stop_condition": "1. 无方案全区间跑赢 O7_baseline（排除零切换）",
+      "triggered": true
+    },
+    {
+      "stop_condition": "2. 无方案达到 5/7 窗口跑赢 O7（排除零切换）",
+      "triggered": true
+    },
+    {
+      "stop_condition": "4. 年化切换 ≤12 且有切换的方案无一个跑赢 O7",
+      "triggered": true
+    },
+    {
+      "stop_condition": "5. 所有方案 2024 都明显拖累",
+      "triggered": false
+    },
+    {
+      "stop_condition": "6. 所有方案 2026H1 都明显拖累",
+      "triggered": false
+    },
+    {
+      "stop_condition": "7. 高成本档全部失效",
+      "triggered": false
+    },
+    {
+      "stop_condition": "8. 所有方案最大回撤比 O7_baseline 更差",
+      "triggered": false
+    }
+  ],
+  "any_stop_triggered": true,
+  "any_strategy_all_pass": false,
+  "final_recommendation": "stop_pool_switch_research",
+  "final_baseline": "O7_baseline",
+  "o7_baseline_all_metrics": {
+    "total_return": 0.6077054460359763,
+    "annual_return": 0.07971784199435317,
+    "max_drawdown": -0.5967929679097411,
+    "sharpe": 0.46824864813626915,
+    "calmar": 0.13357704644805682,
+    "final_nav": 1.6077054460359763,
+    "n_trade_days": "1560",
+    "n_switches": "0",
+    "annual_switches": 0.0,
+    "avg_hold_days": 1560.0,
+    "median_hold_days": 1560.0,
+    "total_cost_pct": 0.0,
+    "total_return_no_cost": 0.6077054460359763,
+    "strategy": "O7_baseline",
+    "framework": "baseline",
+    "cost_scenario": "n/a",
+    "window": "all"
+  },
+  "c8d_baseline_all_metrics": {
+    "total_return": 0.22149149363483533,
+    "annual_return": 0.03284737270472804,
+    "max_drawdown": -0.49127174615874813,
+    "sharpe": 0.3071458349645775,
+    "calmar": 0.06686192104789562,
+    "final_nav": 1.2214914936348353,
+    "n_trade_days": "1560",
+    "n_switches": "0",
+    "annual_switches": 0.0,
+    "avg_hold_days": 1560.0,
+    "median_hold_days": 1560.0,
+    "total_cost_pct": 0.0,
+    "total_return_no_cost": 0.22149149363483533,
+    "strategy": "C8D_baseline",
+    "framework": "baseline",
+    "cost_scenario": "n/a",
+    "window": "all"
+  }
+}
