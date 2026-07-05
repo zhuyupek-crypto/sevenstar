@@ -35,6 +35,10 @@ qixing_optimize/runs/*.json
 !qixing_optimize/runs/factor_validation/
 !qixing_optimize/runs/factor_validation/**
 
+# P3-03 池审计结果（例外保留）
+!qixing_optimize/runs/p3_03_pool_audit/
+!qixing_optimize/runs/p3_03_pool_audit/**
+
 # 系统文件
 .DS_Store
 Thumbs.db

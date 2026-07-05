@@ -1,0 +1,2168 @@
+[
+  {
+    "code": "518880.XSHG",
+    "theme": "黄金",
+    "theme_category": "商品/贵金属",
+    "is_original_risk": true,
+    "is_defensive": false,
+    "is_bak_only": false,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1559,
+    "data_coverage": 99.94,
+    "amt_mean_yuan": 1961097.0,
+    "amt_median_yuan": 1266825.0,
+    "vol_annual_pct": 17.35,
+    "max_dd_pct": -28.55,
+    "yearly": {
+      "2020": {
+        "return_pct": 14.24,
+        "max_dd_pct": -17.13,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": -6.64,
+        "max_dd_pct": -11.42,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": 10.11,
+        "max_dd_pct": -11.38,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": 16.58,
+        "max_dd_pct": -5.35,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 27.05,
+        "max_dd_pct": -7.49,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 55.61,
+        "max_dd_pct": -11.53,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": -8.8,
+        "max_dd_pct": -28.55,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "159985.XSHE",
+    "theme": "豆粕",
+    "theme_category": "商品/贵金属",
+    "is_original_risk": true,
+    "is_defensive": false,
+    "is_bak_only": false,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1560,
+    "data_coverage": 100.0,
+    "amt_mean_yuan": 149510.0,
+    "amt_median_yuan": 59440.0,
+    "vol_annual_pct": 19.72,
+    "max_dd_pct": -26.6,
+    "yearly": {
+      "2020": {
+        "return_pct": 28.64,
+        "max_dd_pct": -9.4,
+        "n_days": 243
+      },
+      "2021": {
+        "return_pct": -4.39,
+        "max_dd_pct": -19.49,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": 61.45,
+        "max_dd_pct": -12.49,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": 8.34,
+        "max_dd_pct": -15.2,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": -14.43,
+        "max_dd_pct": -25.63,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 5.87,
+        "max_dd_pct": -7.32,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 3.12,
+        "max_dd_pct": -14.69,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "501018.XSHG",
+    "theme": "原油",
+    "theme_category": "能源",
+    "is_original_risk": true,
+    "is_defensive": false,
+    "is_bak_only": false,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1557,
+    "data_coverage": 99.81,
+    "amt_mean_yuan": 103561.0,
+    "amt_median_yuan": 13256.0,
+    "vol_annual_pct": 34.52,
+    "max_dd_pct": -62.47,
+    "yearly": {
+      "2020": {
+        "return_pct": -50.68,
+        "max_dd_pct": -62.47,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": 53.25,
+        "max_dd_pct": -14.7,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": 36.67,
+        "max_dd_pct": -28.46,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -5.07,
+        "max_dd_pct": -20.45,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 6.12,
+        "max_dd_pct": -15.77,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": -11.73,
+        "max_dd_pct": -24.01,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 83.7,
+        "max_dd_pct": -27.05,
+        "n_days": 103
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "161226.XSHE",
+    "theme": "白银",
+    "theme_category": "商品/贵金属",
+    "is_original_risk": true,
+    "is_defensive": false,
+    "is_bak_only": false,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1558,
+    "data_coverage": 99.87,
+    "amt_mean_yuan": 119897.0,
+    "amt_median_yuan": 36664.0,
+    "vol_annual_pct": 34.96,
+    "max_dd_pct": -65.03,
+    "yearly": {
+      "2020": {
+        "return_pct": 8.03,
+        "max_dd_pct": -34.18,
+        "n_days": 243
+      },
+      "2021": {
+        "return_pct": -25.39,
+        "max_dd_pct": -29.9,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": 2.38,
+        "max_dd_pct": -25.58,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": 3.13,
+        "max_dd_pct": -11.8,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 15.07,
+        "max_dd_pct": -18.96,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 151.79,
+        "max_dd_pct": -27.76,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": -19.9,
+        "max_dd_pct": -65.03,
+        "n_days": 103
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "513100.XSHG",
+    "theme": "纳指",
+    "theme_category": "海外科技",
+    "is_original_risk": true,
+    "is_defensive": false,
+    "is_bak_only": false,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1558,
+    "data_coverage": 99.87,
+    "amt_mean_yuan": 417312.0,
+    "amt_median_yuan": 326675.0,
+    "vol_annual_pct": 25.15,
+    "max_dd_pct": -28.57,
+    "yearly": {
+      "2020": {
+        "return_pct": 35.03,
+        "max_dd_pct": -28.57,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": 23.79,
+        "max_dd_pct": -8.79,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -26.07,
+        "max_dd_pct": -25.4,
+        "n_days": 241
+      },
+      "2023": {
+        "return_pct": 50.5,
+        "max_dd_pct": -9.8,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 34.63,
+        "max_dd_pct": -17.92,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 15.89,
+        "max_dd_pct": -23.79,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 12.02,
+        "max_dd_pct": -13.04,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "159915.XSHE",
+    "theme": "创业板",
+    "theme_category": "A股成长",
+    "is_original_risk": true,
+    "is_defensive": false,
+    "is_bak_only": false,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1559,
+    "data_coverage": 99.94,
+    "amt_mean_yuan": 2003303.0,
+    "amt_median_yuan": 1220687.0,
+    "vol_annual_pct": 30.9,
+    "max_dd_pct": -56.58,
+    "yearly": {
+      "2020": {
+        "return_pct": 62.38,
+        "max_dd_pct": -19.74,
+        "n_days": 243
+      },
+      "2021": {
+        "return_pct": 8.13,
+        "max_dd_pct": -22.78,
+        "n_days": 242
+      },
+      "2022": {
+        "return_pct": -27.74,
+        "max_dd_pct": -32.01,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -19.53,
+        "max_dd_pct": -30.82,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 16.39,
+        "max_dd_pct": -25.5,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 57.8,
+        "max_dd_pct": -20.72,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 17.22,
+        "max_dd_pct": -7.67,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "511220.XSHG",
+    "theme": "城投债",
+    "theme_category": "债券/固收",
+    "is_original_risk": true,
+    "is_defensive": false,
+    "is_bak_only": false,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1559,
+    "data_coverage": 99.94,
+    "amt_mean_yuan": 292176.0,
+    "amt_median_yuan": 158886.0,
+    "vol_annual_pct": 2.08,
+    "max_dd_pct": -4.28,
+    "yearly": {
+      "2020": {
+        "return_pct": 2.68,
+        "max_dd_pct": -2.84,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": 5.57,
+        "max_dd_pct": -0.56,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": 2.18,
+        "max_dd_pct": -2.33,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": 5.74,
+        "max_dd_pct": -2.36,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 4.19,
+        "max_dd_pct": -2.05,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 1.53,
+        "max_dd_pct": -1.13,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 1.59,
+        "max_dd_pct": -0.47,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "159980.XSHE",
+    "theme": "有色金属",
+    "theme_category": "商品/贵金属",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1560,
+    "data_coverage": 100.0,
+    "amt_mean_yuan": 134248.0,
+    "amt_median_yuan": 57683.0,
+    "vol_annual_pct": 18.9,
+    "max_dd_pct": -32.86,
+    "yearly": {
+      "2020": {
+        "return_pct": 14.47,
+        "max_dd_pct": -22.5,
+        "n_days": 243
+      },
+      "2021": {
+        "return_pct": 28.18,
+        "max_dd_pct": -12.6,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": 8.41,
+        "max_dd_pct": -32.86,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -2.9,
+        "max_dd_pct": -13.1,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 5.89,
+        "max_dd_pct": -15.8,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 22.45,
+        "max_dd_pct": -10.62,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 2.92,
+        "max_dd_pct": -15.56,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "159981.XSHE",
+    "theme": "能源化工",
+    "theme_category": "能源",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-17",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1549,
+    "data_coverage": 99.29,
+    "amt_mean_yuan": 146994.0,
+    "amt_median_yuan": 23882.0,
+    "vol_annual_pct": 25.12,
+    "max_dd_pct": -48.36,
+    "yearly": {
+      "2020": {
+        "return_pct": 0.71,
+        "max_dd_pct": -25.6,
+        "n_days": 232
+      },
+      "2021": {
+        "return_pct": 42.97,
+        "max_dd_pct": -39.15,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": 4.2,
+        "max_dd_pct": -25.98,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": 7.96,
+        "max_dd_pct": -14.42,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": -11.11,
+        "max_dd_pct": -20.62,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": -13.43,
+        "max_dd_pct": -21.2,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 32.46,
+        "max_dd_pct": -11.76,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "159509.XSHE",
+    "theme": "纳指科技",
+    "theme_category": "海外科技",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2023-08-08",
+    "data_end": "2026-06-12",
+    "n_valid_days": 688,
+    "data_coverage": 44.1,
+    "amt_mean_yuan": 940219.0,
+    "amt_median_yuan": 908709.0,
+    "vol_annual_pct": 31.4,
+    "max_dd_pct": -30.47,
+    "yearly": {
+      "2020": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2021": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2022": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2023": {
+        "return_pct": 9.63,
+        "max_dd_pct": -9.25,
+        "n_days": 98
+      },
+      "2024": {
+        "return_pct": 49.07,
+        "max_dd_pct": -24.65,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 40.32,
+        "max_dd_pct": -25.95,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 12.32,
+        "max_dd_pct": -17.69,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "513290.XSHG",
+    "theme": "纳指生物",
+    "theme_category": "海外科技",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2022-08-29",
+    "data_end": "2026-06-12",
+    "n_valid_days": 916,
+    "data_coverage": 58.72,
+    "amt_mean_yuan": 66500.0,
+    "amt_median_yuan": 52397.0,
+    "vol_annual_pct": 21.74,
+    "max_dd_pct": -25.77,
+    "yearly": {
+      "2020": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2021": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2022": {
+        "return_pct": 11.3,
+        "max_dd_pct": -7.3,
+        "n_days": 84
+      },
+      "2023": {
+        "return_pct": 6.74,
+        "max_dd_pct": -11.42,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 1.67,
+        "max_dd_pct": -14.12,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 30.51,
+        "max_dd_pct": -19.51,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": -7.76,
+        "max_dd_pct": -11.82,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "513500.XSHG",
+    "theme": "标普500",
+    "theme_category": "海外宽基",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1558,
+    "data_coverage": 99.87,
+    "amt_mean_yuan": 214314.0,
+    "amt_median_yuan": 180683.0,
+    "vol_annual_pct": 19.53,
+    "max_dd_pct": -29.67,
+    "yearly": {
+      "2020": {
+        "return_pct": 7.66,
+        "max_dd_pct": -29.67,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": 26.27,
+        "max_dd_pct": -5.11,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -14.01,
+        "max_dd_pct": -19.73,
+        "n_days": 241
+      },
+      "2023": {
+        "return_pct": 28.24,
+        "max_dd_pct": -8.11,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 34.54,
+        "max_dd_pct": -13.05,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 11.41,
+        "max_dd_pct": -23.04,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 1.9,
+        "max_dd_pct": -12.89,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "159529.XSHE",
+    "theme": "标普消费",
+    "theme_category": "海外宽基",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2024-02-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 563,
+    "data_coverage": 36.09,
+    "amt_mean_yuan": 458297.0,
+    "amt_median_yuan": 90010.0,
+    "vol_annual_pct": 33.45,
+    "max_dd_pct": -37.3,
+    "yearly": {
+      "2020": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2021": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2022": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2023": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2024": {
+        "return_pct": 50.48,
+        "max_dd_pct": -9.93,
+        "n_days": 219
+      },
+      "2025": {
+        "return_pct": -11.31,
+        "max_dd_pct": -32.73,
+        "n_days": 239
+      },
+      "2026H1": {
+        "return_pct": -6.96,
+        "max_dd_pct": -12.96,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "513400.XSHG",
+    "theme": "道琼斯",
+    "theme_category": "海外宽基",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2024-02-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 567,
+    "data_coverage": 36.35,
+    "amt_mean_yuan": 160651.0,
+    "amt_median_yuan": 123382.0,
+    "vol_annual_pct": 19.95,
+    "max_dd_pct": -20.46,
+    "yearly": {
+      "2020": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2021": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2022": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2023": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2024": {
+        "return_pct": 13.98,
+        "max_dd_pct": -12.8,
+        "n_days": 219
+      },
+      "2025": {
+        "return_pct": 4.84,
+        "max_dd_pct": -18.59,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 0.16,
+        "max_dd_pct": -14.59,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "513520.XSHG",
+    "theme": "日经",
+    "theme_category": "欧日东南亚",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1559,
+    "data_coverage": 99.94,
+    "amt_mean_yuan": 160680.0,
+    "amt_median_yuan": 23010.0,
+    "vol_annual_pct": 23.94,
+    "max_dd_pct": -29.26,
+    "yearly": {
+      "2020": {
+        "return_pct": 15.0,
+        "max_dd_pct": -27.71,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": -6.58,
+        "max_dd_pct": -14.71,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -13.85,
+        "max_dd_pct": -19.16,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": 28.21,
+        "max_dd_pct": -18.84,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 10.49,
+        "max_dd_pct": -21.01,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 20.97,
+        "max_dd_pct": -20.75,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 25.11,
+        "max_dd_pct": -15.97,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "513030.XSHG",
+    "theme": "德国",
+    "theme_category": "欧日东南亚",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1558,
+    "data_coverage": 99.87,
+    "amt_mean_yuan": 131760.0,
+    "amt_median_yuan": 24361.0,
+    "vol_annual_pct": 22.81,
+    "max_dd_pct": -37.44,
+    "yearly": {
+      "2020": {
+        "return_pct": 2.59,
+        "max_dd_pct": -37.44,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": 2.72,
+        "max_dd_pct": -10.85,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -13.92,
+        "max_dd_pct": -30.36,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": 24.71,
+        "max_dd_pct": -13.65,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 11.17,
+        "max_dd_pct": -10.04,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 29.46,
+        "max_dd_pct": -16.92,
+        "n_days": 242
+      },
+      "2026H1": {
+        "return_pct": -7.14,
+        "max_dd_pct": -20.09,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "513080.XSHG",
+    "theme": "法国",
+    "theme_category": "欧日东南亚",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-06-12",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1452,
+    "data_coverage": 93.08,
+    "amt_mean_yuan": 99971.0,
+    "amt_median_yuan": 5885.0,
+    "vol_annual_pct": 20.21,
+    "max_dd_pct": -23.67,
+    "yearly": {
+      "2020": {
+        "return_pct": 14.63,
+        "max_dd_pct": -12.56,
+        "n_days": 136
+      },
+      "2021": {
+        "return_pct": 16.0,
+        "max_dd_pct": -8.89,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -5.3,
+        "max_dd_pct": -23.22,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": 24.14,
+        "max_dd_pct": -11.79,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": -5.46,
+        "max_dd_pct": -15.32,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 20.38,
+        "max_dd_pct": -19.37,
+        "n_days": 242
+      },
+      "2026H1": {
+        "return_pct": -4.03,
+        "max_dd_pct": -20.3,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "513310.XSHG",
+    "theme": "中韩半导体",
+    "theme_category": "海外科技",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2022-12-22",
+    "data_end": "2026-06-12",
+    "n_valid_days": 839,
+    "data_coverage": 53.78,
+    "amt_mean_yuan": 1447951.0,
+    "amt_median_yuan": 170710.0,
+    "vol_annual_pct": 36.15,
+    "max_dd_pct": -22.68,
+    "yearly": {
+      "2020": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2021": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2022": {
+        "return_pct": -2.44,
+        "max_dd_pct": -3.23,
+        "n_days": 7
+      },
+      "2023": {
+        "return_pct": 29.35,
+        "max_dd_pct": -11.58,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 15.64,
+        "max_dd_pct": -22.68,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 84.6,
+        "max_dd_pct": -20.32,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 101.86,
+        "max_dd_pct": -21.8,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "513730.XSHG",
+    "theme": "东南亚",
+    "theme_category": "欧日东南亚",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2023-12-01",
+    "data_end": "2026-06-12",
+    "n_valid_days": 611,
+    "data_coverage": 39.17,
+    "amt_mean_yuan": 111540.0,
+    "amt_median_yuan": 58927.0,
+    "vol_annual_pct": 22.18,
+    "max_dd_pct": -31.97,
+    "yearly": {
+      "2020": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2021": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2022": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2023": {
+        "return_pct": 7.35,
+        "max_dd_pct": -4.89,
+        "n_days": 21
+      },
+      "2024": {
+        "return_pct": 26.88,
+        "max_dd_pct": -11.06,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 3.35,
+        "max_dd_pct": -28.13,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": -18.81,
+        "max_dd_pct": -21.0,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "159792.XSHE",
+    "theme": "港股互联",
+    "theme_category": "中概/港股",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2021-09-28",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1138,
+    "data_coverage": 72.95,
+    "amt_mean_yuan": 1096808.0,
+    "amt_median_yuan": 607207.0,
+    "vol_annual_pct": 36.48,
+    "max_dd_pct": -59.66,
+    "yearly": {
+      "2020": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2021": {
+        "return_pct": -13.93,
+        "max_dd_pct": -22.89,
+        "n_days": 64
+      },
+      "2022": {
+        "return_pct": -14.15,
+        "max_dd_pct": -46.49,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -24.31,
+        "max_dd_pct": -31.46,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 27.99,
+        "max_dd_pct": -21.03,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 22.71,
+        "max_dd_pct": -24.0,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": -32.54,
+        "max_dd_pct": -37.62,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "513130.XSHG",
+    "theme": "恒生科技",
+    "theme_category": "中概/港股",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2021-06-01",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1220,
+    "data_coverage": 78.21,
+    "amt_mean_yuan": 2481729.0,
+    "amt_median_yuan": 1745716.0,
+    "vol_annual_pct": 34.17,
+    "max_dd_pct": -62.33,
+    "yearly": {
+      "2020": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2021": {
+        "return_pct": -31.5,
+        "max_dd_pct": -34.66,
+        "n_days": 146
+      },
+      "2022": {
+        "return_pct": -20.38,
+        "max_dd_pct": -45.96,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -10.31,
+        "max_dd_pct": -23.59,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 20.89,
+        "max_dd_pct": -18.61,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 22.11,
+        "max_dd_pct": -23.9,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": -21.34,
+        "max_dd_pct": -24.08,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "513050.XSHG",
+    "theme": "中概互联",
+    "theme_category": "中概/港股",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1559,
+    "data_coverage": 99.94,
+    "amt_mean_yuan": 1497368.0,
+    "amt_median_yuan": 1232466.0,
+    "vol_annual_pct": 31.24,
+    "max_dd_pct": -68.25,
+    "yearly": {
+      "2020": {
+        "return_pct": 42.91,
+        "max_dd_pct": -17.14,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": -39.41,
+        "max_dd_pct": -53.15,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -16.05,
+        "max_dd_pct": -38.32,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -10.74,
+        "max_dd_pct": -22.79,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 24.71,
+        "max_dd_pct": -15.32,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 26.25,
+        "max_dd_pct": -22.32,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": -29.19,
+        "max_dd_pct": -31.64,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "159920.XSHE",
+    "theme": "恒生",
+    "theme_category": "中概/港股",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1560,
+    "data_coverage": 100.0,
+    "amt_mean_yuan": 831208.0,
+    "amt_median_yuan": 705178.0,
+    "vol_annual_pct": 21.84,
+    "max_dd_pct": -45.96,
+    "yearly": {
+      "2020": {
+        "return_pct": -8.62,
+        "max_dd_pct": -22.25,
+        "n_days": 243
+      },
+      "2021": {
+        "return_pct": -14.89,
+        "max_dd_pct": -26.14,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -6.81,
+        "max_dd_pct": -32.66,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -11.54,
+        "max_dd_pct": -20.54,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 25.2,
+        "max_dd_pct": -14.44,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 27.19,
+        "max_dd_pct": -17.54,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": -9.4,
+        "max_dd_pct": -15.49,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "513690.XSHG",
+    "theme": "港股红利",
+    "theme_category": "中概/港股",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2021-05-20",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1228,
+    "data_coverage": 78.72,
+    "amt_mean_yuan": 87327.0,
+    "amt_median_yuan": 47888.0,
+    "vol_annual_pct": 19.72,
+    "max_dd_pct": -38.02,
+    "yearly": {
+      "2020": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2021": {
+        "return_pct": -12.55,
+        "max_dd_pct": -16.16,
+        "n_days": 154
+      },
+      "2022": {
+        "return_pct": -12.32,
+        "max_dd_pct": -35.9,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -2.25,
+        "max_dd_pct": -15.11,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 25.82,
+        "max_dd_pct": -16.07,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 22.4,
+        "max_dd_pct": -10.73,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 5.89,
+        "max_dd_pct": -6.26,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "510300.XSHG",
+    "theme": "沪深300",
+    "theme_category": "A股宽基",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1560,
+    "data_coverage": 100.0,
+    "amt_mean_yuan": 3286896.0,
+    "amt_median_yuan": 2535260.0,
+    "vol_annual_pct": 19.01,
+    "max_dd_pct": -42.13,
+    "yearly": {
+      "2020": {
+        "return_pct": 27.43,
+        "max_dd_pct": -16.09,
+        "n_days": 243
+      },
+      "2021": {
+        "return_pct": -4.87,
+        "max_dd_pct": -17.19,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -19.84,
+        "max_dd_pct": -26.74,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -10.03,
+        "max_dd_pct": -19.88,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 19.04,
+        "max_dd_pct": -12.44,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 24.31,
+        "max_dd_pct": -10.08,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 2.04,
+        "max_dd_pct": -7.61,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "510500.XSHG",
+    "theme": "中证500",
+    "theme_category": "A股宽基",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1559,
+    "data_coverage": 99.94,
+    "amt_mean_yuan": 1872382.0,
+    "amt_median_yuan": 1392752.0,
+    "vol_annual_pct": 21.63,
+    "max_dd_pct": -39.43,
+    "yearly": {
+      "2020": {
+        "return_pct": 21.16,
+        "max_dd_pct": -14.99,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": 15.29,
+        "max_dd_pct": -9.71,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -18.34,
+        "max_dd_pct": -27.09,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -7.55,
+        "max_dd_pct": -17.28,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 7.36,
+        "max_dd_pct": -18.62,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 37.09,
+        "max_dd_pct": -13.81,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 6.41,
+        "max_dd_pct": -14.02,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "510050.XSHG",
+    "theme": "上证50",
+    "theme_category": "A股宽基",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1560,
+    "data_coverage": 100.0,
+    "amt_mean_yuan": 2173353.0,
+    "amt_median_yuan": 1869613.0,
+    "vol_annual_pct": 18.35,
+    "max_dd_pct": -41.88,
+    "yearly": {
+      "2020": {
+        "return_pct": 19.67,
+        "max_dd_pct": -17.11,
+        "n_days": 243
+      },
+      "2021": {
+        "return_pct": -9.2,
+        "max_dd_pct": -22.53,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -17.26,
+        "max_dd_pct": -28.02,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -9.73,
+        "max_dd_pct": -18.93,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 20.05,
+        "max_dd_pct": -10.71,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 19.56,
+        "max_dd_pct": -8.47,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": -6.05,
+        "max_dd_pct": -11.34,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "510210.XSHG",
+    "theme": "上证",
+    "theme_category": "A股宽基",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1558,
+    "data_coverage": 99.87,
+    "amt_mean_yuan": 195113.0,
+    "amt_median_yuan": 105970.0,
+    "vol_annual_pct": 16.76,
+    "max_dd_pct": -21.89,
+    "yearly": {
+      "2020": {
+        "return_pct": 22.68,
+        "max_dd_pct": -12.71,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": 5.29,
+        "max_dd_pct": -9.16,
+        "n_days": 242
+      },
+      "2022": {
+        "return_pct": -12.45,
+        "max_dd_pct": -17.85,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -0.45,
+        "max_dd_pct": -12.46,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 12.53,
+        "max_dd_pct": -13.99,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 24.94,
+        "max_dd_pct": -9.36,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 0.9,
+        "max_dd_pct": -8.9,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "588080.XSHG",
+    "theme": "科创50",
+    "theme_category": "A股成长",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-11-16",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1351,
+    "data_coverage": 86.6,
+    "amt_mean_yuan": 757852.0,
+    "amt_median_yuan": 477766.0,
+    "vol_annual_pct": 30.26,
+    "max_dd_pct": -59.95,
+    "yearly": {
+      "2020": {
+        "return_pct": -2.07,
+        "max_dd_pct": -4.87,
+        "n_days": 34
+      },
+      "2021": {
+        "return_pct": -0.97,
+        "max_dd_pct": -18.47,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -29.7,
+        "max_dd_pct": -35.1,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -13.23,
+        "max_dd_pct": -28.96,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 17.77,
+        "max_dd_pct": -22.44,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 41.4,
+        "max_dd_pct": -17.49,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 18.95,
+        "max_dd_pct": -19.03,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "512100.XSHG",
+    "theme": "中证1000",
+    "theme_category": "A股宽基",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1559,
+    "data_coverage": 99.94,
+    "amt_mean_yuan": 1081356.0,
+    "amt_median_yuan": 875597.0,
+    "vol_annual_pct": 24.79,
+    "max_dd_pct": -46.35,
+    "yearly": {
+      "2020": {
+        "return_pct": 28.85,
+        "max_dd_pct": -15.91,
+        "n_days": 243
+      },
+      "2021": {
+        "return_pct": 21.97,
+        "max_dd_pct": -10.44,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -21.83,
+        "max_dd_pct": -32.51,
+        "n_days": 241
+      },
+      "2023": {
+        "return_pct": -7.41,
+        "max_dd_pct": -19.52,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 2.8,
+        "max_dd_pct": -25.86,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 32.91,
+        "max_dd_pct": -16.11,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 6.47,
+        "max_dd_pct": -13.52,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "563360.XSHG",
+    "theme": "A500",
+    "theme_category": "A股宽基",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2024-10-15",
+    "data_end": "2026-06-12",
+    "n_valid_days": 404,
+    "data_coverage": 25.9,
+    "amt_mean_yuan": 4330093.0,
+    "amt_median_yuan": 3681093.0,
+    "vol_annual_pct": 18.01,
+    "max_dd_pct": -15.81,
+    "yearly": {
+      "2020": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2021": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2022": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2023": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2024": {
+        "return_pct": 2.33,
+        "max_dd_pct": -7.81,
+        "n_days": 56
+      },
+      "2025": {
+        "return_pct": 28.78,
+        "max_dd_pct": -13.31,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 3.65,
+        "max_dd_pct": -8.45,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": true,
+    "note": ""
+  },
+  {
+    "code": "563300.XSHG",
+    "theme": "中证2000",
+    "theme_category": "A股宽基",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2023-09-14",
+    "data_end": "2026-06-12",
+    "n_valid_days": 661,
+    "data_coverage": 42.37,
+    "amt_mean_yuan": 358646.0,
+    "amt_median_yuan": 315324.0,
+    "vol_annual_pct": 29.77,
+    "max_dd_pct": -32.76,
+    "yearly": {
+      "2020": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2021": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2022": {
+        "return_pct": null,
+        "max_dd_pct": null,
+        "n_days": 0
+      },
+      "2023": {
+        "return_pct": 2.54,
+        "max_dd_pct": -8.29,
+        "n_days": 71
+      },
+      "2024": {
+        "return_pct": 0.49,
+        "max_dd_pct": -29.96,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 36.39,
+        "max_dd_pct": -18.67,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 9.57,
+        "max_dd_pct": -13.47,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "512890.XSHG",
+    "theme": "红利低波",
+    "theme_category": "红利/价值",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1558,
+    "data_coverage": 99.87,
+    "amt_mean_yuan": 180513.0,
+    "amt_median_yuan": 26539.0,
+    "vol_annual_pct": 17.12,
+    "max_dd_pct": -15.66,
+    "yearly": {
+      "2020": {
+        "return_pct": 8.14,
+        "max_dd_pct": -15.66,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": 23.22,
+        "max_dd_pct": -14.61,
+        "n_days": 242
+      },
+      "2022": {
+        "return_pct": 1.11,
+        "max_dd_pct": -13.65,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": 11.19,
+        "max_dd_pct": -12.27,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 21.51,
+        "max_dd_pct": -13.79,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 6.81,
+        "max_dd_pct": -7.4,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": -0.09,
+        "max_dd_pct": -5.45,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "159967.XSHE",
+    "theme": "创业板成长",
+    "theme_category": "A股成长",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1560,
+    "data_coverage": 100.0,
+    "amt_mean_yuan": 167521.0,
+    "amt_median_yuan": 123444.0,
+    "vol_annual_pct": 33.12,
+    "max_dd_pct": -60.76,
+    "yearly": {
+      "2020": {
+        "return_pct": 96.21,
+        "max_dd_pct": -20.25,
+        "n_days": 243
+      },
+      "2021": {
+        "return_pct": 16.96,
+        "max_dd_pct": -27.63,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -26.79,
+        "max_dd_pct": -33.38,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -26.15,
+        "max_dd_pct": -34.59,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 10.0,
+        "max_dd_pct": -22.3,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 46.21,
+        "max_dd_pct": -23.03,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 37.63,
+        "max_dd_pct": -7.95,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "512040.XSHG",
+    "theme": "价值",
+    "theme_category": "红利/价值",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1559,
+    "data_coverage": 99.94,
+    "amt_mean_yuan": 30092.0,
+    "amt_median_yuan": 19000.0,
+    "vol_annual_pct": 18.0,
+    "max_dd_pct": -19.35,
+    "yearly": {
+      "2020": {
+        "return_pct": 24.85,
+        "max_dd_pct": -14.3,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": 26.96,
+        "max_dd_pct": -11.6,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -11.66,
+        "max_dd_pct": -19.35,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": 9.77,
+        "max_dd_pct": -9.65,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 17.06,
+        "max_dd_pct": -18.18,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 19.83,
+        "max_dd_pct": -10.21,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 3.0,
+        "max_dd_pct": -8.37,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "511380.XSHG",
+    "theme": "可转债",
+    "theme_category": "债券/固收",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-04-07",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1498,
+    "data_coverage": 96.03,
+    "amt_mean_yuan": 2525428.0,
+    "amt_median_yuan": 579722.0,
+    "vol_annual_pct": 9.97,
+    "max_dd_pct": -15.9,
+    "yearly": {
+      "2020": {
+        "return_pct": 2.99,
+        "max_dd_pct": -5.17,
+        "n_days": 181
+      },
+      "2021": {
+        "return_pct": 13.48,
+        "max_dd_pct": -5.79,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": -7.3,
+        "max_dd_pct": -11.42,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": -0.65,
+        "max_dd_pct": -7.03,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 5.82,
+        "max_dd_pct": -9.85,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 18.94,
+        "max_dd_pct": -6.45,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 0.46,
+        "max_dd_pct": -9.05,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "511010.XSHG",
+    "theme": "国债",
+    "theme_category": "债券/固收",
+    "is_original_risk": false,
+    "is_defensive": false,
+    "is_bak_only": true,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1559,
+    "data_coverage": 99.94,
+    "amt_mean_yuan": 427622.0,
+    "amt_median_yuan": 252761.0,
+    "vol_annual_pct": 2.03,
+    "max_dd_pct": -4.92,
+    "yearly": {
+      "2020": {
+        "return_pct": 1.62,
+        "max_dd_pct": -4.92,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": 4.42,
+        "max_dd_pct": -0.77,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": 2.12,
+        "max_dd_pct": -1.21,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": 3.33,
+        "max_dd_pct": -0.96,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 5.98,
+        "max_dd_pct": -0.87,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 0.54,
+        "max_dd_pct": -1.56,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 1.35,
+        "max_dd_pct": -0.26,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  },
+  {
+    "code": "511880.XSHG",
+    "theme": "货币(防御)",
+    "theme_category": "防御",
+    "is_original_risk": false,
+    "is_defensive": true,
+    "is_bak_only": false,
+    "data_start": "2020-01-02",
+    "data_end": "2026-06-12",
+    "n_valid_days": 1559,
+    "data_coverage": 99.94,
+    "amt_mean_yuan": 12864049.0,
+    "amt_median_yuan": 12323737.0,
+    "vol_annual_pct": 0.22,
+    "max_dd_pct": -0.19,
+    "yearly": {
+      "2020": {
+        "return_pct": 2.1,
+        "max_dd_pct": -0.08,
+        "n_days": 242
+      },
+      "2021": {
+        "return_pct": 2.09,
+        "max_dd_pct": -0.03,
+        "n_days": 243
+      },
+      "2022": {
+        "return_pct": 1.72,
+        "max_dd_pct": -0.04,
+        "n_days": 242
+      },
+      "2023": {
+        "return_pct": 1.78,
+        "max_dd_pct": -0.05,
+        "n_days": 242
+      },
+      "2024": {
+        "return_pct": 1.54,
+        "max_dd_pct": -0.19,
+        "n_days": 242
+      },
+      "2025": {
+        "return_pct": 1.17,
+        "max_dd_pct": -0.07,
+        "n_days": 243
+      },
+      "2026H1": {
+        "return_pct": 0.46,
+        "max_dd_pct": -0.04,
+        "n_days": 105
+      }
+    },
+    "max_gap_days": 6,
+    "has_long_gap": false,
+    "single_year_dominant": false,
+    "note": ""
+  }
+]

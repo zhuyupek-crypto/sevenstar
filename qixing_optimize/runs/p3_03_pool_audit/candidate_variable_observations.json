@@ -1,0 +1,2431 @@
+{
+  "v1_bak_vol": {
+    "meta": {
+      "category": "波动率",
+      "name": "大池独有ETF波动率(20日)",
+      "logic": "高波动环境下大池独有更易均值回归？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1520,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.41,
+        "count": 507
+      },
+      "mid": {
+        "mean": -0.62,
+        "count": 506
+      },
+      "high": {
+        "mean": -0.39,
+        "count": 507
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 0.95,
+          "count": 77
+        },
+        "mid": {
+          "mean": 2.21,
+          "count": 63
+        },
+        "high": {
+          "mean": 0.02,
+          "count": 82
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.56,
+          "count": 122
+        },
+        "mid": {
+          "mean": 0.38,
+          "count": 70
+        },
+        "high": {
+          "mean": -0.43,
+          "count": 51
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -2.49,
+          "count": 4
+        },
+        "mid": {
+          "mean": -2.56,
+          "count": 84
+        },
+        "high": {
+          "mean": -0.33,
+          "count": 154
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.84,
+          "count": 163
+        },
+        "mid": {
+          "mean": -0.69,
+          "count": 79
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 0.66,
+          "count": 47
+        },
+        "mid": {
+          "mean": 0.13,
+          "count": 92
+        },
+        "high": {
+          "mean": 0.23,
+          "count": 103
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -0.58,
+          "count": 87
+        },
+        "mid": {
+          "mean": -1.3,
+          "count": 99
+        },
+        "high": {
+          "mean": -1.26,
+          "count": 57
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": -6.53,
+          "count": 7
+        },
+        "mid": {
+          "mean": -4.93,
+          "count": 19
+        },
+        "high": {
+          "mean": -1.32,
+          "count": 60
+        }
+      }
+    }
+  },
+  "v1_risk_vol": {
+    "meta": {
+      "category": "波动率",
+      "name": "原风险池波动率(20日)",
+      "logic": "原池高波动时大池独有是否更值得开放？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1520,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.88,
+        "count": 507
+      },
+      "mid": {
+        "mean": -0.27,
+        "count": 506
+      },
+      "high": {
+        "mean": -0.27,
+        "count": 507
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": -2.75,
+          "count": 14
+        },
+        "mid": {
+          "mean": 1.39,
+          "count": 48
+        },
+        "high": {
+          "mean": 1.16,
+          "count": 160
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.58,
+          "count": 83
+        },
+        "mid": {
+          "mean": -0.17,
+          "count": 108
+        },
+        "high": {
+          "mean": 0.05,
+          "count": 52
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -0.36,
+          "count": 27
+        },
+        "mid": {
+          "mean": -2.27,
+          "count": 105
+        },
+        "high": {
+          "mean": -0.25,
+          "count": 110
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -1.05,
+          "count": 194
+        },
+        "mid": {
+          "mean": 0.25,
+          "count": 48
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": -0.68,
+          "count": 91
+        },
+        "mid": {
+          "mean": 1.04,
+          "count": 110
+        },
+        "high": {
+          "mean": 0.31,
+          "count": 41
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -0.61,
+          "count": 93
+        },
+        "mid": {
+          "mean": -0.89,
+          "count": 84
+        },
+        "high": {
+          "mean": -1.81,
+          "count": 66
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": -5.26,
+          "count": 5
+        },
+        "mid": {
+          "mean": -0.32,
+          "count": 3
+        },
+        "high": {
+          "mean": -2.45,
+          "count": 78
+        }
+      }
+    }
+  },
+  "v1_vol_ratio": {
+    "meta": {
+      "category": "波动率",
+      "name": "大池独有/原风险池波动率比",
+      "logic": "大池独有相对波动率越高，是否更易反转？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1520,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.09,
+        "count": 507
+      },
+      "mid": {
+        "mean": -0.85,
+        "count": 506
+      },
+      "high": {
+        "mean": -0.48,
+        "count": 507
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 1.41,
+          "count": 173
+        },
+        "mid": {
+          "mean": 0.72,
+          "count": 19
+        },
+        "high": {
+          "mean": -1.43,
+          "count": 30
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.33,
+          "count": 112
+        },
+        "mid": {
+          "mean": -0.18,
+          "count": 68
+        },
+        "high": {
+          "mean": -0.24,
+          "count": 63
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -1.73,
+          "count": 27
+        },
+        "mid": {
+          "mean": -2.02,
+          "count": 107
+        },
+        "high": {
+          "mean": -0.12,
+          "count": 108
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": 0.06,
+          "count": 44
+        },
+        "mid": {
+          "mean": -1.05,
+          "count": 126
+        },
+        "high": {
+          "mean": -0.84,
+          "count": 72
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": -0.41,
+          "count": 12
+        },
+        "mid": {
+          "mean": 1.45,
+          "count": 87
+        },
+        "high": {
+          "mean": -0.38,
+          "count": 143
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -2.23,
+          "count": 79
+        },
+        "mid": {
+          "mean": -0.48,
+          "count": 77
+        },
+        "high": {
+          "mean": -0.43,
+          "count": 87
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": -0.44,
+          "count": 60
+        },
+        "mid": {
+          "mean": -7.9,
+          "count": 22
+        },
+        "high": {
+          "mean": -4.69,
+          "count": 4
+        }
+      }
+    }
+  },
+  "v1_vol_expansion": {
+    "meta": {
+      "category": "波动率",
+      "name": "大池独有波动率扩张(20d/60d-1)",
+      "logic": "波动率扩张时主题是否更易反转？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1480,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": 0.36,
+        "count": 494
+      },
+      "mid": {
+        "mean": -0.96,
+        "count": 493
+      },
+      "high": {
+        "mean": -0.86,
+        "count": 493
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 1.5,
+          "count": 119
+        },
+        "mid": {
+          "mean": 1.49,
+          "count": 33
+        },
+        "high": {
+          "mean": -0.62,
+          "count": 30
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.36,
+          "count": 62
+        },
+        "mid": {
+          "mean": -1.02,
+          "count": 94
+        },
+        "high": {
+          "mean": 0.62,
+          "count": 87
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": 0.38,
+          "count": 72
+        },
+        "mid": {
+          "mean": -1.18,
+          "count": 82
+        },
+        "high": {
+          "mean": -2.35,
+          "count": 88
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.3,
+          "count": 55
+        },
+        "mid": {
+          "mean": -1.07,
+          "count": 137
+        },
+        "high": {
+          "mean": -0.57,
+          "count": 50
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 0.62,
+          "count": 109
+        },
+        "mid": {
+          "mean": -0.32,
+          "count": 37
+        },
+        "high": {
+          "mean": 0.11,
+          "count": 96
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -0.69,
+          "count": 64
+        },
+        "mid": {
+          "mean": -1.02,
+          "count": 87
+        },
+        "high": {
+          "mean": -1.28,
+          "count": 92
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": -1.2,
+          "count": 13
+        },
+        "mid": {
+          "mean": -3.67,
+          "count": 23
+        },
+        "high": {
+          "mean": -2.37,
+          "count": 50
+        }
+      }
+    }
+  },
+  "v2_bak_dd_20d": {
+    "meta": {
+      "category": "回撤位置",
+      "name": "大池独有距20日高点回撤",
+      "logic": "大池独有远离高点(20d)时更易反转还是修复？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1521,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.16,
+        "count": 507
+      },
+      "mid": {
+        "mean": -0.79,
+        "count": 507
+      },
+      "high": {
+        "mean": -0.46,
+        "count": 507
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 1.45,
+          "count": 57
+        },
+        "mid": {
+          "mean": 1.16,
+          "count": 63
+        },
+        "high": {
+          "mean": 0.59,
+          "count": 103
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": 0.27,
+          "count": 62
+        },
+        "mid": {
+          "mean": -0.43,
+          "count": 98
+        },
+        "high": {
+          "mean": -0.46,
+          "count": 83
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -1.71,
+          "count": 129
+        },
+        "mid": {
+          "mean": -1.35,
+          "count": 64
+        },
+        "high": {
+          "mean": 0.64,
+          "count": 49
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.32,
+          "count": 85
+        },
+        "mid": {
+          "mean": -1.08,
+          "count": 99
+        },
+        "high": {
+          "mean": -0.98,
+          "count": 58
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 1.49,
+          "count": 93
+        },
+        "mid": {
+          "mean": 0.11,
+          "count": 85
+        },
+        "high": {
+          "mean": -1.28,
+          "count": 64
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -0.95,
+          "count": 57
+        },
+        "mid": {
+          "mean": -1.75,
+          "count": 70
+        },
+        "high": {
+          "mean": -0.64,
+          "count": 116
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": -0.75,
+          "count": 24
+        },
+        "mid": {
+          "mean": -4.5,
+          "count": 28
+        },
+        "high": {
+          "mean": -2.2,
+          "count": 34
+        }
+      }
+    }
+  },
+  "v2_bak_dd_60d": {
+    "meta": {
+      "category": "回撤位置",
+      "name": "大池独有距60日高点回撤",
+      "logic": "大池独有远离高点(60d)时更易反转还是修复？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1481,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": 0.14,
+        "count": 494
+      },
+      "mid": {
+        "mean": -0.74,
+        "count": 493
+      },
+      "high": {
+        "mean": -0.85,
+        "count": 494
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 2.17,
+          "count": 52
+        },
+        "mid": {
+          "mean": 3.06,
+          "count": 33
+        },
+        "high": {
+          "mean": -0.01,
+          "count": 98
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.59,
+          "count": 45
+        },
+        "mid": {
+          "mean": 0.1,
+          "count": 107
+        },
+        "high": {
+          "mean": -0.53,
+          "count": 91
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -1.33,
+          "count": 175
+        },
+        "mid": {
+          "mean": -1.01,
+          "count": 43
+        },
+        "high": {
+          "mean": 0.0,
+          "count": 24
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.13,
+          "count": 81
+        },
+        "mid": {
+          "mean": -1.1,
+          "count": 104
+        },
+        "high": {
+          "mean": -1.15,
+          "count": 57
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 2.12,
+          "count": 79
+        },
+        "mid": {
+          "mean": 0.21,
+          "count": 89
+        },
+        "high": {
+          "mean": -1.62,
+          "count": 74
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": 0.8,
+          "count": 38
+        },
+        "mid": {
+          "mean": -2.65,
+          "count": 89
+        },
+        "high": {
+          "mean": -0.38,
+          "count": 116
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": 1.1,
+          "count": 24
+        },
+        "mid": {
+          "mean": -3.65,
+          "count": 28
+        },
+        "high": {
+          "mean": -4.2,
+          "count": 34
+        }
+      }
+    }
+  },
+  "v2_bak_dd_120d": {
+    "meta": {
+      "category": "回撤位置",
+      "name": "大池独有距120日高点回撤",
+      "logic": "大池独有远离高点(120d)时更易反转还是修复？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1421,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.08,
+        "count": 474
+      },
+      "mid": {
+        "mean": -0.71,
+        "count": 473
+      },
+      "high": {
+        "mean": -1.1,
+        "count": 474
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 2.7,
+          "count": 7
+        },
+        "mid": {
+          "mean": 2.73,
+          "count": 33
+        },
+        "high": {
+          "mean": -0.81,
+          "count": 83
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.45,
+          "count": 30
+        },
+        "mid": {
+          "mean": -0.02,
+          "count": 110
+        },
+        "high": {
+          "mean": -0.47,
+          "count": 103
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -1.14,
+          "count": 221
+        },
+        "mid": {
+          "mean": -1.13,
+          "count": 21
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.06,
+          "count": 89
+        },
+        "mid": {
+          "mean": -1.23,
+          "count": 89
+        },
+        "high": {
+          "mean": -1.19,
+          "count": 64
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 1.57,
+          "count": 80
+        },
+        "mid": {
+          "mean": 0.28,
+          "count": 96
+        },
+        "high": {
+          "mean": -1.31,
+          "count": 66
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": 1.16,
+          "count": 29
+        },
+        "mid": {
+          "mean": -2.19,
+          "count": 96
+        },
+        "high": {
+          "mean": -0.62,
+          "count": 118
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": 3.17,
+          "count": 18
+        },
+        "mid": {
+          "mean": -3.78,
+          "count": 28
+        },
+        "high": {
+          "mean": -4.25,
+          "count": 40
+        }
+      }
+    }
+  },
+  "v2_risk_dd_60d": {
+    "meta": {
+      "category": "回撤位置",
+      "name": "原风险池距60日高点回撤",
+      "logic": "原池深回撤时大池独有是否更易修复？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1481,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.24,
+        "count": 494
+      },
+      "mid": {
+        "mean": -0.66,
+        "count": 493
+      },
+      "high": {
+        "mean": -0.57,
+        "count": 494
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 1.52,
+          "count": 110
+        },
+        "mid": {
+          "mean": 0.48,
+          "count": 20
+        },
+        "high": {
+          "mean": 0.69,
+          "count": 53
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.94,
+          "count": 73
+        },
+        "mid": {
+          "mean": -0.21,
+          "count": 81
+        },
+        "high": {
+          "mean": 0.24,
+          "count": 89
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -1.0,
+          "count": 115
+        },
+        "mid": {
+          "mean": -0.62,
+          "count": 78
+        },
+        "high": {
+          "mean": -2.29,
+          "count": 49
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": 0.34,
+          "count": 45
+        },
+        "mid": {
+          "mean": -0.75,
+          "count": 115
+        },
+        "high": {
+          "mean": -1.47,
+          "count": 82
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 1.59,
+          "count": 88
+        },
+        "mid": {
+          "mean": -0.29,
+          "count": 101
+        },
+        "high": {
+          "mean": -0.84,
+          "count": 53
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -1.06,
+          "count": 32
+        },
+        "mid": {
+          "mean": -2.08,
+          "count": 75
+        },
+        "high": {
+          "mean": -0.45,
+          "count": 136
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": -7.14,
+          "count": 31
+        },
+        "mid": {
+          "mean": 0.16,
+          "count": 23
+        },
+        "high": {
+          "mean": -0.03,
+          "count": 32
+        }
+      }
+    }
+  },
+  "v2_dd_diff_60d": {
+    "meta": {
+      "category": "回撤位置",
+      "name": "大池独有-原池 60日回撤差",
+      "logic": "大池独有相对原池回撤更深时是否更易修复？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1481,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.2,
+        "count": 494
+      },
+      "mid": {
+        "mean": -0.44,
+        "count": 516
+      },
+      "high": {
+        "mean": -0.84,
+        "count": 471
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 1.04,
+          "count": 6
+        },
+        "mid": {
+          "mean": 1.15,
+          "count": 63
+        },
+        "high": {
+          "mean": 1.18,
+          "count": 114
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": 0.87,
+          "count": 49
+        },
+        "mid": {
+          "mean": -0.31,
+          "count": 90
+        },
+        "high": {
+          "mean": -0.76,
+          "count": 104
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -1.19,
+          "count": 172
+        },
+        "mid": {
+          "mean": -1.2,
+          "count": 36
+        },
+        "high": {
+          "mean": -0.84,
+          "count": 34
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.54,
+          "count": 108
+        },
+        "mid": {
+          "mean": -1.22,
+          "count": 86
+        },
+        "high": {
+          "mean": -0.59,
+          "count": 48
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 2.0,
+          "count": 45
+        },
+        "mid": {
+          "mean": 0.11,
+          "count": 122
+        },
+        "high": {
+          "mean": -0.49,
+          "count": 75
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -0.47,
+          "count": 91
+        },
+        "mid": {
+          "mean": -0.92,
+          "count": 92
+        },
+        "high": {
+          "mean": -2.05,
+          "count": 60
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": 3.0,
+          "count": 23
+        },
+        "mid": {
+          "mean": -1.96,
+          "count": 27
+        },
+        "high": {
+          "mean": -6.53,
+          "count": 36
+        }
+      }
+    }
+  },
+  "v3_xs_dispersion_20d": {
+    "meta": {
+      "category": "横截面离散度",
+      "name": "37只风险ETF 20日收益横截面离散度",
+      "logic": "横截面机会多时大池是否更值得开放？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1520,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.2,
+        "count": 507
+      },
+      "mid": {
+        "mean": -0.27,
+        "count": 506
+      },
+      "high": {
+        "mean": -0.95,
+        "count": 507
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 1.72,
+          "count": 45
+        },
+        "mid": {
+          "mean": 1.57,
+          "count": 77
+        },
+        "high": {
+          "mean": 0.16,
+          "count": 100
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.32,
+          "count": 65
+        },
+        "mid": {
+          "mean": -0.2,
+          "count": 113
+        },
+        "high": {
+          "mean": -0.33,
+          "count": 65
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -2.05,
+          "count": 24
+        },
+        "mid": {
+          "mean": -0.76,
+          "count": 85
+        },
+        "high": {
+          "mean": -1.22,
+          "count": 133
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.83,
+          "count": 184
+        },
+        "mid": {
+          "mean": -0.66,
+          "count": 56
+        },
+        "high": {
+          "mean": -0.62,
+          "count": 2
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 0.47,
+          "count": 93
+        },
+        "mid": {
+          "mean": -0.17,
+          "count": 87
+        },
+        "high": {
+          "mean": 0.6,
+          "count": 62
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -0.27,
+          "count": 91
+        },
+        "mid": {
+          "mean": -0.94,
+          "count": 71
+        },
+        "high": {
+          "mean": -1.96,
+          "count": 81
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": 5.35,
+          "count": 5
+        },
+        "mid": {
+          "mean": -3.12,
+          "count": 17
+        },
+        "high": {
+          "mean": -3.01,
+          "count": 64
+        }
+      }
+    }
+  },
+  "v3_bak_internal_disp_20d": {
+    "meta": {
+      "category": "横截面离散度",
+      "name": "大池独有内部20日收益离散度",
+      "logic": "大池独有内部分化时是否更值得开放？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1520,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.33,
+        "count": 507
+      },
+      "mid": {
+        "mean": -0.58,
+        "count": 506
+      },
+      "high": {
+        "mean": -0.51,
+        "count": 507
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 1.33,
+          "count": 94
+        },
+        "mid": {
+          "mean": 1.45,
+          "count": 78
+        },
+        "high": {
+          "mean": -0.48,
+          "count": 50
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.89,
+          "count": 47
+        },
+        "mid": {
+          "mean": -0.09,
+          "count": 101
+        },
+        "high": {
+          "mean": -0.14,
+          "count": 95
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -1.98,
+          "count": 23
+        },
+        "mid": {
+          "mean": -2.27,
+          "count": 84
+        },
+        "high": {
+          "mean": -0.29,
+          "count": 135
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.8,
+          "count": 166
+        },
+        "mid": {
+          "mean": -0.79,
+          "count": 65
+        },
+        "high": {
+          "mean": -0.58,
+          "count": 11
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 0.3,
+          "count": 66
+        },
+        "mid": {
+          "mean": 0.26,
+          "count": 88
+        },
+        "high": {
+          "mean": 0.27,
+          "count": 88
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -0.83,
+          "count": 107
+        },
+        "mid": {
+          "mean": -1.41,
+          "count": 67
+        },
+        "high": {
+          "mean": -0.97,
+          "count": 69
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": -0.33,
+          "count": 4
+        },
+        "mid": {
+          "mean": -3.61,
+          "count": 23
+        },
+        "high": {
+          "mean": -2.28,
+          "count": 59
+        }
+      }
+    }
+  },
+  "v3_top1_minus_median_20d": {
+    "meta": {
+      "category": "横截面离散度",
+      "name": "Top1与中位ETF 20日收益差",
+      "logic": "头部ETF大幅领先时大池是否更值得开放？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1520,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": 0.01,
+        "count": 507
+      },
+      "mid": {
+        "mean": -0.46,
+        "count": 506
+      },
+      "high": {
+        "mean": -0.97,
+        "count": 507
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 1.68,
+          "count": 50
+        },
+        "mid": {
+          "mean": 0.78,
+          "count": 101
+        },
+        "high": {
+          "mean": 0.72,
+          "count": 71
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.21,
+          "count": 106
+        },
+        "mid": {
+          "mean": -0.17,
+          "count": 71
+        },
+        "high": {
+          "mean": -0.44,
+          "count": 66
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -0.62,
+          "count": 70
+        },
+        "mid": {
+          "mean": -0.71,
+          "count": 96
+        },
+        "high": {
+          "mean": -2.15,
+          "count": 76
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.28,
+          "count": 130
+        },
+        "mid": {
+          "mean": -1.46,
+          "count": 100
+        },
+        "high": {
+          "mean": -0.66,
+          "count": 12
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 1.17,
+          "count": 69
+        },
+        "mid": {
+          "mean": -0.56,
+          "count": 78
+        },
+        "high": {
+          "mean": 0.3,
+          "count": 95
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -0.8,
+          "count": 81
+        },
+        "mid": {
+          "mean": -0.73,
+          "count": 51
+        },
+        "high": {
+          "mean": -1.34,
+          "count": 111
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": 5.23,
+          "count": 1
+        },
+        "mid": {
+          "mean": -0.39,
+          "count": 9
+        },
+        "high": {
+          "mean": -2.9,
+          "count": 76
+        }
+      }
+    }
+  },
+  "v4_bak_internal_corr_60d": {
+    "meta": {
+      "category": "相关性/拥挤度",
+      "name": "大池独有内部60日平均相关性",
+      "logic": "高度同涨同跌时大池是否风险更大？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1480,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.48,
+        "count": 494
+      },
+      "mid": {
+        "mean": -0.83,
+        "count": 493
+      },
+      "high": {
+        "mean": -0.15,
+        "count": 493
+      }
+    },
+    "yearly": {
+      "2020": {
+        "mid": {
+          "mean": 0.68,
+          "count": 64
+        },
+        "high": {
+          "mean": 1.41,
+          "count": 118
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.2,
+          "count": 180
+        },
+        "mid": {
+          "mean": -0.5,
+          "count": 55
+        },
+        "high": {
+          "mean": -0.11,
+          "count": 8
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -4.71,
+          "count": 17
+        },
+        "mid": {
+          "mean": -3.41,
+          "count": 72
+        },
+        "high": {
+          "mean": 0.33,
+          "count": 153
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -2.96,
+          "count": 14
+        },
+        "mid": {
+          "mean": -0.97,
+          "count": 189
+        },
+        "high": {
+          "mean": 0.84,
+          "count": 39
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": -0.23,
+          "count": 167
+        },
+        "mid": {
+          "mean": 1.44,
+          "count": 73
+        },
+        "high": {
+          "mean": 0.0,
+          "count": 2
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -0.37,
+          "count": 116
+        },
+        "mid": {
+          "mean": -1.92,
+          "count": 35
+        },
+        "high": {
+          "mean": -1.52,
+          "count": 92
+        }
+      },
+      "2026": {
+        "mid": {
+          "mean": -7.0,
+          "count": 5
+        },
+        "high": {
+          "mean": -2.27,
+          "count": 81
+        }
+      }
+    }
+  },
+  "v4_risk_internal_corr_60d": {
+    "meta": {
+      "category": "相关性/拥挤度",
+      "name": "原风险池内部60日平均相关性",
+      "logic": "原池高度同涨同跌时是否预示主题拥挤？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1480,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.32,
+        "count": 494
+      },
+      "mid": {
+        "mean": -1.38,
+        "count": 493
+      },
+      "high": {
+        "mean": 0.23,
+        "count": 493
+      }
+    },
+    "yearly": {
+      "2020": {
+        "mid": {
+          "mean": -0.71,
+          "count": 24
+        },
+        "high": {
+          "mean": 1.44,
+          "count": 158
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.1,
+          "count": 85
+        },
+        "mid": {
+          "mean": -0.2,
+          "count": 94
+        },
+        "high": {
+          "mean": -0.58,
+          "count": 64
+        }
+      },
+      "2022": {
+        "mid": {
+          "mean": -2.15,
+          "count": 83
+        },
+        "high": {
+          "mean": -0.61,
+          "count": 159
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -1.0,
+          "count": 147
+        },
+        "mid": {
+          "mean": -1.44,
+          "count": 47
+        },
+        "high": {
+          "mean": 0.49,
+          "count": 48
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": -0.66,
+          "count": 124
+        },
+        "mid": {
+          "mean": 1.29,
+          "count": 111
+        },
+        "high": {
+          "mean": 0.71,
+          "count": 7
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -0.49,
+          "count": 98
+        },
+        "mid": {
+          "mean": -2.23,
+          "count": 89
+        },
+        "high": {
+          "mean": -0.06,
+          "count": 56
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": 3.22,
+          "count": 40
+        },
+        "mid": {
+          "mean": -7.63,
+          "count": 45
+        },
+        "high": {
+          "mean": -4.1,
+          "count": 1
+        }
+      }
+    }
+  },
+  "v5_bak_efficiency_20d": {
+    "meta": {
+      "category": "趋势效率/噪音",
+      "name": "大池独有20日收益路径效率",
+      "logic": "少数跳涨的趋势延续性是否较差？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1521,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.81,
+        "count": 507
+      },
+      "mid": {
+        "mean": -0.59,
+        "count": 507
+      },
+      "high": {
+        "mean": -0.01,
+        "count": 507
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 1.6,
+          "count": 54
+        },
+        "mid": {
+          "mean": 1.28,
+          "count": 69
+        },
+        "high": {
+          "mean": 0.42,
+          "count": 100
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.32,
+          "count": 109
+        },
+        "mid": {
+          "mean": -0.32,
+          "count": 89
+        },
+        "high": {
+          "mean": -0.02,
+          "count": 45
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -1.87,
+          "count": 74
+        },
+        "mid": {
+          "mean": -1.51,
+          "count": 89
+        },
+        "high": {
+          "mean": -0.04,
+          "count": 79
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.99,
+          "count": 91
+        },
+        "mid": {
+          "mean": -0.98,
+          "count": 98
+        },
+        "high": {
+          "mean": -0.09,
+          "count": 53
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 0.68,
+          "count": 86
+        },
+        "mid": {
+          "mean": 0.38,
+          "count": 73
+        },
+        "high": {
+          "mean": -0.24,
+          "count": 83
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -2.3,
+          "count": 62
+        },
+        "mid": {
+          "mean": -1.67,
+          "count": 69
+        },
+        "high": {
+          "mean": 0.07,
+          "count": 112
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": -4.87,
+          "count": 31
+        },
+        "mid": {
+          "mean": -2.05,
+          "count": 20
+        },
+        "high": {
+          "mean": -0.77,
+          "count": 35
+        }
+      }
+    }
+  },
+  "v5_bak_up_day_ratio_20d": {
+    "meta": {
+      "category": "趋势效率/噪音",
+      "name": "大池独有20日上涨日比例",
+      "logic": "上涨日比例极端时是否预示反转？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1521,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.38,
+        "count": 760
+      },
+      "mid": {
+        "mean": -0.65,
+        "count": 279
+      },
+      "high": {
+        "mean": -0.52,
+        "count": 482
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 1.0,
+          "count": 59
+        },
+        "mid": {
+          "mean": 2.01,
+          "count": 38
+        },
+        "high": {
+          "mean": 0.64,
+          "count": 126
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.26,
+          "count": 109
+        },
+        "mid": {
+          "mean": -0.63,
+          "count": 64
+        },
+        "high": {
+          "mean": 0.06,
+          "count": 70
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -1.39,
+          "count": 180
+        },
+        "mid": {
+          "mean": -0.87,
+          "count": 27
+        },
+        "high": {
+          "mean": -0.04,
+          "count": 35
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.75,
+          "count": 153
+        },
+        "mid": {
+          "mean": -1.42,
+          "count": 42
+        },
+        "high": {
+          "mean": -0.35,
+          "count": 47
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 1.11,
+          "count": 132
+        },
+        "mid": {
+          "mean": -0.03,
+          "count": 51
+        },
+        "high": {
+          "mean": -1.35,
+          "count": 59
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -0.89,
+          "count": 95
+        },
+        "mid": {
+          "mean": -2.21,
+          "count": 40
+        },
+        "high": {
+          "mean": -0.72,
+          "count": 108
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": -0.37,
+          "count": 32
+        },
+        "mid": {
+          "mean": -2.63,
+          "count": 17
+        },
+        "high": {
+          "mean": -4.38,
+          "count": 37
+        }
+      }
+    }
+  },
+  "v5_bak_max_day_contrib_20d": {
+    "meta": {
+      "category": "趋势效率/噪音",
+      "name": "大池独有20日最大单日贡献占比",
+      "logic": "趋势由少数跳涨贡献时延续性是否较差？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1521,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.54,
+        "count": 507
+      },
+      "mid": {
+        "mean": -0.64,
+        "count": 507
+      },
+      "high": {
+        "mean": -0.24,
+        "count": 507
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 1.94,
+          "count": 36
+        },
+        "mid": {
+          "mean": 0.66,
+          "count": 73
+        },
+        "high": {
+          "mean": 0.86,
+          "count": 114
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.68,
+          "count": 105
+        },
+        "mid": {
+          "mean": 0.07,
+          "count": 88
+        },
+        "high": {
+          "mean": 0.01,
+          "count": 50
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -0.7,
+          "count": 65
+        },
+        "mid": {
+          "mean": -1.73,
+          "count": 110
+        },
+        "high": {
+          "mean": -0.58,
+          "count": 67
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.33,
+          "count": 153
+        },
+        "mid": {
+          "mean": -1.6,
+          "count": 51
+        },
+        "high": {
+          "mean": -1.54,
+          "count": 38
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 0.25,
+          "count": 53
+        },
+        "mid": {
+          "mean": -0.87,
+          "count": 88
+        },
+        "high": {
+          "mean": 1.28,
+          "count": 101
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -1.58,
+          "count": 86
+        },
+        "mid": {
+          "mean": -0.81,
+          "count": 75
+        },
+        "high": {
+          "mean": -0.66,
+          "count": 82
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": -5.75,
+          "count": 9
+        },
+        "mid": {
+          "mean": 1.34,
+          "count": 22
+        },
+        "high": {
+          "mean": -3.57,
+          "count": 55
+        }
+      }
+    }
+  },
+  "v6_bak_amt_mean_20d": {
+    "meta": {
+      "category": "流动性",
+      "name": "大池独有成交额20日均值",
+      "logic": "主题爆发前是否有成交额提前扩张？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1521,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.16,
+        "count": 507
+      },
+      "mid": {
+        "mean": -0.31,
+        "count": 507
+      },
+      "high": {
+        "mean": -0.95,
+        "count": 507
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 1.05,
+          "count": 188
+        },
+        "mid": {
+          "mean": 0.55,
+          "count": 35
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.38,
+          "count": 201
+        },
+        "mid": {
+          "mean": 0.29,
+          "count": 42
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -1.65,
+          "count": 99
+        },
+        "mid": {
+          "mean": -1.24,
+          "count": 118
+        },
+        "high": {
+          "mean": 1.36,
+          "count": 25
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -2.0,
+          "count": 19
+        },
+        "mid": {
+          "mean": -0.64,
+          "count": 206
+        },
+        "high": {
+          "mean": -1.28,
+          "count": 17
+        }
+      },
+      "2024": {
+        "mid": {
+          "mean": 0.84,
+          "count": 106
+        },
+        "high": {
+          "mean": -0.17,
+          "count": 136
+        }
+      },
+      "2025": {
+        "high": {
+          "mean": -1.03,
+          "count": 243
+        }
+      },
+      "2026": {
+        "high": {
+          "mean": -2.54,
+          "count": 86
+        }
+      }
+    }
+  },
+  "v6_bak_amt_change": {
+    "meta": {
+      "category": "流动性",
+      "name": "大池独有成交额变化率(20d/60d-1)",
+      "logic": "成交额扩张时主题是否更易延续？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1481,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": 0.12,
+        "count": 494
+      },
+      "mid": {
+        "mean": -0.38,
+        "count": 493
+      },
+      "high": {
+        "mean": -1.2,
+        "count": 494
+      }
+    },
+    "yearly": {
+      "2020": {
+        "low": {
+          "mean": 2.38,
+          "count": 83
+        },
+        "mid": {
+          "mean": 0.52,
+          "count": 64
+        },
+        "high": {
+          "mean": -0.48,
+          "count": 36
+        }
+      },
+      "2021": {
+        "low": {
+          "mean": -0.44,
+          "count": 72
+        },
+        "mid": {
+          "mean": -0.72,
+          "count": 104
+        },
+        "high": {
+          "mean": 0.63,
+          "count": 67
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -0.03,
+          "count": 42
+        },
+        "mid": {
+          "mean": 0.11,
+          "count": 88
+        },
+        "high": {
+          "mean": -2.54,
+          "count": 112
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.18,
+          "count": 100
+        },
+        "mid": {
+          "mean": -0.93,
+          "count": 107
+        },
+        "high": {
+          "mean": -2.1,
+          "count": 35
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 0.36,
+          "count": 70
+        },
+        "mid": {
+          "mean": 0.16,
+          "count": 68
+        },
+        "high": {
+          "mean": 0.29,
+          "count": 104
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -2.2,
+          "count": 88
+        },
+        "mid": {
+          "mean": 0.13,
+          "count": 48
+        },
+        "high": {
+          "mean": -0.59,
+          "count": 107
+        }
+      },
+      "2026": {
+        "low": {
+          "mean": 2.07,
+          "count": 39
+        },
+        "mid": {
+          "mean": -5.25,
+          "count": 14
+        },
+        "high": {
+          "mean": -6.85,
+          "count": 33
+        }
+      }
+    }
+  },
+  "v6_bak_amt_quantile": {
+    "meta": {
+      "category": "流动性",
+      "name": "大池独有成交额分位数(252日)",
+      "logic": "成交额处于历史高位时主题是否更易延续？",
+      "computable": true,
+      "future_function": false
+    },
+    "n_total": 1270,
+    "bucketing": "qcut3",
+    "all_sample": {
+      "low": {
+        "mean": -0.63,
+        "count": 427
+      },
+      "mid": {
+        "mean": -0.66,
+        "count": 429
+      },
+      "high": {
+        "mean": -0.98,
+        "count": 414
+      }
+    },
+    "yearly": {
+      "2020": {
+        "note": "样本不足(n=0)"
+      },
+      "2021": {
+        "low": {
+          "mean": -0.6,
+          "count": 102
+        },
+        "mid": {
+          "mean": -0.27,
+          "count": 90
+        },
+        "high": {
+          "mean": -0.14,
+          "count": 23
+        }
+      },
+      "2022": {
+        "low": {
+          "mean": -1.9,
+          "count": 51
+        },
+        "mid": {
+          "mean": -1.08,
+          "count": 76
+        },
+        "high": {
+          "mean": -0.84,
+          "count": 115
+        }
+      },
+      "2023": {
+        "low": {
+          "mean": -0.92,
+          "count": 146
+        },
+        "mid": {
+          "mean": -0.33,
+          "count": 65
+        },
+        "high": {
+          "mean": -1.12,
+          "count": 31
+        }
+      },
+      "2024": {
+        "low": {
+          "mean": 1.2,
+          "count": 44
+        },
+        "mid": {
+          "mean": 0.1,
+          "count": 97
+        },
+        "high": {
+          "mean": 0.04,
+          "count": 101
+        }
+      },
+      "2025": {
+        "low": {
+          "mean": -0.36,
+          "count": 84
+        },
+        "mid": {
+          "mean": -2.25,
+          "count": 73
+        },
+        "high": {
+          "mean": -0.66,
+          "count": 86
+        }
+      },
+      "2026": {
+        "mid": {
+          "mean": 0.03,
+          "count": 28
+        },
+        "high": {
+          "mean": -3.79,
+          "count": 58
+        }
+      }
+    }
+  }
+}

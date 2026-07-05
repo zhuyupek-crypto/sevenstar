@@ -1,0 +1,222 @@
+{
+  "v1_bak_vol": {
+    "category": "波动率",
+    "name": "大池独有ETF波动率(20日)",
+    "causal_logic": "高波动环境下大池独有更易均值回归？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1539,
+    "n_total": 1560,
+    "missing_rate_pct": 1.35,
+    "t_minus_1": true
+  },
+  "v1_risk_vol": {
+    "category": "波动率",
+    "name": "原风险池波动率(20日)",
+    "causal_logic": "原池高波动时大池独有是否更值得开放？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1539,
+    "n_total": 1560,
+    "missing_rate_pct": 1.35,
+    "t_minus_1": true
+  },
+  "v1_vol_ratio": {
+    "category": "波动率",
+    "name": "大池独有/原风险池波动率比",
+    "causal_logic": "大池独有相对波动率越高，是否更易反转？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1539,
+    "n_total": 1560,
+    "missing_rate_pct": 1.35,
+    "t_minus_1": true
+  },
+  "v1_vol_expansion": {
+    "category": "波动率",
+    "name": "大池独有波动率扩张(20d/60d-1)",
+    "causal_logic": "波动率扩张时主题是否更易反转？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1499,
+    "n_total": 1560,
+    "missing_rate_pct": 3.91,
+    "t_minus_1": true
+  },
+  "v2_bak_dd_20d": {
+    "category": "回撤位置",
+    "name": "大池独有距20日高点回撤",
+    "causal_logic": "大池独有远离高点(20d)时更易反转还是修复？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1540,
+    "n_total": 1560,
+    "missing_rate_pct": 1.28,
+    "t_minus_1": true
+  },
+  "v2_bak_dd_60d": {
+    "category": "回撤位置",
+    "name": "大池独有距60日高点回撤",
+    "causal_logic": "大池独有远离高点(60d)时更易反转还是修复？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1500,
+    "n_total": 1560,
+    "missing_rate_pct": 3.85,
+    "t_minus_1": true
+  },
+  "v2_bak_dd_120d": {
+    "category": "回撤位置",
+    "name": "大池独有距120日高点回撤",
+    "causal_logic": "大池独有远离高点(120d)时更易反转还是修复？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1440,
+    "n_total": 1560,
+    "missing_rate_pct": 7.69,
+    "t_minus_1": true
+  },
+  "v2_risk_dd_60d": {
+    "category": "回撤位置",
+    "name": "原风险池距60日高点回撤",
+    "causal_logic": "原池深回撤时大池独有是否更易修复？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1500,
+    "n_total": 1560,
+    "missing_rate_pct": 3.85,
+    "t_minus_1": true
+  },
+  "v2_dd_diff_60d": {
+    "category": "回撤位置",
+    "name": "大池独有-原池 60日回撤差",
+    "causal_logic": "大池独有相对原池回撤更深时是否更易修复？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1500,
+    "n_total": 1560,
+    "missing_rate_pct": 3.85,
+    "t_minus_1": true
+  },
+  "v3_xs_dispersion_20d": {
+    "category": "横截面离散度",
+    "name": "37只风险ETF 20日收益横截面离散度",
+    "causal_logic": "横截面机会多时大池是否更值得开放？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1539,
+    "n_total": 1560,
+    "missing_rate_pct": 1.35,
+    "t_minus_1": true
+  },
+  "v3_bak_internal_disp_20d": {
+    "category": "横截面离散度",
+    "name": "大池独有内部20日收益离散度",
+    "causal_logic": "大池独有内部分化时是否更值得开放？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1539,
+    "n_total": 1560,
+    "missing_rate_pct": 1.35,
+    "t_minus_1": true
+  },
+  "v3_top1_minus_median_20d": {
+    "category": "横截面离散度",
+    "name": "Top1与中位ETF 20日收益差",
+    "causal_logic": "头部ETF大幅领先时大池是否更值得开放？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1539,
+    "n_total": 1560,
+    "missing_rate_pct": 1.35,
+    "t_minus_1": true
+  },
+  "v4_bak_internal_corr_60d": {
+    "category": "相关性/拥挤度",
+    "name": "大池独有内部60日平均相关性",
+    "causal_logic": "高度同涨同跌时大池是否风险更大？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1499,
+    "n_total": 1500,
+    "missing_rate_pct": 0.07,
+    "t_minus_1": true
+  },
+  "v4_risk_internal_corr_60d": {
+    "category": "相关性/拥挤度",
+    "name": "原风险池内部60日平均相关性",
+    "causal_logic": "原池高度同涨同跌时是否预示主题拥挤？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1499,
+    "n_total": 1500,
+    "missing_rate_pct": 0.07,
+    "t_minus_1": true
+  },
+  "v5_bak_efficiency_20d": {
+    "category": "趋势效率/噪音",
+    "name": "大池独有20日收益路径效率",
+    "causal_logic": "少数跳涨的趋势延续性是否较差？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1540,
+    "n_total": 1560,
+    "missing_rate_pct": 1.28,
+    "t_minus_1": true
+  },
+  "v5_bak_up_day_ratio_20d": {
+    "category": "趋势效率/噪音",
+    "name": "大池独有20日上涨日比例",
+    "causal_logic": "上涨日比例极端时是否预示反转？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1540,
+    "n_total": 1560,
+    "missing_rate_pct": 1.28,
+    "t_minus_1": true
+  },
+  "v5_bak_max_day_contrib_20d": {
+    "category": "趋势效率/噪音",
+    "name": "大池独有20日最大单日贡献占比",
+    "causal_logic": "趋势由少数跳涨贡献时延续性是否较差？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1540,
+    "n_total": 1560,
+    "missing_rate_pct": 1.28,
+    "t_minus_1": true
+  },
+  "v6_bak_amt_mean_20d": {
+    "category": "流动性",
+    "name": "大池独有成交额20日均值",
+    "causal_logic": "主题爆发前是否有成交额提前扩张？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1540,
+    "n_total": 1560,
+    "missing_rate_pct": 1.28,
+    "t_minus_1": true
+  },
+  "v6_bak_amt_change": {
+    "category": "流动性",
+    "name": "大池独有成交额变化率(20d/60d-1)",
+    "causal_logic": "成交额扩张时主题是否更易延续？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1500,
+    "n_total": 1560,
+    "missing_rate_pct": 3.85,
+    "t_minus_1": true
+  },
+  "v6_bak_amt_quantile": {
+    "category": "流动性",
+    "name": "大池独有成交额分位数(252日)",
+    "causal_logic": "成交额处于历史高位时主题是否更易延续？",
+    "computable": true,
+    "future_function_risk": false,
+    "n_valid": 1289,
+    "n_total": 1560,
+    "missing_rate_pct": 17.37,
+    "t_minus_1": true
+  }
+}
