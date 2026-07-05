@@ -53,10 +53,34 @@
       "evidence": "年化切换 = 40.0 次"
     }
   ],
-  "all_continue_passed": true,
+  "all_continue_passed": "true_with_caveat",
   "any_stop_triggered": false,
-  "final_recommendation": "proceed_to_p4_04",
+  "final_recommendation": "conditional_proceed_to_p4_04_low_frequency_only",
   "final_baseline": "O7_baseline（无论结论如何都保留）",
+  "acceptance_correction": {
+    "corrected_by_user": true,
+    "correction_date": "2026-07-05",
+    "issues_identified": [
+      "脚本中 stop_condition 5 的阈值年化 >50 次是人为设定，任务书未冻结此阈值",
+      "relative_score 年化 40 次切换 × 0.40% round-trip = 16% 年化成本 > H-L 2.15%，机械桶切换已被证伪",
+      "原表述 '7/7 继续条件全部通过、0/3 停止条件触发' 不当，应承认机械切换路径已失效"
+    ],
+    "corrected_conclusion": [
+      "P4-03 研究主体通过",
+      "relative_score 反向逻辑有一定因果解释",
+      "o7_internal_corr_60d 有经济解释",
+      "静态 H-L 扣单次 round-trip 成本后仍为正",
+      "但机械桶切换已被证伪，不能说全部继续条件无保留通过"
+    ],
+    "frozen_constraints_for_p4_04": [
+      "不停止整个 O7 vs C8D 研究",
+      "禁止进入按桶切换或日频切换规则",
+      "P4-04 只能验证低频切换框架",
+      "年化切换次数必须显著低于 40 次，最好约束在 ≤12 次",
+      "P4-04 必须做真实切换回测、真实成本扣减、2024 失效环境验证",
+      "若低频化后信号消失，立即停止池切换研究，保留 O7_baseline"
+    ]
+  },
   "key_metrics": {
     "relative_score_n20_gross_hl": 0.025474168301725966,
     "relative_score_n20_net_hl_low": 0.023474168301725967,
