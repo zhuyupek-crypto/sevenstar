@@ -47,6 +47,10 @@ qixing_optimize/runs/*.json
 !qixing_optimize/runs/p4_02_non_momentum_predictive_validation/
 !qixing_optimize/runs/p4_02_non_momentum_predictive_validation/**
 
+# P4-03 反向因果与成本验证结果（例外保留）
+!qixing_optimize/runs/p4_03_reverse_causality_cost_validation/
+!qixing_optimize/runs/p4_03_reverse_causality_cost_validation/**
+
 # 系统文件
 .DS_Store
 Thumbs.db

@@ -1,0 +1,22 @@
+[
+  {
+    "feature": "relative_score",
+    "n_total_days": 1498,
+    "bucket_change_count": 238,
+    "annualized_bucket_change_count": 40.03738317757009,
+    "average_bucket_duration_days": 6.2677824267782425,
+    "median_bucket_duration_days": 3.0,
+    "min_bucket_duration_days": 1,
+    "max_bucket_duration_days": 61
+  },
+  {
+    "feature": "o7_internal_corr_60d",
+    "n_total_days": 1498,
+    "bucket_change_count": 130,
+    "annualized_bucket_change_count": 21.86915887850467,
+    "average_bucket_duration_days": 11.435114503816793,
+    "median_bucket_duration_days": 4.0,
+    "min_bucket_duration_days": 1,
+    "max_bucket_duration_days": 121
+  }
+]
