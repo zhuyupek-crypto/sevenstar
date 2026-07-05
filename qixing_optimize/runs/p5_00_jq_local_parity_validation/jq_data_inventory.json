@@ -1,0 +1,74 @@
+[
+  {
+    "file_path": "D:\\Work Space\\他山之石\\七星高照ETF轮动\\聚宽回测结果\\交易日志.txt",
+    "file_name": "交易日志.txt",
+    "file_type": "txt",
+    "file_size_bytes": 86306,
+    "file_size_mb": 0.0823,
+    "readable": true,
+    "used_for_alignment": "auxiliary (strategy log, only to 2024-03-21)"
+  },
+  {
+    "file_path": "D:\\Work Space\\他山之石\\七星高照ETF轮动\\聚宽回测结果\\交易记录240101-241231.txt",
+    "file_name": "交易记录240101-241231.txt",
+    "file_type": "txt",
+    "file_size_bytes": 12285,
+    "file_size_mb": 0.0117,
+    "readable": true,
+    "used_for_alignment": "yes (trade records)"
+  },
+  {
+    "file_path": "D:\\Work Space\\他山之石\\七星高照ETF轮动\\聚宽回测结果\\每日持仓&资金.txt",
+    "file_name": "每日持仓&资金.txt",
+    "file_type": "txt",
+    "file_size_bytes": 32831,
+    "file_size_mb": 0.0313,
+    "readable": true,
+    "used_for_alignment": "yes (daily NAV + positions)"
+  },
+  {
+    "file_path": "D:\\Work Space\\他山之石\\七星高照ETF轮动\\聚宽净值导出脚本.py",
+    "file_name": "聚宽净值导出脚本.py",
+    "file_type": "py",
+    "file_size_bytes": 5592,
+    "file_size_mb": 0.0053,
+    "readable": true,
+    "used_for_alignment": "no (fund NAV export script, not strategy backtest)"
+  },
+  {
+    "file_path": "D:\\Work Space\\他山之石\\七星高照ETF轮动\\jq_diagnose.py",
+    "file_name": "jq_diagnose.py",
+    "file_type": "py",
+    "file_size_bytes": 1836,
+    "file_size_mb": 0.0018,
+    "readable": true,
+    "used_for_alignment": "no (diagnostic script, not data)"
+  },
+  {
+    "file_path": "D:\\Work Space\\他山之石\\七星高照ETF轮动\\qixing_nav_export_bundle_20171201_20260703.zip",
+    "file_name": "qixing_nav_export_bundle_20171201_20260703.zip",
+    "file_type": "missing",
+    "file_size_bytes": 0,
+    "file_size_mb": 0,
+    "readable": false,
+    "used_for_alignment": "no (file not found in working directory)"
+  },
+  {
+    "file_path": "D:\\Work Space\\他山之石\\七星高照ETF轮动\\qixing_nav_processed_bundle.zip",
+    "file_name": "qixing_nav_processed_bundle.zip",
+    "file_type": "missing",
+    "file_size_bytes": 0,
+    "file_size_mb": 0,
+    "readable": false,
+    "used_for_alignment": "no (file not found in working directory)"
+  },
+  {
+    "file_path": "D:\\Work Space\\他山之石\\七星高照ETF轮动\\七星高照_聚宽NAV完整导出脚本.py",
+    "file_name": "七星高照_聚宽NAV完整导出脚本.py",
+    "file_type": "missing",
+    "file_size_bytes": 0,
+    "file_size_mb": 0,
+    "readable": false,
+    "used_for_alignment": "no (file not found in working directory)"
+  }
+]

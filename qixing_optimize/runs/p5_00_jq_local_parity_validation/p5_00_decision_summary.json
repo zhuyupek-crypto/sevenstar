@@ -1,0 +1,87 @@
+{
+  "pass_criteria": {
+    "1_date_param_aligned": true,
+    "2_nav_alignable": true,
+    "3_total_return_diff_le_1pp": false,
+    "4_max_dd_diff_le_1pp": true,
+    "5_annual_return_diff_le_1pp": false,
+    "6_nav_mean_abs_err_le_0_2pct": false,
+    "7_return_corr_ge_0_98": true,
+    "8_trade_date_match_ge_95pct": true,
+    "9_position_match_ge_95pct": true,
+    "10_no_systematic_drift": false
+  },
+  "all_pass": false,
+  "nav_level_pass": false,
+  "trade_level_pass": true,
+  "final_recommendation": "parity_failed_fix_localization_first",
+  "allow_live_packaging": false,
+  "nav_stats": {
+    "n_aligned_days": 242,
+    "max_abs_diff": 0.02463054601752157,
+    "mean_abs_diff": 0.007966956975528404,
+    "median_abs_diff": 0.0031333566471299923,
+    "max_pct_diff": 0.01849899438924062,
+    "n_days_gt_0_1pct": 170,
+    "n_days_gt_0_5pct": 77,
+    "n_days_gt_1pct": 76,
+    "jq_final_nav": 1.3235013410108432,
+    "local_final_nav": 1.3479847848923552,
+    "final_nav_diff": -0.024483443881512024
+  },
+  "return_stats": {
+    "n_days": 241,
+    "max_return_diff": 0.008645039112280317,
+    "mean_return_diff": 9.213183354978627e-05,
+    "median_return_diff": 2.943498434992975e-07,
+    "correlation": 0.9995311228330194,
+    "direction_match_rate": 0.995850622406639
+  },
+  "metric_diff": {
+    "total_return_diff": -0.024483443881512024,
+    "annual_return_diff": -0.02580195435394672,
+    "max_drawdown_diff": -0.0011343580031505374,
+    "sharpe_diff": -0.06183880375677209,
+    "final_nav_diff": -24438.15000000014
+  },
+  "trade_stats": {
+    "jq_n_trades": 106,
+    "local_n_trades": 109,
+    "jq_n_trade_dates": 54,
+    "local_n_trade_dates": 55,
+    "n_common_dates": 54,
+    "n_jq_only_dates": 0,
+    "n_local_only_dates": 1,
+    "date_match_rate": 0.9818181818181818,
+    "n_matched_trades": 12,
+    "n_mismatched_trades": 93,
+    "n_jq_only_trades": 1,
+    "n_local_only_trades": 4
+  },
+  "position_stats": {
+    "n_days_compared": 242,
+    "n_match": 241,
+    "n_mismatch": 1,
+    "position_match_rate": 0.9958677685950413
+  },
+  "cost_stats": {
+    "jq_total_commission": 23749.82,
+    "local_total_commission": 24629.96,
+    "commission_diff": -880.1399999999994,
+    "jq_total_tax": 323906.7,
+    "local_total_tax": 0.0,
+    "tax_diff": 323906.7,
+    "jq_total_trade_value": 118749038.1,
+    "local_total_trade_value": 123149865.6,
+    "jq_comm_rate": 0.00020000010425347606,
+    "local_comm_rate": 0.00019999989346313992
+  },
+  "data_coverage": {
+    "jq_data_dates": "2024-01-02 ~ 2024-12-31 (only 2024)",
+    "jq_data_files": 3,
+    "jq_trade_log_incomplete": true,
+    "jq_trade_log_end_date": "2024-03-21",
+    "full_range_parity_not_possible": true,
+    "full_range_note": "聚宽数据只覆盖 2024 年，无法做 2020-2026H1 全区间复刻验收"
+  }
+}

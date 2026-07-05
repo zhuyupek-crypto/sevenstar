@@ -1,0 +1,18 @@
+{
+  "stats": {
+    "n_days_compared": 242,
+    "n_match": 241,
+    "n_mismatch": 1,
+    "position_match_rate": 0.9958677685950413
+  },
+  "position_diffs": [
+    {
+      "date": "2024-09-05",
+      "jq_held": "511880.XSHG",
+      "local_held": "159985.XSHE",
+      "jq_only": "511880.XSHG",
+      "local_only": "159985.XSHE",
+      "note": "jq=1etfs local=1etfs"
+    }
+  ]
+}

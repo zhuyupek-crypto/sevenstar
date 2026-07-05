@@ -1,0 +1,9 @@
+﻿file_path,file_name,file_type,file_size_bytes,file_size_mb,readable,used_for_alignment
+D:\Work Space\他山之石\七星高照ETF轮动\聚宽回测结果\交易日志.txt,交易日志.txt,txt,86306,0.0823,True,"auxiliary (strategy log, only to 2024-03-21)"
+D:\Work Space\他山之石\七星高照ETF轮动\聚宽回测结果\交易记录240101-241231.txt,交易记录240101-241231.txt,txt,12285,0.0117,True,yes (trade records)
+D:\Work Space\他山之石\七星高照ETF轮动\聚宽回测结果\每日持仓&资金.txt,每日持仓&资金.txt,txt,32831,0.0313,True,yes (daily NAV + positions)
+D:\Work Space\他山之石\七星高照ETF轮动\聚宽净值导出脚本.py,聚宽净值导出脚本.py,py,5592,0.0053,True,"no (fund NAV export script, not strategy backtest)"
+D:\Work Space\他山之石\七星高照ETF轮动\jq_diagnose.py,jq_diagnose.py,py,1836,0.0018,True,"no (diagnostic script, not data)"
+D:\Work Space\他山之石\七星高照ETF轮动\qixing_nav_export_bundle_20171201_20260703.zip,qixing_nav_export_bundle_20171201_20260703.zip,missing,0,0.0,False,no (file not found in working directory)
+D:\Work Space\他山之石\七星高照ETF轮动\qixing_nav_processed_bundle.zip,qixing_nav_processed_bundle.zip,missing,0,0.0,False,no (file not found in working directory)
+D:\Work Space\他山之石\七星高照ETF轮动\七星高照_聚宽NAV完整导出脚本.py,七星高照_聚宽NAV完整导出脚本.py,missing,0,0.0,False,no (file not found in working directory)

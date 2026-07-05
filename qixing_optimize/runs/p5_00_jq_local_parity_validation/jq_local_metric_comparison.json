@@ -1,0 +1,43 @@
+{
+  "metrics": [
+    {
+      "label": "jq_mother",
+      "total_return": 0.32350134101084316,
+      "annual_return": 0.33891904466511447,
+      "max_drawdown": -0.14791103066933825,
+      "sharpe": 1.098680800689515,
+      "calmar": 2.2913709892454417,
+      "final_nav": 1321052.89,
+      "init_nav": 998150.02,
+      "n_days": 242
+    },
+    {
+      "label": "local_o7_baseline",
+      "total_return": 0.3479847848923552,
+      "annual_return": 0.3647209990190612,
+      "max_drawdown": -0.1467766726661877,
+      "sharpe": 1.160519604446287,
+      "calmar": 2.4848703298278294,
+      "final_nav": 1345491.04,
+      "init_nav": 998150.02,
+      "n_days": 242
+    },
+    {
+      "label": "local_o7_baseline_p4_01_raw",
+      "total_return": 0.3455,
+      "annual_return": 0.36210000000000003,
+      "max_drawdown": 0.14679999999999999,
+      "sharpe": 1.161,
+      "calmar": 2.467,
+      "final_nav": 1345491.04,
+      "n_days": 242
+    }
+  ],
+  "diff": {
+    "total_return_diff": -0.024483443881512024,
+    "annual_return_diff": -0.02580195435394672,
+    "max_drawdown_diff": -0.0011343580031505374,
+    "sharpe_diff": -0.06183880375677209,
+    "final_nav_diff": -24438.15000000014
+  }
+}

@@ -55,6 +55,10 @@ qixing_optimize/runs/*.json
 !qixing_optimize/runs/p4_04_low_frequency_switch_validation/
 !qixing_optimize/runs/p4_04_low_frequency_switch_validation/**
 
+# P5-00 聚宽母版与本地复刻验收结果（例外保留）
+!qixing_optimize/runs/p5_00_jq_local_parity_validation/
+!qixing_optimize/runs/p5_00_jq_local_parity_validation/**
+
 # 系统文件
 .DS_Store
 Thumbs.db
