@@ -372,6 +372,10 @@ def calc_factors(price_matrix):
 def calc_future_returns(price_matrix, n_days_list):
     """计算原风险池/大池独有等权组合的未来 N 日收益（用于分桶统计）
 
+    未来 N 日收益口径：因子日期为 T（用 T-1 及以前数据），未来收益 = T 到 T+N-1 的累计收益。
+    实现方法：rolling(n) 在索引 i 处算的是 [i-n+1, i] 的累计收益，
+    用 shift(-(n-1)) 把索引 i+n-1 处的值移到索引 i，即得到 [i, i+n-1] 的未来 N 日收益。
+
     主口径超额 = 大池独有 - 原风险池7
     稳健性口径超额 = 大池独有 - (原风险池7+防御1)
     """
@@ -390,15 +394,16 @@ def calc_future_returns(price_matrix, n_days_list):
     default_w_def_ret = eq_weight_returns(default_w_def_prices)
     bak_ret = eq_weight_returns(bak_prices)
 
-    # 未来 N 日累计收益
+    # 未来 N 日累计收益（T 到 T+N-1）
     future = pd.DataFrame(index=price_matrix.index)
     for n in n_days_list:
-        # 主口径：原风险池 7 只未来 N 日累计收益
-        future[f'risk_ret_{n}d'] = (1 + risk_ret).rolling(n).apply(np.prod, raw=True) - 1
-        # 稳健性口径：原风险池+防御 8 只未来 N 日累计收益
-        future[f'default_w_def_ret_{n}d'] = (1 + default_w_def_ret).rolling(n).apply(np.prod, raw=True) - 1
-        # 大池独有未来 N 日累计收益
-        future[f'bak_ret_{n}d'] = (1 + bak_ret).rolling(n).apply(np.prod, raw=True) - 1
+        # rolling(n) 在 i 处算 [i-n+1, i] 累计收益；shift(-(n-1)) 后在 i 处得到 [i, i+n-1] 未来收益
+        roll_risk = (1 + risk_ret).rolling(n).apply(np.prod, raw=True) - 1
+        future[f'risk_ret_{n}d'] = roll_risk.shift(-(n - 1))
+        roll_default_w_def = (1 + default_w_def_ret).rolling(n).apply(np.prod, raw=True) - 1
+        future[f'default_w_def_ret_{n}d'] = roll_default_w_def.shift(-(n - 1))
+        roll_bak = (1 + bak_ret).rolling(n).apply(np.prod, raw=True) - 1
+        future[f'bak_ret_{n}d'] = roll_bak.shift(-(n - 1))
         # 主口径超额 = 大池独有 - 原风险池
         future[f'excess_ret_{n}d'] = future[f'bak_ret_{n}d'] - future[f'risk_ret_{n}d']
         # 稳健性口径超额 = 大池独有 - (原风险池+防御)
