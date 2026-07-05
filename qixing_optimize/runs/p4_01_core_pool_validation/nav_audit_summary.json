@@ -1,0 +1,6 @@
+{
+  "total_runs": 70,
+  "fail_open_count": 0,
+  "missing_skip_count": 0,
+  "note": "P4-01 使用 realistic NAV 模式（与 P2 C/D 一致），NAV 缺失时跳过该 ETF"
+}

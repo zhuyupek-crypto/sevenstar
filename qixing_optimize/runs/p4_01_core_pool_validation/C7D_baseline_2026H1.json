@@ -1,0 +1,1668 @@
+{
+  "trades": [
+    {
+      "date": "2026-01-05",
+      "time": "14:01",
+      "security": "510500.XSHG",
+      "amount": 128700,
+      "price": 7.765,
+      "commission": 199.87,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-01-14",
+      "time": "14:00",
+      "security": "510500.XSHG",
+      "amount": -128700,
+      "price": 8.273,
+      "commission": 212.95,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-01-14",
+      "time": "14:01",
+      "security": "510050.XSHG",
+      "amount": 334800,
+      "price": 3.18,
+      "commission": 212.93,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-01-15",
+      "time": "14:00",
+      "security": "510050.XSHG",
+      "amount": -334800,
+      "price": 3.181,
+      "commission": 213.0,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-01-15",
+      "time": "14:01",
+      "security": "159915.XSHE",
+      "amount": 320500,
+      "price": 3.322,
+      "commission": 212.94,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-01-16",
+      "time": "14:00",
+      "security": "159915.XSHE",
+      "amount": -320500,
+      "price": 3.347,
+      "commission": 214.54,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-01-16",
+      "time": "14:01",
+      "security": "510500.XSHG",
+      "amount": 129300,
+      "price": 8.294,
+      "commission": 214.48,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-01-29",
+      "time": "14:00",
+      "security": "510500.XSHG",
+      "amount": -129300,
+      "price": 8.592,
+      "commission": 222.19,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-01-29",
+      "time": "14:01",
+      "security": "518880.XSHG",
+      "amount": 92900,
+      "price": 11.944,
+      "commission": 221.92,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-01-30",
+      "time": "11:00",
+      "security": "518880.XSHG",
+      "amount": -92900,
+      "price": 11.204,
+      "commission": 208.17,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-01-30",
+      "time": "14:01",
+      "security": "510500.XSHG",
+      "amount": 123100,
+      "price": 8.453,
+      "commission": 208.11,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-02-02",
+      "time": "14:00",
+      "security": "510500.XSHG",
+      "amount": -123100,
+      "price": 8.18,
+      "commission": 201.39,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-02-02",
+      "time": "14:01",
+      "security": "511220.XSHG",
+      "amount": 98200,
+      "price": 10.249,
+      "commission": 201.29,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-02-24",
+      "time": "14:00",
+      "security": "511220.XSHG",
+      "amount": -98200,
+      "price": 10.277,
+      "commission": 201.84,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-02-24",
+      "time": "14:01",
+      "security": "518880.XSHG",
+      "amount": 92000,
+      "price": 10.975,
+      "commission": 201.94,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-03-06",
+      "time": "14:00",
+      "security": "518880.XSHG",
+      "amount": -92000,
+      "price": 10.89,
+      "commission": 200.38,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-03-06",
+      "time": "14:01",
+      "security": "511220.XSHG",
+      "amount": 97300,
+      "price": 10.288,
+      "commission": 200.2,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-04-15",
+      "time": "14:00",
+      "security": "511220.XSHG",
+      "amount": -97300,
+      "price": 10.327,
+      "commission": 200.96,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-04-15",
+      "time": "14:01",
+      "security": "159915.XSHE",
+      "amount": 285100,
+      "price": 3.524,
+      "commission": 200.94,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-05-06",
+      "time": "14:00",
+      "security": "159915.XSHE",
+      "amount": -285100,
+      "price": 3.799,
+      "commission": 216.62,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-05-06",
+      "time": "14:01",
+      "security": "513100.XSHG",
+      "amount": 537400,
+      "price": 2.015,
+      "commission": 216.57,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-06-04",
+      "time": "11:00",
+      "security": "513100.XSHG",
+      "amount": -537400,
+      "price": 2.255,
+      "commission": 242.37,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-06-04",
+      "time": "14:01",
+      "security": "159915.XSHE",
+      "amount": 294200,
+      "price": 4.117,
+      "commission": 242.24,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-06-05",
+      "time": "14:00",
+      "security": "159915.XSHE",
+      "amount": -294200,
+      "price": 4.019,
+      "commission": 236.48,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-06-05",
+      "time": "14:01",
+      "security": "513100.XSHG",
+      "amount": 533900,
+      "price": 2.214,
+      "commission": 236.41,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-06-08",
+      "time": "14:00",
+      "security": "513100.XSHG",
+      "amount": -533900,
+      "price": 2.12,
+      "commission": 226.37,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-06-08",
+      "time": "14:01",
+      "security": "511220.XSHG",
+      "amount": 108800,
+      "price": 10.394,
+      "commission": 226.17,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-06-11",
+      "time": "14:00",
+      "security": "511220.XSHG",
+      "amount": -108800,
+      "price": 10.35,
+      "commission": 225.22,
+      "tax": 0.0
+    },
+    {
+      "date": "2026-06-11",
+      "time": "14:01",
+      "security": "511880.XSHG",
+      "amount": 11200,
+      "price": 100.517,
+      "commission": 225.16,
+      "tax": 0.0
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-01-05 00:00:00",
+      "cash": 444.63,
+      "value": 1003275.03,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-06 00:00:00",
+      "cash": 444.63,
+      "value": 1025025.33,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-07 00:00:00",
+      "cash": 444.63,
+      "value": 1029915.93,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-08 00:00:00",
+      "cash": 444.63,
+      "value": 1033133.43,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-09 00:00:00",
+      "cash": 444.63,
+      "value": 1057843.83,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-12 00:00:00",
+      "cash": 444.63,
+      "value": 1083583.83,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-13 00:00:00",
+      "cash": 444.63,
+      "value": 1069426.83,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-14 00:00:00",
+      "cash": 89.85,
+      "value": 1067097.45,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-15 00:00:00",
+      "cash": -38.29,
+      "value": 1074277.71,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-16 00:00:00",
+      "cash": -168.01,
+      "value": 1072375.49,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-19 00:00:00",
+      "cash": -168.01,
+      "value": 1079228.39,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-20 00:00:00",
+      "cash": -168.01,
+      "value": 1076125.19,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-21 00:00:00",
+      "cash": -168.01,
+      "value": 1090089.59,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-22 00:00:00",
+      "cash": -168.01,
+      "value": 1094873.69,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-23 00:00:00",
+      "cash": -168.01,
+      "value": 1127198.69,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-26 00:00:00",
+      "cash": -168.01,
+      "value": 1107157.19,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-27 00:00:00",
+      "cash": -168.01,
+      "value": 1114268.69,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-28 00:00:00",
+      "cash": -168.01,
+      "value": 1123578.29,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-29 00:00:00",
+      "cash": 735.88,
+      "value": 1106617.48,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-01-30 00:00:00",
+      "cash": 606.9,
+      "value": 1039570.9,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-02 00:00:00",
+      "cash": 710.42,
+      "value": 1006671.22,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-03 00:00:00",
+      "cash": 710.42,
+      "value": 1006769.42,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-04 00:00:00",
+      "cash": 710.42,
+      "value": 1006965.82,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-05 00:00:00",
+      "cash": 710.42,
+      "value": 1007358.62,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-06 00:00:00",
+      "cash": 710.42,
+      "value": 1008537.02,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-09 00:00:00",
+      "cash": 710.42,
+      "value": 1008340.62,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-10 00:00:00",
+      "cash": 710.42,
+      "value": 1008537.02,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-11 00:00:00",
+      "cash": 710.42,
+      "value": 1009322.62,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-12 00:00:00",
+      "cash": 710.42,
+      "value": 1009224.42,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-13 00:00:00",
+      "cash": 710.42,
+      "value": 1009911.82,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-24 00:00:00",
+      "cash": -191.96,
+      "value": 1007208.04,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-25 00:00:00",
+      "cash": -191.96,
+      "value": 1008036.04,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-26 00:00:00",
+      "cash": -191.96,
+      "value": 1003804.04,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-02-27 00:00:00",
+      "cash": -191.96,
+      "value": 1005644.04,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-02 00:00:00",
+      "cash": -191.96,
+      "value": 1050172.04,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-03 00:00:00",
+      "cash": -191.96,
+      "value": 1035636.04,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-04 00:00:00",
+      "cash": -191.96,
+      "value": 1009968.04,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-05 00:00:00",
+      "cash": -191.96,
+      "value": 1008496.04,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-06 00:00:00",
+      "cash": 265.06,
+      "value": 1001384.76,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-09 00:00:00",
+      "cash": 265.06,
+      "value": 1000800.96,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-10 00:00:00",
+      "cash": 265.06,
+      "value": 1001190.16,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-11 00:00:00",
+      "cash": 265.06,
+      "value": 1001092.86,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-12 00:00:00",
+      "cash": 265.06,
+      "value": 1001190.16,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-13 00:00:00",
+      "cash": 265.06,
+      "value": 1001190.16,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-16 00:00:00",
+      "cash": 265.06,
+      "value": 1001190.16,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-17 00:00:00",
+      "cash": 265.06,
+      "value": 1001482.06,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-18 00:00:00",
+      "cash": 265.06,
+      "value": 1001676.66,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-19 00:00:00",
+      "cash": 265.06,
+      "value": 1001968.56,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-20 00:00:00",
+      "cash": 265.06,
+      "value": 1002260.46,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-23 00:00:00",
+      "cash": 265.06,
+      "value": 1002065.86,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-24 00:00:00",
+      "cash": 265.06,
+      "value": 1001968.56,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-25 00:00:00",
+      "cash": 265.06,
+      "value": 1002552.36,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-26 00:00:00",
+      "cash": 265.06,
+      "value": 1003330.76,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-27 00:00:00",
+      "cash": 265.06,
+      "value": 1003428.06,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-30 00:00:00",
+      "cash": 265.06,
+      "value": 1003622.66,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-03-31 00:00:00",
+      "cash": 265.06,
+      "value": 1003622.66,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-01 00:00:00",
+      "cash": 265.06,
+      "value": 1003330.76,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-02 00:00:00",
+      "cash": 265.06,
+      "value": 1003622.66,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-03 00:00:00",
+      "cash": 265.06,
+      "value": 1004498.36,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-07 00:00:00",
+      "cash": 265.06,
+      "value": 1004984.86,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-08 00:00:00",
+      "cash": 265.06,
+      "value": 1004692.96,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-09 00:00:00",
+      "cash": 265.06,
+      "value": 1005082.16,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-10 00:00:00",
+      "cash": 265.06,
+      "value": 1005276.76,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-13 00:00:00",
+      "cash": 265.06,
+      "value": 1005179.46,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-14 00:00:00",
+      "cash": 265.06,
+      "value": 1005179.46,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-15 00:00:00",
+      "cash": -12.14,
+      "value": 1000973.96,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-16 00:00:00",
+      "cash": -12.14,
+      "value": 1033190.26,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-17 00:00:00",
+      "cash": -12.14,
+      "value": 1046304.86,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-20 00:00:00",
+      "cash": -12.14,
+      "value": 1046875.06,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-21 00:00:00",
+      "cash": -12.14,
+      "value": 1049440.96,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-22 00:00:00",
+      "cash": -12.14,
+      "value": 1071393.66,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-23 00:00:00",
+      "cash": -12.14,
+      "value": 1062840.66,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-24 00:00:00",
+      "cash": -12.14,
+      "value": 1047445.26,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-27 00:00:00",
+      "cash": -12.14,
+      "value": 1041173.06,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-28 00:00:00",
+      "cash": -12.14,
+      "value": 1026918.06,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-29 00:00:00",
+      "cash": -12.14,
+      "value": 1053147.26,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-04-30 00:00:00",
+      "cash": -12.14,
+      "value": 1051721.76,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-06 00:00:00",
+      "cash": -211.43,
+      "value": 1079962.57,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-07 00:00:00",
+      "cash": -211.43,
+      "value": 1103608.17,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-08 00:00:00",
+      "cash": -211.43,
+      "value": 1109519.57,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-11 00:00:00",
+      "cash": -211.43,
+      "value": 1132627.77,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-12 00:00:00",
+      "cash": -211.43,
+      "value": 1118117.97,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-13 00:00:00",
+      "cash": -211.43,
+      "value": 1124566.77,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-14 00:00:00",
+      "cash": -211.43,
+      "value": 1131015.57,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-15 00:00:00",
+      "cash": -211.43,
+      "value": 1128328.57,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-18 00:00:00",
+      "cash": -211.43,
+      "value": 1110056.97,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-19 00:00:00",
+      "cash": -211.43,
+      "value": 1099846.37,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-20 00:00:00",
+      "cash": -211.43,
+      "value": 1105757.77,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-21 00:00:00",
+      "cash": -211.43,
+      "value": 1129940.77,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-22 00:00:00",
+      "cash": -211.43,
+      "value": 1153048.97,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-25 00:00:00",
+      "cash": -211.43,
+      "value": 1198727.97,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-26 00:00:00",
+      "cash": -211.43,
+      "value": 1174007.57,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-27 00:00:00",
+      "cash": -211.43,
+      "value": 1194428.77,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-28 00:00:00",
+      "cash": -211.43,
+      "value": 1189592.17,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-05-29 00:00:00",
+      "cash": -211.43,
+      "value": 1221298.77,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-01 00:00:00",
+      "cash": -211.43,
+      "value": 1270739.57,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-02 00:00:00",
+      "cash": -211.43,
+      "value": 1258916.77,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-03 00:00:00",
+      "cash": -211.43,
+      "value": 1235271.17,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-04 00:00:00",
+      "cash": -80.44,
+      "value": 1206139.56,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-05 00:00:00",
+      "cash": -218.13,
+      "value": 1177031.37,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-08 00:00:00",
+      "cash": 330.13,
+      "value": 1131523.73,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-09 00:00:00",
+      "cash": 330.13,
+      "value": 1129456.53,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-10 00:00:00",
+      "cash": 330.13,
+      "value": 1127498.13,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-11 00:00:00",
+      "cash": 169.35,
+      "value": 1126026.95,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-12 00:00:00",
+      "cash": 169.35,
+      "value": 1125959.75,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-15 00:00:00",
+      "cash": 169.35,
+      "value": 1125959.75,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-16 00:00:00",
+      "cash": 169.35,
+      "value": 1125959.75,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-17 00:00:00",
+      "cash": 169.35,
+      "value": 1125959.75,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-18 00:00:00",
+      "cash": 169.35,
+      "value": 1125959.75,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-22 00:00:00",
+      "cash": 169.35,
+      "value": 1125959.75,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-23 00:00:00",
+      "cash": 169.35,
+      "value": 1125959.75,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-24 00:00:00",
+      "cash": 169.35,
+      "value": 1125959.75,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-25 00:00:00",
+      "cash": 169.35,
+      "value": 1125959.75,
+      "positions": "{}"
+    },
+    {
+      "date": "2026-06-26 00:00:00",
+      "cash": 169.35,
+      "value": 1125959.75,
+      "positions": "{}"
+    }
+  ],
+  "diag": [
+    {
+      "date": "2026-01-05",
+      "time": "14:01",
+      "callback": "order",
+      "security": "510500.XSHG",
+      "last_price": 7.765,
+      "high_limit": 8.347,
+      "low_limit": 6.829,
+      "paused": false,
+      "day_open": 7.642,
+      "cash_before": 1000000,
+      "total_value": 1000000,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 128700
+    },
+    {
+      "date": "2026-01-14",
+      "time": "14:00",
+      "callback": "order",
+      "security": "510500.XSHG",
+      "last_price": 8.273,
+      "high_limit": 9.137,
+      "low_limit": 7.475,
+      "paused": false,
+      "day_open": 8.308,
+      "cash_before": 444.63,
+      "total_value": 1065179.73,
+      "position_amount": 128700,
+      "position_cost": 7.765,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -128700
+    },
+    {
+      "date": "2026-01-14",
+      "time": "14:01",
+      "callback": "order",
+      "security": "510050.XSHG",
+      "last_price": 3.18,
+      "high_limit": 3.535,
+      "low_limit": 2.893,
+      "paused": false,
+      "day_open": 3.216,
+      "cash_before": 1064966.78,
+      "total_value": 1064966.78,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 334800
+    },
+    {
+      "date": "2026-01-15",
+      "time": "14:00",
+      "callback": "order",
+      "security": "510050.XSHG",
+      "last_price": 3.181,
+      "high_limit": 3.506,
+      "low_limit": 2.868,
+      "paused": false,
+      "day_open": 3.18,
+      "cash_before": 89.85,
+      "total_value": 1065088.65,
+      "position_amount": 334800,
+      "position_cost": 3.18,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -334800
+    },
+    {
+      "date": "2026-01-15",
+      "time": "14:01",
+      "callback": "order",
+      "security": "159915.XSHE",
+      "last_price": 3.322,
+      "high_limit": 3.665,
+      "low_limit": 2.999,
+      "paused": false,
+      "day_open": 3.306,
+      "cash_before": 1064875.65,
+      "total_value": 1064875.65,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 320500
+    },
+    {
+      "date": "2026-01-16",
+      "time": "14:00",
+      "callback": "order",
+      "security": "159915.XSHE",
+      "last_price": 3.347,
+      "high_limit": 3.687,
+      "low_limit": 3.017,
+      "paused": false,
+      "day_open": 3.382,
+      "cash_before": -38.29,
+      "total_value": 1072675.21,
+      "position_amount": 320500,
+      "position_cost": 3.322,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -320500
+    },
+    {
+      "date": "2026-01-16",
+      "time": "14:01",
+      "callback": "order",
+      "security": "510500.XSHG",
+      "last_price": 8.294,
+      "high_limit": 9.105,
+      "low_limit": 7.449,
+      "paused": false,
+      "day_open": 8.318,
+      "cash_before": 1072460.67,
+      "total_value": 1072460.67,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 129300
+    },
+    {
+      "date": "2026-01-29",
+      "time": "14:00",
+      "callback": "order",
+      "security": "510500.XSHG",
+      "last_price": 8.592,
+      "high_limit": 9.56,
+      "low_limit": 7.822,
+      "paused": false,
+      "day_open": 8.661,
+      "cash_before": -168.01,
+      "total_value": 1110777.59,
+      "position_amount": 129300,
+      "position_cost": 8.294,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -129300
+    },
+    {
+      "date": "2026-01-29",
+      "time": "14:01",
+      "callback": "order",
+      "security": "518880.XSHG",
+      "last_price": 11.944,
+      "high_limit": 12.408,
+      "low_limit": 10.152,
+      "paused": false,
+      "day_open": 11.918,
+      "cash_before": 1110555.4,
+      "total_value": 1110555.4,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 92900
+    },
+    {
+      "date": "2026-01-30",
+      "time": "11:00",
+      "callback": "order",
+      "security": "518880.XSHG",
+      "last_price": 11.204,
+      "high_limit": 13.094,
+      "low_limit": 10.714,
+      "paused": false,
+      "day_open": 11.471,
+      "cash_before": 735.88,
+      "total_value": 1041587.48,
+      "position_amount": 92900,
+      "position_cost": 11.944,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -92900
+    },
+    {
+      "date": "2026-01-30",
+      "time": "14:01",
+      "callback": "order",
+      "security": "510500.XSHG",
+      "last_price": 8.453,
+      "high_limit": 9.45,
+      "low_limit": 7.732,
+      "paused": false,
+      "day_open": 8.518,
+      "cash_before": 1041379.31,
+      "total_value": 1041379.31,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 123100
+    },
+    {
+      "date": "2026-02-02",
+      "time": "14:00",
+      "callback": "order",
+      "security": "510500.XSHG",
+      "last_price": 8.18,
+      "high_limit": 9.284,
+      "low_limit": 7.596,
+      "paused": false,
+      "day_open": 8.33,
+      "cash_before": 606.9,
+      "total_value": 1007564.9,
+      "position_amount": 123100,
+      "position_cost": 8.453,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -123100
+    },
+    {
+      "date": "2026-02-02",
+      "time": "14:01",
+      "callback": "order",
+      "security": "511220.XSHG",
+      "last_price": 10.249,
+      "high_limit": 11.275,
+      "low_limit": 9.225,
+      "paused": false,
+      "day_open": 10.255,
+      "cash_before": 1007363.51,
+      "total_value": 1007363.51,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 98200
+    },
+    {
+      "date": "2026-02-24",
+      "time": "14:00",
+      "callback": "order",
+      "security": "511220.XSHG",
+      "last_price": 10.277,
+      "high_limit": 11.305,
+      "low_limit": 9.249,
+      "paused": false,
+      "day_open": 10.278,
+      "cash_before": 710.42,
+      "total_value": 1009911.82,
+      "position_amount": 98200,
+      "position_cost": 10.249,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -98200
+    },
+    {
+      "date": "2026-02-24",
+      "time": "14:01",
+      "callback": "order",
+      "security": "518880.XSHG",
+      "last_price": 10.975,
+      "high_limit": 11.633,
+      "low_limit": 9.518,
+      "paused": false,
+      "day_open": 10.92,
+      "cash_before": 1009709.98,
+      "total_value": 1009709.98,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 92000
+    },
+    {
+      "date": "2026-03-06",
+      "time": "14:00",
+      "callback": "order",
+      "security": "518880.XSHG",
+      "last_price": 10.89,
+      "high_limit": 12.06,
+      "low_limit": 9.868,
+      "paused": false,
+      "day_open": 10.834,
+      "cash_before": -191.96,
+      "total_value": 1001688.04,
+      "position_amount": 92000,
+      "position_cost": 10.975,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -92000
+    },
+    {
+      "date": "2026-03-06",
+      "time": "14:01",
+      "callback": "order",
+      "security": "511220.XSHG",
+      "last_price": 10.288,
+      "high_limit": 11.311,
+      "low_limit": 9.255,
+      "paused": false,
+      "day_open": 10.285,
+      "cash_before": 1001487.66,
+      "total_value": 1001487.66,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 97300
+    },
+    {
+      "date": "2026-04-15",
+      "time": "14:00",
+      "callback": "order",
+      "security": "511220.XSHG",
+      "last_price": 10.327,
+      "high_limit": 11.361,
+      "low_limit": 9.295,
+      "paused": false,
+      "day_open": 10.328,
+      "cash_before": 265.06,
+      "total_value": 1005082.16,
+      "position_amount": 97300,
+      "position_cost": 10.288,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -97300
+    },
+    {
+      "date": "2026-04-15",
+      "time": "14:01",
+      "callback": "order",
+      "security": "159915.XSHE",
+      "last_price": 3.524,
+      "high_limit": 3.905,
+      "low_limit": 3.195,
+      "paused": false,
+      "day_open": 3.589,
+      "cash_before": 1004881.2,
+      "total_value": 1004881.2,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 285100
+    },
+    {
+      "date": "2026-05-06",
+      "time": "14:00",
+      "callback": "order",
+      "security": "159915.XSHE",
+      "last_price": 3.799,
+      "high_limit": 4.058,
+      "low_limit": 3.32,
+      "paused": false,
+      "day_open": 3.763,
+      "cash_before": -12.14,
+      "total_value": 1083082.76,
+      "position_amount": 285100,
+      "position_cost": 3.524,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -285100
+    },
+    {
+      "date": "2026-05-06",
+      "time": "14:01",
+      "callback": "order",
+      "security": "513100.XSHG",
+      "last_price": 2.015,
+      "high_limit": 2.155,
+      "low_limit": 1.763,
+      "paused": false,
+      "day_open": 2.02,
+      "cash_before": 1082866.14,
+      "total_value": 1082866.14,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 537400
+    },
+    {
+      "date": "2026-06-04",
+      "time": "11:00",
+      "callback": "order",
+      "security": "513100.XSHG",
+      "last_price": 2.255,
+      "high_limit": 2.529,
+      "low_limit": 2.069,
+      "paused": false,
+      "day_open": 2.31,
+      "cash_before": -211.43,
+      "total_value": 1211625.57,
+      "position_amount": 537400,
+      "position_cost": 2.015,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -537400
+    },
+    {
+      "date": "2026-06-04",
+      "time": "14:01",
+      "callback": "order",
+      "security": "159915.XSHE",
+      "last_price": 4.117,
+      "high_limit": 4.56,
+      "low_limit": 3.731,
+      "paused": false,
+      "day_open": 4.074,
+      "cash_before": 1211383.2,
+      "total_value": 1211383.2,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 294200
+    },
+    {
+      "date": "2026-06-05",
+      "time": "14:00",
+      "callback": "order",
+      "security": "159915.XSHE",
+      "last_price": 4.019,
+      "high_limit": 4.51,
+      "low_limit": 3.69,
+      "paused": false,
+      "day_open": 4.083,
+      "cash_before": -80.44,
+      "total_value": 1182309.36,
+      "position_amount": 294200,
+      "position_cost": 4.117,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -294200
+    },
+    {
+      "date": "2026-06-05",
+      "time": "14:01",
+      "callback": "order",
+      "security": "513100.XSHG",
+      "last_price": 2.214,
+      "high_limit": 2.464,
+      "low_limit": 2.016,
+      "paused": false,
+      "day_open": 2.202,
+      "cash_before": 1182072.88,
+      "total_value": 1182072.88,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 533900
+    },
+    {
+      "date": "2026-06-08",
+      "time": "14:00",
+      "callback": "order",
+      "security": "513100.XSHG",
+      "last_price": 2.12,
+      "high_limit": 2.426,
+      "low_limit": 1.985,
+      "paused": false,
+      "day_open": 2.116,
+      "cash_before": -218.13,
+      "total_value": 1131649.87,
+      "position_amount": 533900,
+      "position_cost": 2.214,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -533900
+    },
+    {
+      "date": "2026-06-08",
+      "time": "14:01",
+      "callback": "order",
+      "security": "511220.XSHG",
+      "last_price": 10.394,
+      "high_limit": 11.441,
+      "low_limit": 9.361,
+      "paused": false,
+      "day_open": 10.401,
+      "cash_before": 1131423.5,
+      "total_value": 1131423.5,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 108800
+    },
+    {
+      "date": "2026-06-11",
+      "time": "14:00",
+      "callback": "order",
+      "security": "511220.XSHG",
+      "last_price": 10.35,
+      "high_limit": 11.396,
+      "low_limit": 9.324,
+      "paused": false,
+      "day_open": 10.363,
+      "cash_before": 330.13,
+      "total_value": 1126410.13,
+      "position_amount": 108800,
+      "position_cost": 10.394,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": -108800
+    },
+    {
+      "date": "2026-06-11",
+      "time": "14:01",
+      "callback": "order",
+      "security": "511880.XSHG",
+      "last_price": 100.517,
+      "high_limit": 110.569,
+      "low_limit": 90.465,
+      "paused": false,
+      "day_open": 100.519,
+      "cash_before": 1126184.91,
+      "total_value": 1126184.91,
+      "position_amount": 0,
+      "position_cost": 0,
+      "slippage_model": "PriceRelatedSlippage",
+      "slippage_param": 0.0001,
+      "fund_net_value": "MISSING",
+      "premium_rate": "MISSING",
+      "requested_amount": 11200
+    }
+  ],
+  "final_value": 1125959.75,
+  "nav_report": {
+    "total_missing": 0,
+    "by_code": {},
+    "affected_pool": []
+  },
+  "nav_mode": "realistic",
+  "invalid_due_to_nav_fail_open": false,
+  "elapsed_seconds": 298.1,
+  "nav_precheck": {
+    "should_abort": false,
+    "nav_mode": "realistic",
+    "backtest_range": "2026-01-02 ~ 2026-06-30",
+    "n_trade_days": 114,
+    "n_required_nav_dates": 114,
+    "prev_of_first": "2025-12-31",
+    "risk_pool_size": 7,
+    "defensive_etf": "511880.XSHG",
+    "total_pool_size": 8,
+    "missing_codes": [],
+    "missing_count": 0,
+    "per_code": {
+      "518880.XSHG": {
+        "in_risk_pool": true,
+        "is_defensive": false,
+        "required_days": 114,
+        "valid_days": 114,
+        "coverage_pct": 100.0,
+        "first_valid_date": "2017-12-01",
+        "last_valid_date": "2026-07-02",
+        "missing_days": 0,
+        "first_20_missing": []
+      },
+      "159915.XSHE": {
+        "in_risk_pool": true,
+        "is_defensive": false,
+        "required_days": 114,
+        "valid_days": 114,
+        "coverage_pct": 100.0,
+        "first_valid_date": "2017-12-01",
+        "last_valid_date": "2026-07-02",
+        "missing_days": 0,
+        "first_20_missing": []
+      },
+      "510300.XSHG": {
+        "in_risk_pool": true,
+        "is_defensive": false,
+        "required_days": 114,
+        "valid_days": 114,
+        "coverage_pct": 100.0,
+        "first_valid_date": "2017-12-01",
+        "last_valid_date": "2026-07-02",
+        "missing_days": 0,
+        "first_20_missing": []
+      },
+      "510500.XSHG": {
+        "in_risk_pool": true,
+        "is_defensive": false,
+        "required_days": 114,
+        "valid_days": 114,
+        "coverage_pct": 100.0,
+        "first_valid_date": "2017-12-01",
+        "last_valid_date": "2026-07-02",
+        "missing_days": 0,
+        "first_20_missing": []
+      },
+      "510050.XSHG": {
+        "in_risk_pool": true,
+        "is_defensive": false,
+        "required_days": 114,
+        "valid_days": 114,
+        "coverage_pct": 100.0,
+        "first_valid_date": "2017-12-01",
+        "last_valid_date": "2026-07-02",
+        "missing_days": 0,
+        "first_20_missing": []
+      },
+      "513100.XSHG": {
+        "in_risk_pool": true,
+        "is_defensive": false,
+        "required_days": 114,
+        "valid_days": 114,
+        "coverage_pct": 100.0,
+        "first_valid_date": "2017-12-01",
+        "last_valid_date": "2026-07-01",
+        "missing_days": 0,
+        "first_20_missing": []
+      },
+      "511220.XSHG": {
+        "in_risk_pool": true,
+        "is_defensive": false,
+        "required_days": 114,
+        "valid_days": 114,
+        "coverage_pct": 100.0,
+        "first_valid_date": "2017-12-01",
+        "last_valid_date": "2026-07-03",
+        "missing_days": 0,
+        "first_20_missing": []
+      },
+      "511880.XSHG": {
+        "in_risk_pool": false,
+        "is_defensive": true,
+        "required_days": 114,
+        "valid_days": 114,
+        "coverage_pct": 100.0,
+        "first_valid_date": "2017-12-01",
+        "last_valid_date": "2026-07-02",
+        "missing_days": 0,
+        "first_20_missing": []
+      }
+    },
+    "nav_file_exists": true
+  },
+  "label": "C7D_baseline_2026H1",
+  "pool_code": "C7D",
+  "score_mode": "baseline",
+  "window": "2026H1",
+  "start": "2026-01-02",
+  "end": "2026-06-30",
+  "metrics": {
+    "label": "C7D_baseline_2026H1",
+    "final_value": 1125959.75,
+    "total_return_pct": 12.6,
+    "annualized_return_pct": 29.98,
+    "max_drawdown_pct": 11.39,
+    "sharpe": 1.213,
+    "calmar": 2.632,
+    "n_trade_days": 114,
+    "trade_count": 29,
+    "buy_count": 15,
+    "sell_count": 14,
+    "elapsed_s": 298.1,
+    "nav_fail_open": false,
+    "nav_missing_skip": false
+  }
+}

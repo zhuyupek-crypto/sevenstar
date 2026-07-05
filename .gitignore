@@ -39,6 +39,10 @@ qixing_optimize/runs/*.json
 !qixing_optimize/runs/p3_03_pool_audit/
 !qixing_optimize/runs/p3_03_pool_audit/**
 
+# P4-01 核心池验证结果（例外保留）
+!qixing_optimize/runs/p4_01_core_pool_validation/
+!qixing_optimize/runs/p4_01_core_pool_validation/**
+
 # 系统文件
 .DS_Store
 Thumbs.db
