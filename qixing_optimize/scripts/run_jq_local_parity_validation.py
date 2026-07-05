@@ -273,7 +273,10 @@ def parse_jq_trades():
             m = TRADE_LINE_RE.match(line)
             if not m:
                 continue
-            date, time, name, code, side, _otype, amount_str, price_str, value_str, tax_str, comm_str = m.groups()
+            # 聚宽交易记录第10列为"实现盈亏"(realized_pnl)，非印花税
+            # 买入时为0.00，卖出时为 (卖出金额 - 买入金额)
+            # ETF 二级市场交易免征印花税，双方印花税均为 0
+            date, time, name, code, side, _otype, amount_str, price_str, value_str, pnl_str, comm_str = m.groups()
             amount = int(amount_str)
             trades.append({
                 'date': date,
@@ -285,7 +288,8 @@ def parse_jq_trades():
                 'signed_amount': amount,
                 'price': float(price_str),
                 'value': float(value_str.replace(',', '')),
-                'tax': float(tax_str.replace(',', '')),
+                'realized_pnl': float(pnl_str.replace(',', '')),
+                'tax': 0.0,  # ETF 免征印花税
                 'commission': float(comm_str),
             })
 
@@ -854,8 +858,11 @@ def compare_costs(jq_trades, local_trades):
 
     jq_total_comm = sum(t['commission'] for t in jq_trades)
     local_total_comm = sum(t['commission'] for t in local_trades)
-    jq_total_tax = sum(t.get('tax', 0) for t in jq_trades)
-    local_total_tax = sum(t.get('tax', 0) for t in local_trades)
+    # ETF 二级市场交易免征印花税，双方印花税均为 0
+    jq_total_tax = 0.0
+    local_total_tax = 0.0
+    # 聚宽交易记录第10列为"实现盈亏"(realized_pnl)，本地 JSON 未记录此字段
+    jq_total_realized_pnl = sum(t.get('realized_pnl', 0) for t in jq_trades)
 
     jq_total_value = sum(abs(t.get('value', t['price'] * t['amount'])) for t in jq_trades)
     local_total_value = sum(abs(t.get('value', t['price'] * t['amount'])) for t in local_trades)
@@ -867,6 +874,9 @@ def compare_costs(jq_trades, local_trades):
         'jq_total_tax': float(jq_total_tax),
         'local_total_tax': float(local_total_tax),
         'tax_diff': float(jq_total_tax - local_total_tax),
+        'jq_total_realized_pnl': float(jq_total_realized_pnl),
+        'local_total_realized_pnl': None,  # 本地 JSON 未记录此字段
+        'note': '聚宽交易记录第10列为实现盈亏(realized_pnl)，非印花税；ETF 二级市场交易免征印花税，双方 tax 均为 0',
         'jq_total_trade_value': float(jq_total_value),
         'local_total_trade_value': float(local_total_value),
         'jq_comm_rate': float(jq_total_comm / jq_total_value) if jq_total_value > 0 else 0,
@@ -876,6 +886,8 @@ def compare_costs(jq_trades, local_trades):
     print(f"  聚宽总佣金：{stats['jq_total_commission']:,.2f}")
     print(f"  本地总佣金：{stats['local_total_commission']:,.2f}")
     print(f"  佣金差：{stats['commission_diff']:+,.2f}")
+    print(f"  聚宽总实现盈亏：{stats['jq_total_realized_pnl']:,.2f}（本地未记录此字段）")
+    print(f"  印花税：双方均为 0（ETF 免征）")
     print(f"  聚宽佣金率：{stats['jq_comm_rate']:.6f}")
     print(f"  本地佣金率：{stats['local_comm_rate']:.6f}")
 
