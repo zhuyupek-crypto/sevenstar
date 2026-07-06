@@ -1,0 +1,32 @@
+{
+  "config": {
+    "start_date": "2019-12-06",
+    "end_date": "2026-06-12",
+    "score_mode": "baseline",
+    "nav_mode": "parity",
+    "initial_cash": 1000000,
+    "etf_pool": "O7 (母版默认 7 只)",
+    "defensive_etf": "511880.XSHG"
+  },
+  "basic": {
+    "trade_days": 1578,
+    "trade_count": 609,
+    "final_value": 22064746.67,
+    "elapsed_seconds": 5520.6
+  },
+  "metrics": {
+    "total_return_pct": 2106.47,
+    "annual_return_pct": 63.26,
+    "max_drawdown_pct": -19.29,
+    "max_dd_start": "2023-09-15 00:00:00",
+    "max_dd_end": "2024-02-01 00:00:00",
+    "sharpe": 1.973,
+    "calmar": 3.279,
+    "volatility_pct": 26.65
+  },
+  "nav_report": {
+    "total_missing": 0,
+    "by_code": {},
+    "affected_pool": []
+  }
+}
